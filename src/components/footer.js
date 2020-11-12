@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
   margin: 0 auto;
-  background: #17525F;
+  background: #1F363D;
   color: white;
   width: 100%;
   height: 150px;
