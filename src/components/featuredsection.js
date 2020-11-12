@@ -11,20 +11,33 @@ const FeaturedSectionContainer = styled.section`
   color: white;
   display: flex;
   flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
 `
 const FeaturedSection = () => {
   return (
     <FeaturedSectionContainer>
-      <FeaturedProjectCard
-        background="#17525F"
-        title="Featured Project 1"
-        description="Description 1"
-      />
-      <FeaturedProjectCard
-        background="#2E90A6"
-        title="Featured Project 2"
-        description="Description 2"
-      />
+      <Link to="/">
+        <FeaturedProjectCard
+          background="#17525F"
+          title="Featured Project 1"
+          description="Description 1"
+        />
+      </Link>
+      <Link to="/">
+        <FeaturedProjectCard
+          background="#2E90A6"
+          title="Featured Project 2"
+          description="Description 2"
+        />
+      </Link>
     </FeaturedSectionContainer>
   )
 }

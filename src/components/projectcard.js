@@ -14,6 +14,10 @@ const ProjectCardContainer = styled.div`
   align-items: center;
   border: 1px solid white;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
   @media (max-width: 768px) {
     width: 50vw;
   }
@@ -21,12 +25,24 @@ const ProjectCardContainer = styled.div`
     width: 100vw;
   }
 `
+const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover {
+  transform: scale(1.1);
+  transition: ease 1s;
+}
+`
 
 const ProjectCard = ({ background, title, description }) => {
   return (
     <ProjectCardContainer background={background}>
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <Description>
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </Description>
     </ProjectCardContainer>
   )
 }
