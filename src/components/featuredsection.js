@@ -24,16 +24,16 @@ const FeaturedSectionContainer = styled.section`
 const FeaturedSection = () => {
   return (
     <FeaturedSectionContainer>
-      <Link to="/">
+      <Link to="/projectdetails">
         <FeaturedProjectCard
-          background="#17525F"
+          background="#1F363D"
           title="Featured Project 1"
           description="Description 1"
         />
       </Link>
       <Link to="/">
         <FeaturedProjectCard
-          background="#2E90A6"
+          background="#40798C"
           title="Featured Project 2"
           description="Description 2"
         />

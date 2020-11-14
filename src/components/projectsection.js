@@ -21,33 +21,33 @@ const ProjectSection = () => {
     <ProjectSectionContainer>
       <Link to="/">
         <ProjectCard
-          background="#65A68A"
+          background="#70A9A1"
           title="Project 1"
           description="Description 1"
         />
       </Link>
       <Link to="/">
         <ProjectCard
-          background="#7ECDAC"
+          background="#9EC1A3"
           title="Project 2"
           description="Description 2"
         />
       </Link>
       <ProjectCard
-        background="#6FD3E9"
+        background="#1F363D"
         title="Project 3"
         description="Description 3"
       />
       <Link to="/">
         <ProjectCard
-          background="#B6B868"
+          background="#70A9A1"
           title="Project 4"
           description="Description 4"
         />
       </Link>
       <Link to="/">
         <ProjectCard
-          background="#49BBD3"
+          background="#40798C"
           title="Project 5"
           description="Description 5"
         />
@@ -68,37 +68,9 @@ const ProjectSection = () => {
       </Link>
       <Link to="/">
         <ProjectCard
-          background="#3C8797"
+          background="#40798C"
           title="Project 8"
           description="Description 8"
-        />
-      </Link>
-      <Link to="/">
-        <ProjectCard
-          background="#65A68A"
-          title="Project 9"
-          description="Description 9"
-        />
-      </Link>
-      <Link to="/">
-        <ProjectCard
-          background="#7ECDAC"
-          title="Project 10"
-          description="Description 10"
-        />
-      </Link>
-      <Link to="/">
-        <ProjectCard
-          background="#6FD3E9"
-          title="Project 11"
-          description="Description 11"
-        />
-      </Link>
-      <Link to="/">
-        <ProjectCard
-          background="#B6B868"
-          title="Project 12"
-          description="Description 12"
         />
       </Link>
     </ProjectSectionContainer>
