@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import ProjectSection from './projectsection'
 
 const ProjectDetailsImageSection = styled.section`
@@ -10,13 +12,13 @@ const ProjectDetailsImageSection = styled.section`
   justify-content: center;
   align-items: center;
   color: white;
-  background-image: url('${(props) => props.background}');
-  background-size: cover; 
 `
 
-const DetailsImageSection = ({ background }) => {
+const DetailsImageSection = () => {
   return (
-    <ProjectDetailsImageSection background={background} />
+    <ProjectDetailsImageSection />
   )
 }
+
+
 export default DetailsImageSection

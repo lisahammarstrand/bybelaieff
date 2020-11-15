@@ -40,7 +40,7 @@ const ProjectCard = ({ background, title, description }) => {
   return (
     <ProjectCardContainer background={background}>
       <Description>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <p>{description}</p>
       </Description>
     </ProjectCardContainer>

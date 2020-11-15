@@ -36,7 +36,7 @@ const FeaturedProjectCard = ({ background, title, description }) => {
   return (
     <FeaturedProjectContainer background={background}>
       <Description>
-        <h2>{title}</h2>
+        <h1>{title}</h1>
         <p>{description}</p>
       </Description>
     </FeaturedProjectContainer>

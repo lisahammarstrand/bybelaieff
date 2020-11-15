@@ -22,54 +22,54 @@ const ProjectSection = () => {
       <Link to="/">
         <ProjectCard
           background="#70A9A1"
-          title="Project 1"
+          title="Hållbar vardag"
           description="Description 1"
         />
       </Link>
       <Link to="/">
         <ProjectCard
           background="#9EC1A3"
-          title="Project 2"
+          title="Trädgårdsmässan"
           description="Description 2"
         />
       </Link>
       <ProjectCard
         background="#1F363D"
-        title="Project 3"
+        title="Södertandläkarna"
         description="Description 3"
       />
       <Link to="/">
         <ProjectCard
           background="#70A9A1"
-          title="Project 4"
+          title="Sea Breeze"
           description="Description 4"
         />
       </Link>
       <Link to="/">
         <ProjectCard
           background="#40798C"
-          title="Project 5"
+          title="Setterwalls"
           description="Description 5"
         />
       </Link>
       <Link to="/">
         <ProjectCard
           background="#17525F"
-          title="Project 6"
+          title={<>Stockholms <br />EU-kontor</>}
           description="Description 6"
         />
       </Link>
       <Link to="/">
         <ProjectCard
           background="#7D7E38"
-          title="Project 7"
+          title="Yoga/Hemfrid"
           description="Description 7"
         />
       </Link>
       <Link to="/">
         <ProjectCard
           background="#40798C"
-          title="Project 8"
+          title="Kapi"
           description="Description 8"
         />
       </Link>
