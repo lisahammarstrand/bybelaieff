@@ -28,7 +28,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-
       <PageContainer>
         <PageContent>
           <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
