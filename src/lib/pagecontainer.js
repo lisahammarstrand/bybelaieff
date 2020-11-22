@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const PageContainer = styled.div`
 position: relative;
-color: white;
 width: 100%;
 height: 100vh;
 display: flex;

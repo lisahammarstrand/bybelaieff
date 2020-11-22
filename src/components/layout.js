@@ -31,7 +31,9 @@ const Layout = ({ children }) => {
       <PageContainer>
         <PageContent>
           <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-          <main>{children}</main>
+          <main>
+            {children}
+          </main>
         </PageContent>
         <Footer />
       </PageContainer>

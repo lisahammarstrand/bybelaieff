@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import FeaturedProjectCard from './featuredprojectcard'
 
@@ -22,6 +22,20 @@ const FeaturedSectionContainer = styled.section`
   }
 `
 const FeaturedSection = () => {
+  /*   const data = useStaticQuery(graphql`
+    query {
+      allContentfulFeaturedProjectCard {
+        edges {
+          node {
+            title
+            subtitle
+            slug
+          }
+        }
+      }
+    }
+    `
+    ) */
   return (
     <FeaturedSectionContainer>
       <Link to="/detailsgs1">

@@ -6,7 +6,7 @@ import Image from '../components/image'
 
 const ProjectDetailsImageSection = styled.section`
   width: 100%;
-  height: 400px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import DetailsImageSection from './projectdetailsimage'
+
 
 const DetailsDescriptionContainer = styled.section`
   width: 100%;
