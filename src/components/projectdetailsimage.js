@@ -13,12 +13,10 @@ const ProjectDetailsImageSection = styled.section`
   background: lightgray;
 `
 
-const DetailsImageSection = ({ image }) => {
+const DetailsImageSection = () => {
   return (
     <ProjectDetailsImageSection>
-      {image}
     </ProjectDetailsImageSection>
-
   )
 }
 

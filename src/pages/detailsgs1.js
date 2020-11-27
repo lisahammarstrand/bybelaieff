@@ -1,10 +1,10 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsToppSection from '../components/projectdetailstopp'
-import DetailsImageSection from '../components/projectdetailsimage'
 import DetailsDescription from '../components/projectdetailsdescription'
 import { ShowCaseContainer } from '../lib/showcasecontainer'
 
@@ -12,26 +12,22 @@ const ProjectDetailsGS1 = () => {
   const data = useStaticQuery(
     graphql`
    {
-      allContentfulFeaturedProjectDetailsGs1 {
-        edges {
-          node {
-            title
-            shortDescription
-            heroImage {
-              fluid(quality: 100) {
-                ...GatsbyContentfulFluid
-              }
-            }
-            secondTitle
-            secondDescription {
-              childMarkdownRemark {
-                rawMarkdownBody
-              }
-            }
-          }
+    contentfulFeaturedProjectDetailsGs1 {
+      title
+      shortDescription
+      heroImage {
+        fluid(quality: 100, maxWidth:1920) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      secondTitle
+      secondDescription {
+        childMarkdownRemark {
+          rawMarkdownBody
         }
       }
     }
+  }
     `
   )
   console.log("data", data)
@@ -39,26 +35,19 @@ const ProjectDetailsGS1 = () => {
   return (
     < Layout >
       <SEO title="Project Details" />
-      {data.allContentfulFeaturedProjectDetailsGs1.edges.map((edge, i) => {
-        return (
-          <ShowCaseContainer key={i}>
-            <DetailsToppSection
-              background="#1F363D"
-              title={edge.node.title}
-              description={edge.node.shortDescription}
-            />
-            <DetailsImageSection
-              image={edge.node.heroImage.fluid}
-            />
-            <DetailsDescription
-              color="#1F363D"
-              title={edge.node.secondTitle}
-              description={edge.node.secondDescription.childMarkdownRemark.rawMarkdownBody}
-            />
-          </ShowCaseContainer>
-        )
-      })
-      }
+      <ShowCaseContainer>
+        <DetailsToppSection
+          background="#1F363D"
+          title={data.contentfulFeaturedProjectDetailsGs1.title}
+          description={data.contentfulFeaturedProjectDetailsGs1.shortDescription}
+        />
+        <Img className="detail-image" fluid={data.contentfulFeaturedProjectDetailsGs1.heroImage.fluid} />
+        <DetailsDescription
+          color="#1F363D"
+          title={data.contentfulFeaturedProjectDetailsGs1.secondTitle}
+          description={data.contentfulFeaturedProjectDetailsGs1.secondDescription.childMarkdownRemark.rawMarkdownBody}
+        />
+      </ShowCaseContainer>
     </Layout >
   )
 }

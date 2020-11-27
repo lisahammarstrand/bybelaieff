@@ -13,6 +13,35 @@ const HeroContainer = styled.section`
 const HeroBackground = () => (
   <>
     <HeroContainer>
+      <div style={{
+        width: `100%`,
+        height: `100vh`,
+        display: `flex`,
+        flexDirection: `column`,
+        justifyContent: `center`,
+        alignItems: `center`,
+
+      }}><h1 style={{
+        marginLeft: `62px`,
+        marginBottom: `62px`,
+        fontSize: `102px`,
+        letterSpacing: `2px`,
+        alignSelf: `flex-start`,
+      }}>By Belaieff</h1>
+        <div style={{
+          display: `flex`,
+          flexDirection: `column`,
+          alignItems: `center`,
+        }}>
+          <h2 style={{
+            letterSpacing: `1px`,
+            marginTop: `32px`,
+          }}>urval av projekt</h2>
+          <span style={{
+            fontSize: `32px`,
+          }}>▽</span>
+        </div>
+      </div>
       <BackgroundSlider
         query={useStaticQuery(graphql`
         query {
@@ -42,38 +71,6 @@ const HeroBackground = () => (
           alignItems: `center`,
         }}
       >
-        {/* Captions in sync with background images*/}
-        <div style={{
-          width: `100%`,
-          height: `100vh`,
-          display: `flex`,
-          flexDirection: `column`,
-          justifyContent: `center`,
-          alignItems: `center`,
-
-        }}><h1 style={{
-          marginLeft: `62px`,
-          marginBottom: `62px`,
-          fontSize: `102px`,
-          letterSpacing: `2px`,
-          alignSelf: `flex-start`,
-        }}>By Belaieff</h1>
-          <div style={{
-            display: `flex`,
-            flexDirection: `column`,
-            alignItems: `center`,
-          }}>
-            <h2 style={{
-              letterSpacing: `1px`,
-              marginTop: `32px`,
-            }}>urval av projekt</h2>
-            <span style={{
-              fontSize: `32px`,
-            }}>▽</span>
-          </div>
-        </div>
-        {/* <div >GREEN</div>
-      <div >YELLOW</div> */}
       </BackgroundSlider>
     </HeroContainer>
   </>
