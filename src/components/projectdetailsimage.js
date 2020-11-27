@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { graphql } from 'gatsby'
-import Image from '../components/image'
 
 
 const ProjectDetailsImageSection = styled.section`
   width: 100%;
-  height: 600px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,10 +13,10 @@ const ProjectDetailsImageSection = styled.section`
   background: lightgray;
 `
 
-const DetailsImageSection = () => {
+const DetailsImageSection = ({ image }) => {
   return (
     <ProjectDetailsImageSection>
-      <Image />
+      {image}
     </ProjectDetailsImageSection>
 
   )
