@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import styled from 'styled-components'
 
 import Layout from "../components/layout"
@@ -35,17 +35,50 @@ const ContactDescription = styled.article`
     color: white;
   }
 `
+const ContactDetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  margin-top: 32px;
+`
+const ContactDetails = styled.p`
+  margin: 8px;
+`
 
-const ContactPage = () => (
-  <Layout>
-    <SEO title="Contact" />
-    <ContactContainer>
-      <ContactDescription>
-        <h1>Hi from the contact page</h1>
-        <p>Welcome to contact me at</p>
-      </ContactDescription>
-    </ContactContainer>
-  </Layout>
-)
+const ContactPage = () => {
+  const data = useStaticQuery(
+    graphql`
+    query MyQuery {
+      contentfulContact {
+        title
+        email
+        phone
+        linkedin
+        address
+      }
+    }    
+    `
+  )
+  return (
+    <Layout>
+      <SEO title="Contact" />
+      <ContactContainer>
+        <ContactDescription>
+          <h1>{data.contentfulContact.title}</h1>
+          <ContactDetailsContainer>
+            <ContactDetails>Email: {data.contentfulContact.email}</ContactDetails>
+            <ContactDetails>Phone: {data.contentfulContact.phone}</ContactDetails>
+            <ContactDetails>Address: {data.contentfulContact.address}</ContactDetails>
+            <Link to="https://www.linkedin.com/">
+              <ContactDetails>{data.contentfulContact.linkedin}</ContactDetails>
+            </Link>
+          </ContactDetailsContainer>
+        </ContactDescription>
+      </ContactContainer>
+    </Layout>
+  )
+}
 
 export default ContactPage

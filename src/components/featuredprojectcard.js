@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const FeaturedProjectContainer = styled.div`
   position: relative;
   width: 50vw;
-  height: 475px;
+  height: 450px;
   background: ${(props) => props.background};
   color: white;
   display: flex;

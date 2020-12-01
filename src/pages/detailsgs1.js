@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import DetailsToppSection from '../components/projectdetailstopp'
+import DetailsTopSection from '../components/projectdetailstop'
 import DetailsDescription from '../components/projectdetailsdescription'
 import { ShowCaseContainer } from '../lib/showcasecontainer'
 
@@ -30,13 +30,12 @@ const ProjectDetailsGS1 = () => {
   }
     `
   )
-  console.log("data", data)
 
   return (
     < Layout >
       <SEO title="Project Details" />
       <ShowCaseContainer>
-        <DetailsToppSection
+        <DetailsTopSection
           background="#1F363D"
           title={data.contentfulFeaturedProjectDetailsGs1.title}
           description={data.contentfulFeaturedProjectDetailsGs1.shortDescription}

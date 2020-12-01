@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import DetailsToppSection from '../components/projectdetailstopp'
+import DetailsTopSection from '../components/projectdetailstop'
 import DetailsImageSection from '../components/projectdetailsimage'
 import Image from '../components/image'
 import DetailsDescription from '../components/projectdetailsdescription'
@@ -14,7 +14,7 @@ const ProjectDetailsKapi = () => {
 
     <Layout>
       <SEO title="Project Details" />
-      <DetailsToppSection
+      <DetailsTopSection
         background="#40798C"
         title="Kapi"
         description="Multi cultural communication" />

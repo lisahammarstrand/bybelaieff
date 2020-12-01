@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ProjectDetailsToppSection = styled.section`
-/*   position: absolute;
+const ProjectDetailsTopSection = styled.section`
+ /*  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; */
+  bottom: 0;  */
   width: 100%;
   height: 100vh;
   padding: 40px;
@@ -19,7 +19,7 @@ const ProjectDetailsToppSection = styled.section`
   transform: translate(0px, -100px); 
   text-align: center;
 `
-export const ToppSectionTitle = styled.h1`
+export const TopSectionTitle = styled.h1`
   font-size: 102px;
 `
 const ChevronDown = styled.span`
@@ -27,15 +27,16 @@ const ChevronDown = styled.span`
   bottom: 32px;
   font-size: 42px;
 `
-const DetailsToppSection = ({ background, title, description }) => {
+
+const DetailsTopSection = ({ background, title, description }) => {
   return (
-    <ProjectDetailsToppSection background={background}>
-      <ToppSectionTitle>{title}</ToppSectionTitle>
+    <ProjectDetailsTopSection background={background}>
+      <TopSectionTitle>{title}</TopSectionTitle>
       <h2>{description}</h2>
       <ChevronDown>
         ▽
       </ChevronDown>
-    </ProjectDetailsToppSection>
+    </ProjectDetailsTopSection>
   )
 }
-export default DetailsToppSection
+export default DetailsTopSection
