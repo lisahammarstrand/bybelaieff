@@ -30,10 +30,10 @@ const Description = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: ease 1s;
 
   &:hover {
   transform: scale(1.1);
-  transition: ease 1s;
 }
 `
 
