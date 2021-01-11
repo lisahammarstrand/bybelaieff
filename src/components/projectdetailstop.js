@@ -16,7 +16,6 @@ const ProjectDetailsTopSection = styled.section`
   align-items: center;
   color: white;
   background: ${(props) => props.background};  
-  transform: translate(0px, -100px); 
   text-align: center;
 `
 export const TopSectionTitle = styled.h1`
