@@ -15,12 +15,11 @@ const ContactContainer = styled.section`
   background: #40798C;
   padding: 40px;
   margin: 0px;
-  transform: translate(0px,-100px);
 `
 
 const ContactDescription = styled.article`
   position: absolute;
-  top: 150px;
+  top: 50px;
   max-width: 600px;
   display: flex;
   flex-direction: column;

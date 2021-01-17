@@ -26,10 +26,25 @@ header {
 }
 
 .nav-list {
+  display: none;
+}
+
+.hbg-icon {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 650px) {
+  .nav-list {
   display: flex;
   list-style-type: none;
   margin: 0;
 }
+.hbg-icon {
+  display: none;
+}
+}
+
 
 .nav-item {
   color: white;
@@ -43,5 +58,20 @@ header {
 }
 
 .active-nav-item {
+  color: #6FD3E9;
+}
+
+.nav-item-hbg {
+  color: white;
+  font-size: .9rem;
+  text-decoration: none;
+  margin-right: 0;
+}
+
+.nav-item-hbg:hover {
+  color: #6FD3E9;
+}
+
+.active-nav-item-hbg {
   color: #6FD3E9;
 }

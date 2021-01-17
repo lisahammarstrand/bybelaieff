@@ -16,12 +16,11 @@ background: #17525F;
 color: #1F363D;
 padding: 40px;
 margin: 0px;
-transform: translate(0px,-100px);
 `
 
 const AboutDescription = styled.article`
 position: absolute;
-top: 150px;
+top: 50px;
 max-width: 600px;
 display: flex;
 flex-direction: column;
