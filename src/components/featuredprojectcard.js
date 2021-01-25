@@ -12,7 +12,7 @@ const FeaturedProjectContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 
   &:hover {
     opacity: 0.8;

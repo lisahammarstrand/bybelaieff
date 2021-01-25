@@ -15,7 +15,7 @@ const HeroBackground = () => (
     <HeroContainer>
       <div style={{
         width: `100%`,
-        height: `100vh`,
+        height: `358px`,
         display: `flex`,
         flexDirection: `column`,
         /*  justifyContent: `center`, */
@@ -37,18 +37,24 @@ const HeroBackground = () => (
         <h2 style={{ fontWeight: `normal`, marginBottom: `12px` }}>Grafisk formgivning</h2>
         <h2 style={{ fontWeight: `normal`, marginBottom: `12px` }}>Art Direction</h2>
         <h2 style={{ fontWeight: `normal`, marginBottom: `12px` }}>Arkitektur</h2>
-        <div style={{
-          display: `flex`,
-          flexDirection: `column`,
-          alignItems: `center`,
-        }}>
-          {/* <h2 style={{
+
+      </div>
+      <div style={{
+        position: `absolute`,
+        bottom: `16px`,
+
+        display: `flex`,
+        /*  flexDirection: `column`, */
+        justifyContent: `center`,
+        alignItems: `center`,
+
+      }}>
+        {/* <h2 style={{
             letterSpacing: `1px`,
             marginTop: `32px`,
           }}>urval av projekt</h2> */}
-          <span style={{
-            fontSize: `32px`,
-          }}>▽</span>
+        <div>
+          <span style={{ fontSize: `36px`, }}>▽</span>
         </div>
       </div>
       <BackgroundSlider
@@ -70,7 +76,7 @@ const HeroBackground = () => (
         transition={4} // transition duration between images
         duration={8} // how long an image is shown
         // specify images to include (and their order) according to `relativePath`
-        images={["mock_hero_blue.png", "mock_hero_green.png", "mock_hero_yellow.png"]}
+        images={["hero_top_blue_2.jpg", "hero_top_green.jpg", "hero_top_yellow.jpg"]}
 
         // pass down standard element props
         style={{

@@ -19,20 +19,19 @@ const ProjectSectionContainer = styled.section`
 const ProjectSection = () => {
   const data = useStaticQuery(graphql`
   {
-    allContentfulProjectCard(
-      sort: {
-        fields: createdAt, 
-        order: ASC}) {
+    allContentfulProjectCard(sort: {fields: order}) {
       edges {
         node {
+          background
           title
           subtitle
           slug
-          background
+          order
         }
       }
     }
   }
+  
   
   `)
   return (

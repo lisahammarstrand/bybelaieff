@@ -14,6 +14,7 @@ const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   padding: 1rem;
+  border-top: 2px solid white;
 `
 const NavContainer = styled.nav`
   display: flex;

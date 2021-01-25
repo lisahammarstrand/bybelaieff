@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const ProjectCardContainer = styled.div`
   position: relative;
-  width: 25vw;
+  width: 33vw;
   height: 300px;
   background: ${(props) => props.background};
   color: white;
@@ -12,14 +12,14 @@ const ProjectCardContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
+ /*  border: 1px solid white; */
 
   &:hover {
     opacity: 0.8;
   }
 
   @media (max-width: 768px) {
-    width: 50vw;
+    width: 100vw;
   }
   @media (max-width: 450px) {
     width: 100vw;
