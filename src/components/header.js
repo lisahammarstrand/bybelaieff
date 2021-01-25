@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from 'react'
 import { useState } from 'react'
 import headerStyles from './header.module.css'
-import nina_flower_50x50_2 from '../images/nina_flower_50x50_2.png'
+/* import nina_flower_50x50_2 from '../images/nina_flower_50x50_2.png' */
 import Hamburger from 'hamburger-react'
 import { HamburgerMenu, HbgNavList } from './hbgmenu'
 
@@ -14,8 +14,8 @@ const Header = ({ siteTitle }) => {
     <header >
       <div className={headerStyles.container}>
         <div className={headerStyles.logoBar}>
-          <img className={headerStyles.logoImg} src={nina_flower_50x50_2} alt="flower_logo" />
-          <h1 style={{ margin: 0, fontSize: `2.0 rem`, }}>
+          {/*  <img className={headerStyles.logoImg} src={nina_flower_50x50_2} alt="flower_logo" /> */}
+          <h1 style={{ margin: 0, fontSize: `2.0 rem`, fontWeight: `normal` }}>
             <Link
               to="/"
               style={{

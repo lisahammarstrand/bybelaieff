@@ -4,6 +4,7 @@ header {
   height: 100px;
   padding: 32px;
   background: #1f363d;
+  border-bottom: 2px solid white;
   z-index: 10;
 }
 
