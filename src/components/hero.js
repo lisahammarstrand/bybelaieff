@@ -18,18 +18,12 @@ const HeroBackground = () => (
         height: `358px`,
         display: `flex`,
         flexDirection: `column`,
-        /*  justifyContent: `center`, */
         alignItems: `flex-start`,
         paddingLeft: `32px`,
         position: `absolute`,
         top: `250px`,
 
       }}><h1 style={{
-        /*  marginLeft: `62px`,
-         marginBottom: `62px`, */
-        /*  fontSize: `50px`, */
-        /*   letterSpacing: `2px`, */
-        /*  alignSelf: `flex-start`, */
         borderBottom: `1px solid white`,
         marginBottom: `16px`,
         paddingBottom: `6px`,
@@ -37,24 +31,17 @@ const HeroBackground = () => (
         <h2 style={{ fontWeight: `normal`, marginBottom: `12px` }}>Grafisk formgivning</h2>
         <h2 style={{ fontWeight: `normal`, marginBottom: `12px` }}>Art Direction</h2>
         <h2 style={{ fontWeight: `normal`, marginBottom: `12px` }}>Arkitektur</h2>
-
-      </div>
-      <div style={{
-        position: `absolute`,
-        bottom: `16px`,
-
-        display: `flex`,
-        /*  flexDirection: `column`, */
-        justifyContent: `center`,
-        alignItems: `center`,
-
-      }}>
-        {/* <h2 style={{
-            letterSpacing: `1px`,
-            marginTop: `32px`,
-          }}>urval av projekt</h2> */}
-        <div>
-          <span style={{ fontSize: `36px`, }}>▽</span>
+        <div style={{
+          position: `absolute`,
+          bottom: `16px`,
+          display: `flex`,
+          justifyContent: `center`,
+          alignItems: `center`,
+          alignSelf: `center`,
+        }}>
+          <div>
+            <span style={{ fontSize: `36px`, }}>▽</span>
+          </div>
         </div>
       </div>
       <BackgroundSlider
