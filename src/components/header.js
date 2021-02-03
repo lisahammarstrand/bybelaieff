@@ -35,13 +35,13 @@ const Header = ({ siteTitle }) => {
             <HamburgerMenu>
               <HbgNavList>
                 <li onClick={() => setOpenHamburger(false)}>
-                  <Link className={headerStyles.navItemHbg} to="/">Home</Link>
+                  <Link className={headerStyles.navItemHbg} to="/">Projekt</Link>
                 </li>
                 <li onClick={() => setOpenHamburger(false)}>
-                  <Link className={headerStyles.navItemHbg} to="/about">About</Link>
+                  <Link className={headerStyles.navItemHbg} to="/about">Om</Link>
                 </li>
                 <li onClick={() => setOpenHamburger(false)}>
-                  <Link className={headerStyles.navItemHbg} to="/contact">Contact</Link>
+                  <Link className={headerStyles.navItemHbg} to="/contact">Kontakt</Link>
                 </li>
               </HbgNavList>
             </HamburgerMenu>)}
@@ -49,13 +49,13 @@ const Header = ({ siteTitle }) => {
           <nav>
             <ul className={headerStyles.navList}>
               <li>
-                <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/">Home</Link>
+                <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/">Projekt</Link>
               </li>
               <li>
-                <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/about">About</Link>
+                <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/about">Om</Link>
               </li>
               <li>
-                <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/contact">Contact</Link>
+                <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/contact">Kontakt</Link>
               </li>
             </ul>
           </nav >

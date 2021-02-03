@@ -8,7 +8,7 @@ const ProjectDetailsTopSection = styled.section`
   right: 0;
   bottom: 0;  */
   width: 100%;
-  height: 100vh;
+  height: 280px;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -18,23 +18,23 @@ const ProjectDetailsTopSection = styled.section`
   background: ${(props) => props.background};  
   text-align: center;
 `
-export const TopSectionTitle = styled.h1`
+/* export const TopSectionTitle = styled.h1`
   font-size: 102px;
-`
-const ChevronDown = styled.span`
+` */
+/* const ChevronDown = styled.span`
   position: absolute;
   bottom: 32px;
   font-size: 42px;
-`
+` */
 
 const DetailsTopSection = ({ background, title, description }) => {
   return (
     <ProjectDetailsTopSection background={background}>
-      <TopSectionTitle>{title}</TopSectionTitle>
-      <h2>{description}</h2>
-      <ChevronDown>
+      <h1 style={{ fontSize: `3.0rem` }}>{title}</h1>
+      {/* <h2>{description}</h2> */}
+      {/*  <ChevronDown>
         ▽
-      </ChevronDown>
+      </ChevronDown> */}
     </ProjectDetailsTopSection>
   )
 }

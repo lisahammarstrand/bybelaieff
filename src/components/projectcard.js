@@ -12,7 +12,6 @@ const ProjectCardContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
- /*  border: 1px solid white; */
 
   &:hover {
     opacity: 0.8;
@@ -25,6 +24,21 @@ const ProjectCardContainer = styled.div`
     width: 100vw;
   }
 `
+/* const DescriptionWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: hidden;
+
+  ${ProjectCardContainer}:hover & {
+    visibiliy: visible;
+  }
+` */
 const Description = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,12 +52,15 @@ const Description = styled.div`
 `
 
 const ProjectCard = ({ background, title, description }) => {
+
   return (
     <ProjectCardContainer background={background}>
+      {/*     <DescriptionWrapper> */}
       <Description>
         <h3>{title}</h3>
         <p>{description}</p>
       </Description>
+      {/* </DescriptionWrapper> */}
     </ProjectCardContainer>
   )
 }
