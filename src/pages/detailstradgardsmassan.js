@@ -33,6 +33,16 @@ const ProjectDetailsTradgardsMassan = () => {
         credits="Uppdragsgivare: Stockholmsmässan via Kasselring & Co. Projektledare: Johan Skylling. 
         Produktionsledare: Eva Kasselring. AD: Nina Belaieff. Illustratör: Lina Eklund."
       />
+      <DetailsDescription
+        color="#71a9ad"
+        title="TRÄDGÅRDSMÄSSAN 2015"
+        title2="Tema Sommar salong."
+        description="I Sommarsalongen möts trädgården som rum och plats. Och det allra bästa av kreativa lösningar samlade på 
+        en och samma plats. Sommarsalongen blir mötesplats. Det handlar om att vara tillsammans och umgås i grönskan. Men det handlar
+        också om att vara innovativ, nytänkande och kreativ i trädgården. Temas följs upp i affischer, annonser, webb och idéträdgårdarna på mässan."
+        credits="Uppdragsgivare: Stockholmsmässan via Kasselring & Co. Projektledare: Johan Skylling. 
+        Produktionsledare: Eva Kasselring. AD: Nina Belaieff. Copy: Anna Blixt. Fotograf: Joachim Belaieff. "
+      />
     </Layout>
   )
 
