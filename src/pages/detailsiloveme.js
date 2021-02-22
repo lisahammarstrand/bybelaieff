@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsDescription from '../components/projectdetailsdescription'
+import DetailsImageSection from '../components/projectdetailsimage'
 
 
 const ProjectDetailsIloveMe = () => {
@@ -43,14 +44,18 @@ const ProjectDetailsIloveMe = () => {
         title={data.contentfulFeaturedProjectDetailsILoveMe.title}
         description={data.contentfulFeaturedProjectDetailsILoveMe.shortDescription}
       />
+
       <Img className="details-image" fluid={data.contentfulFeaturedProjectDetailsILoveMe.heroImage.fluid}
       />
+
       <DetailsDescription
         color="#40798C"
         title={data.contentfulFeaturedProjectDetailsILoveMe.secondTitle}
         description={data.contentfulFeaturedProjectDetailsILoveMe.secondDescription.childMarkdownRemark.rawMarkdownBody}
       />
-      <Img className="details-image" fluid={data.contentfulFeaturedProjectDetailsILoveMe.secondImage.fluid} />
+      <DetailsImageSection>
+        <Img className="details-image" fluid={data.contentfulFeaturedProjectDetailsILoveMe.secondImage.fluid} />
+      </DetailsImageSection>
     </Layout>
   )
 

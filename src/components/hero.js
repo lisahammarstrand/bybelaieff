@@ -1,6 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 import BackgroundSlider from 'gatsby-image-background-slider'
 
@@ -9,7 +11,9 @@ const HeroContainer = styled.section`
   height: 580px; 
   color: white;
 `
-
+const ChevronDown = styled.h2`
+  margin: 0px;
+`
 const HeroBackground = () => (
   <>
     <HeroContainer>
@@ -39,9 +43,9 @@ const HeroBackground = () => (
           alignItems: `center`,
           alignSelf: `center`,
         }}>
-          <div>
-            <span style={{ fontSize: `36px`, }}>▽</span>
-          </div>
+          <ChevronDown>
+            <FontAwesomeIcon icon={faChevronDown} />
+          </ChevronDown>
         </div>
       </div>
       <BackgroundSlider
