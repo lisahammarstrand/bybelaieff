@@ -16,21 +16,21 @@ const ProjectDetailsVardguiden = () => {
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background="#356266"
+        background="#7ba07e"
         title="Vårdguiden 1177" />
       <DetailsNavbar />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>
       <DetailsDescription
-        color="#356266"
+        color="#7ba07e"
         title="Vårdguiden 1177"
         title2="Vårda vårda."
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in."
         credits="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in."
       />
       <DetailsDescription
-        color="#356266"
+        color="#7ba07e"
         title="Vårdguiden 2 1177"
         title2="Vårda 2 vårda 2."
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in."

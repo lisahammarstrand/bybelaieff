@@ -16,7 +16,7 @@ const ProjectDetailsTradgardsMassan = () => {
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background="#71a9ad"
+        background="#356266"
         title="Trädgårdsmässan"
         description="The Gardening Fair" />
       <DetailsNavbar />
@@ -24,7 +24,7 @@ const ProjectDetailsTradgardsMassan = () => {
         <Image />
       </DetailsImageSection>
       <DetailsDescription
-        color="#71a9ad"
+        color="#356266"
         title="TRÄDGÅRDSMÄSSAN 2014"
         title2="Tema Urban fägring."
         description="Ingen plats är omöjlig att odla på. Tillbaka till naturen, fast inne i stan. Men även det omvända. 
@@ -34,7 +34,7 @@ const ProjectDetailsTradgardsMassan = () => {
         Produktionsledare: Eva Kasselring. AD: Nina Belaieff. Illustratör: Lina Eklund."
       />
       <DetailsDescription
-        color="#71a9ad"
+        color="#356266"
         title="TRÄDGÅRDSMÄSSAN 2015"
         title2="Tema Sommar salong."
         description="I Sommarsalongen möts trädgården som rum och plats. Och det allra bästa av kreativa lösningar samlade på 

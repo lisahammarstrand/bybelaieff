@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const ProjectCardContainer = styled.div`
   position: relative;
-  width: 33vw;
+  width: 33.3333333vw;
   height: 300px;
   background: ${(props) => props.background};
   color: white;
@@ -58,7 +58,7 @@ const ProjectCard = ({ background, title, description }) => {
       {/*     <DescriptionWrapper> */}
       <Description>
         <h3>{title}</h3>
-        <p>{description}</p>
+        {/* <p>{description}</p> */}
       </Description>
       {/* </DescriptionWrapper> */}
     </ProjectCardContainer>

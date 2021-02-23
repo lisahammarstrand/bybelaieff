@@ -16,7 +16,7 @@ const ProjectDetailsSetterwalls = () => {
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background="#2a5155"
+        background="#356266"
         title="Setterwalls"
         description="Attorneys at law" />
       <DetailsNavbar />
@@ -24,7 +24,7 @@ const ProjectDetailsSetterwalls = () => {
         <Image />
       </DetailsImageSection>
       <DetailsDescription
-        color="#2a5155"
+        color="#356266"
         title="Paragraphs and paragraphs"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in." />
 

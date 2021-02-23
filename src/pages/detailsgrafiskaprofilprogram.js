@@ -10,14 +10,14 @@ import Image from '../components/image'
 import DetailsDescription from '../components/projectdetailsdescription'
 
 
-const ProjectDetailsSeaBreeze = () => {
+const ProjectDetailsGrafiskaProfilprogram = () => {
   return (
 
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
         background="#71a9ad"
-        title="Sea Breeze"
+        title="Grafiska profilprogram"
         description="Grenada hide away" />
       <DetailsNavbar />
       <DetailsImageSection>
@@ -32,4 +32,4 @@ const ProjectDetailsSeaBreeze = () => {
   )
 
 }
-export default ProjectDetailsSeaBreeze
+export default ProjectDetailsGrafiskaProfilprogram

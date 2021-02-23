@@ -37,14 +37,14 @@ const ProjectDetailsGS1 = () => {
       <SEO title="Project Details" />
       <ShowCaseContainer>
         <DetailsTopSection
-          background="#7ba07e"
+          background="#4a7351"
           title={data.contentfulFeaturedProjectDetailsGs1.title}
           description={data.contentfulFeaturedProjectDetailsGs1.shortDescription}
         />
         <DetailsNavbar />
         <Img className="detail-image" fluid={data.contentfulFeaturedProjectDetailsGs1.heroImage.fluid} />
         <DetailsDescription
-          color="#7ba07e"
+          color="#4a7351"
           title={data.contentfulFeaturedProjectDetailsGs1.secondTitle}
           description={data.contentfulFeaturedProjectDetailsGs1.secondDescription.childMarkdownRemark.rawMarkdownBody}
         />

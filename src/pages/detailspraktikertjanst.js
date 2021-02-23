@@ -16,7 +16,7 @@ const ProjectDetailsPraktikertjanst = () => {
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background="#7ba07e"
+        background="#4a7351"
         title="Praktikertjänst"
         description="Praktikertjänst" />
       <DetailsNavbar />
@@ -24,7 +24,7 @@ const ProjectDetailsPraktikertjanst = () => {
         <Image />
       </DetailsImageSection>
       <DetailsDescription
-        color="#7ba07e"
+        color="#4a7351"
         title="Praktikertjänts Praktikertjänst Praktikertjänst"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in." />
 

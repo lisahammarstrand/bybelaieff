@@ -16,7 +16,7 @@ const ProjectDetailsRegionStockholm = () => {
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background="#356266"
+        background="#71a9Ad"
         title="Region Stockholm"
         description="Region Stockholm" />
       <DetailsNavbar />
@@ -24,7 +24,7 @@ const ProjectDetailsRegionStockholm = () => {
         <Image />
       </DetailsImageSection>
       <DetailsDescription
-        color="#356266"
+        color="#71a9Ad"
         title="Region Stockholm Region Stockholm"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in." />
 
