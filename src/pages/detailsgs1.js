@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
+import DetailsNavbar from '../components/navbarprojectdetails'
 import DetailsDescription from '../components/projectdetailsdescription'
 import { ShowCaseContainer } from '../lib/showcasecontainer'
 
@@ -36,13 +37,14 @@ const ProjectDetailsGS1 = () => {
       <SEO title="Project Details" />
       <ShowCaseContainer>
         <DetailsTopSection
-          background="#1F363D"
+          background="#7ba07e"
           title={data.contentfulFeaturedProjectDetailsGs1.title}
           description={data.contentfulFeaturedProjectDetailsGs1.shortDescription}
         />
+        <DetailsNavbar />
         <Img className="detail-image" fluid={data.contentfulFeaturedProjectDetailsGs1.heroImage.fluid} />
         <DetailsDescription
-          color="#1F363D"
+          color="#7ba07e"
           title={data.contentfulFeaturedProjectDetailsGs1.secondTitle}
           description={data.contentfulFeaturedProjectDetailsGs1.secondDescription.childMarkdownRemark.rawMarkdownBody}
         />

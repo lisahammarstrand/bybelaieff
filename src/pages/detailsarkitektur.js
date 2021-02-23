@@ -10,26 +10,26 @@ import Image from '../components/image'
 import DetailsDescription from '../components/projectdetailsdescription'
 
 
-const ProjectDetailsSeaBreeze = () => {
+const ProjectDetailsArkitektur = () => {
   return (
 
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background="#71a9ad"
-        title="Sea Breeze"
-        description="Grenada hide away" />
+        background="#c6b364"
+        title="Arkitektur"
+        description="Arkitektur" />
       <DetailsNavbar />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>
       <DetailsDescription
-        color="#71a9ad"
-        title="All sunshine and vibrant colors"
+        color="#c6b364"
+        title="Arkitektur arkitektur arkitektur"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in." />
 
     </Layout>
   )
 
 }
-export default ProjectDetailsSeaBreeze
+export default ProjectDetailsArkitektur

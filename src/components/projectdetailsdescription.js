@@ -40,7 +40,7 @@ const DetailsDescription = ({ color, title, title2, description, credits }) => {
         <DetailsDescriptionTitle color={color}>
           {title}
         </DetailsDescriptionTitle>
-        <p> <span style={{ fontWeight: `bold`, color: `#71a9ad` }}>{title2}</span> {description}</p>
+        <p> <span style={{ fontWeight: `bold`, color: color }}>{title2}</span> {description}</p>
         <DetailsDescriptionCredits>
           <p>{credits}</p>
         </DetailsDescriptionCredits>
