@@ -6,10 +6,10 @@ export const HamburgerMenu = styled.nav`
   justify-content: center;
   background: #1f363d;
   color: white;
-  width: 150px;
-  height: 180px;
+  width: 200px;
+  height: 150px;
   padding: 0px;
-  text-align: center;
+  text-align: left;
   position: absolute;
   top: 100;
   right: 0;
@@ -36,7 +36,7 @@ export const HbgNavList = styled.ul`
   width: 100%;
   list-style: none;
   margin: 0;
-  padding: 16px;
+  padding: 16px 16px 16px 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

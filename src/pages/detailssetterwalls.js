@@ -19,7 +19,10 @@ const ProjectDetailsSetterwalls = () => {
         background="#356266"
         title="Setterwalls"
         description="Attorneys at law" />
-      <DetailsNavbar />
+      <DetailsNavbar
+        linkleft="/detailshallbarvardag"
+        linkright="/detailspraktikertjanst"
+      />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>

@@ -19,7 +19,10 @@ const ProjectDetailsKapi = () => {
         background="#356266"
         title="KAPI"
         description="Multi cultural communication" />
-      <DetailsNavbar />
+      <DetailsNavbar
+        linkleft="/detailsregionstockholm"
+        linkright="/detailsarkitektur"
+      />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>

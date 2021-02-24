@@ -18,7 +18,10 @@ const ProjectDetailsSwedbank = () => {
       <DetailsTopSection
         background="#7ba07e"
         title="Swedbank" />
-      <DetailsNavbar />
+      <DetailsNavbar
+        linkleft="/detailstradgardsmassan"
+        linkright="/detailsgs1"
+      />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>

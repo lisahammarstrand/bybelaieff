@@ -19,7 +19,10 @@ const ProjectDetailsRegionStockholm = () => {
         background="#71a9Ad"
         title="Region Stockholm"
         description="Region Stockholm" />
-      <DetailsNavbar />
+      <DetailsNavbar
+        linkleft="/detailsutbildningsmaterial"
+        linkright="/detailskapi"
+      />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>

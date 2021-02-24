@@ -19,7 +19,10 @@ const ProjectDetailsPraktikertjanst = () => {
         background="#4a7351"
         title="Praktikertjänst"
         description="Praktikertjänst" />
-      <DetailsNavbar />
+      <DetailsNavbar
+        linkleft="/detailssetterwalls"
+        linkright="/"
+      />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>

@@ -19,7 +19,10 @@ const ProjectDetailsArkitektur = () => {
         background="#c6b364"
         title="Arkitektur"
         description="Arkitektur" />
-      <DetailsNavbar />
+      <DetailsNavbar
+        linkleft="/detailskapi"
+        linkright="/detailsvardguiden"
+      />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>

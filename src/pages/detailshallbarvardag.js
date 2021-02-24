@@ -19,7 +19,10 @@ const ProjectDetailsHallbarVardag = () => {
         background="#71a9Ad"
         title="Hållbar vardag"
         description="Sustainable everyday life" />
-      <DetailsNavbar />
+      <DetailsNavbar
+        linkleft="/detailsvardguiden"
+        linkright="/detailssetterwalls"
+      />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>

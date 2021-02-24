@@ -19,7 +19,9 @@ const ProjectDetailsTradgardsMassan = () => {
         background="#356266"
         title="Trädgårdsmässan"
         description="The Gardening Fair" />
-      <DetailsNavbar />
+      <DetailsNavbar
+        linkleft="/detailsgrafiskaprofilprogram"
+        linkright="/detailsswedbank" />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>

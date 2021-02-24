@@ -19,7 +19,10 @@ const ProjectDetailsGrafiskaProfilprogram = () => {
         background="#71a9ad"
         title="Grafiska profilprogram"
         description="Grenada hide away" />
-      <DetailsNavbar />
+      <DetailsNavbar
+        linkleft="/"
+        linkright="/detailstradgardsmassan"
+      />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>

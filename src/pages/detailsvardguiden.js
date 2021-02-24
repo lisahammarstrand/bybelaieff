@@ -18,7 +18,10 @@ const ProjectDetailsVardguiden = () => {
       <DetailsTopSection
         background="#7ba07e"
         title="Vårdguiden 1177" />
-      <DetailsNavbar />
+      <DetailsNavbar
+        linkleft="/detailsarkitektur"
+        linkright="/detailshallbarvardag"
+      />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>

@@ -19,7 +19,10 @@ const ProjectDetailsUtbildningsMaterial = () => {
         background="#7ba07e"
         title="Utbildningsmaterial"
         description="Utbildningsmaterial" />
-      <DetailsNavbar />
+      <DetailsNavbar
+        linkleft="/detailsgs1"
+        linkright="/detailsregionstockholm"
+      />
       <DetailsImageSection>
         <Image />
       </DetailsImageSection>

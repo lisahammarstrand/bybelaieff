@@ -41,7 +41,10 @@ const ProjectDetailsGS1 = () => {
           title={data.contentfulFeaturedProjectDetailsGs1.title}
           description={data.contentfulFeaturedProjectDetailsGs1.shortDescription}
         />
-        <DetailsNavbar />
+        <DetailsNavbar
+          linkleft="/detailsswedbank"
+          linkright="/detailsutbildningsmaterial"
+        />
         <Img className="detail-image" fluid={data.contentfulFeaturedProjectDetailsGs1.heroImage.fluid} />
         <DetailsDescription
           color="#4a7351"

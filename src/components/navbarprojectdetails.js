@@ -19,15 +19,15 @@ const NavIcon = styled.h3`
   color: black;
 `
 
-const DetailsNavbar = () => {
+const DetailsNavbar = ({ linkleft, linkright }) => {
   return (
     <NavContainer>
-      <Link to="/detailshallbarvardag">
+      <Link to={linkleft}>
         <NavIcon>
           <FontAwesomeIcon icon={faChevronLeft} />
         </NavIcon>
       </Link>
-      <Link to="/detailsseabreeze">
+      <Link to={linkright}>
         <NavIcon>
           <FontAwesomeIcon icon={faChevronRight} />
         </NavIcon>
