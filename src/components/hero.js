@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
@@ -11,8 +11,31 @@ const HeroContainer = styled.section`
   height: 580px; 
   color: white;
 `
-const ChevronDown = styled.h2`
+const ChevronDown = styled.h1`
   margin: 0px;
+`
+const scrolldown = keyframes`
+0% {height: 30%;
+    opacity: 0;
+  }
+50% {height: 15%;
+    opacity: 1;
+  }
+100% {height: 0%;
+      opacity: 0;   
+  }
+}
+`
+const ScrollDown = styled.div`
+  position: absolute;
+  left: 49%;
+  height: 100px;
+  bottom: 0px;
+  display: flex;
+  justifyContent: center;
+  alignItems: center;
+  alignSelf: center;
+  animation: ${scrolldown} 4s linear infinite;
 `
 const HeroBackground = () => (
   <>
@@ -35,18 +58,11 @@ const HeroBackground = () => (
         <h2 style={{ fontWeight: `normal`, marginBottom: `12px` }}>Grafisk formgivning</h2>
         <h2 style={{ fontWeight: `normal`, marginBottom: `12px` }}>Art Direction</h2>
         <h2 style={{ fontWeight: `normal`, marginBottom: `12px` }}>Arkitektur</h2>
-        <div style={{
-          position: `absolute`,
-          bottom: `16px`,
-          display: `flex`,
-          justifyContent: `center`,
-          alignItems: `center`,
-          alignSelf: `center`,
-        }}>
+        <ScrollDown>
           <ChevronDown>
             <FontAwesomeIcon icon={faChevronDown} />
           </ChevronDown>
-        </div>
+        </ScrollDown>
       </div>
       <BackgroundSlider
         query={useStaticQuery(graphql`
