@@ -13,6 +13,7 @@ const NavContainer = styled.section`
   height: 50px;
   margin: 0;
   padding: 32px;
+  background: #ffffff;
   `
 const NavIcon = styled.h3`
   margin: 0px;

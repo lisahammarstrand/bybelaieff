@@ -1,52 +1,95 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
-import DetailsImageSection from '../components/projectdetailsimage'
-import Image from '../components/image'
 import DetailsDescription from '../components/projectdetailsdescription'
 
+const DescriptionContainer = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #d9d9d9 , white);
+  `
 
 const ProjectDetailsTradgardsMassan = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    contentfulProjectDetailsTradgardsmassan {
+      background
+      titleTop
+      titleColor
+      titleOne
+      subtitleOne
+      descriptionOne {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      creditsOne {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      imageOne {
+        fixed(quality: 100, width: 756) {
+          ...GatsbyContentfulFixed
+        }
+      }
+      titleTwo
+      subtitleTwo
+      descriptionTwo {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      creditsTwo {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      imageTwo {
+        fixed(quality: 100, width: 756) {
+          ...GatsbyContentfulFixed
+        }
+      }
+    }
+  }
+`)
   return (
-
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background="#356266"
-        title="Trädgårdsmässan"
-        description="The Gardening Fair" />
+        background={data.contentfulProjectDetailsTradgardsmassan.background}
+        title={data.contentfulProjectDetailsTradgardsmassan.titleTop} />
       <DetailsNavbar
         linkleft="/detailsgrafiskaprofilprogram"
         linkright="/detailsswedbank" />
-      <DetailsImageSection>
-        <Image />
-      </DetailsImageSection>
-      <DetailsDescription
-        color="#356266"
-        title="TRÄDGÅRDSMÄSSAN 2014"
-        title2="Tema Urban fägring."
-        description="Ingen plats är omöjlig att odla på. Tillbaka till naturen, fast inne i stan. Men även det omvända. 
-        Det urbana flyttar in i våra trädgårdar i form av modern arkitektur, betong och gråskalor. Urban fägring helt enkelt. 
-        Temat följs upp i affischer, annonser, webb och idéträdgårdar på mässan."
-        credits="Uppdragsgivare: Stockholmsmässan via Kasselring & Co. Projektledare: Johan Skylling. 
-        Produktionsledare: Eva Kasselring. AD: Nina Belaieff. Illustratör: Lina Eklund."
-      />
-      <DetailsDescription
-        color="#356266"
-        title="TRÄDGÅRDSMÄSSAN 2015"
-        title2="Tema Sommar salong."
-        description="I Sommarsalongen möts trädgården som rum och plats. Och det allra bästa av kreativa lösningar samlade på 
-        en och samma plats. Sommarsalongen blir mötesplats. Det handlar om att vara tillsammans och umgås i grönskan. Men det handlar
-        också om att vara innovativ, nytänkande och kreativ i trädgården. Temas följs upp i affischer, annonser, webb och idéträdgårdarna på mässan."
-        credits="Uppdragsgivare: Stockholmsmässan via Kasselring & Co. Projektledare: Johan Skylling. 
-        Produktionsledare: Eva Kasselring. AD: Nina Belaieff. Copy: Anna Blixt. Fotograf: Joachim Belaieff. "
-      />
+      <DescriptionContainer>
+        <DetailsDescription
+          color={data.contentfulProjectDetailsTradgardsmassan.titleColor}
+          title={data.contentfulProjectDetailsTradgardsmassan.titleOne}
+          title2={data.contentfulProjectDetailsTradgardsmassan.subtitleOne}
+          description={data.contentfulProjectDetailsTradgardsmassan.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+          credits={data.contentfulProjectDetailsTradgardsmassan.creditsOne.childMarkdownRemark.rawMarkdownBody}
+        />
+        <Img fixed={data.contentfulProjectDetailsTradgardsmassan.imageOne.fixed} alt="trädgårdsmässan_2014" />
+        <DetailsDescription
+          color={data.contentfulProjectDetailsTradgardsmassan.titleColor}
+          title={data.contentfulProjectDetailsTradgardsmassan.titleTwo}
+          title2={data.contentfulProjectDetailsTradgardsmassan.subtitleTwo}
+          description={data.contentfulProjectDetailsTradgardsmassan.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+          credits={data.contentfulProjectDetailsTradgardsmassan.creditsTwo.childMarkdownRemark.rawMarkdownBody}
+        />
+        <Img fixed={data.contentfulProjectDetailsTradgardsmassan.imageTwo.fixed} alt="trädgårdsmässan_2015" />
+      </DescriptionContainer>
     </Layout>
   )
-
 }
 export default ProjectDetailsTradgardsMassan

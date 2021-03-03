@@ -1,36 +1,91 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
-import DetailsImageSection from '../components/projectdetailsimage'
-import Image from '../components/image'
-import DetailsDescription from '../components/projectdetailsdescription'
 
+
+const GrayDivider = styled.div`
+  width: 90%;
+  margin: 0;
+  border-bottom: 2px solid lightgray;
+  `
 
 const ProjectDetailsGrafiskaProfilprogram = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    contentfulGrafiskaProfilprogram {
+      background
+      titleTop
+      imageOne {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      imageTwo {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      imageThree {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      imageFour {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      imageFive {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      imageSix {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      imageSeven {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyContentfulFluid
+        }
+      }
+    }
+  }
+  `)
   return (
 
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background="#71a9ad"
-        title="Grafiska profilprogram"
-        description="Grenada hide away" />
+        background={data.contentfulGrafiskaProfilprogram.background}
+        title={data.contentfulGrafiskaProfilprogram.titleTop}
+      />
       <DetailsNavbar
         linkleft="/"
         linkright="/detailstradgardsmassan"
       />
-      <DetailsImageSection>
-        <Image />
-      </DetailsImageSection>
-      <DetailsDescription
-        color="#71a9ad"
-        title="All sunshine and vibrant colors"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in." />
-
+      <section>
+        <Img fluid={data.contentfulGrafiskaProfilprogram.imageOne.fluid} alt="grafisk_profil_sea_breeze" />
+        <GrayDivider />
+        <Img fluid={data.contentfulGrafiskaProfilprogram.imageTwo.fluid} alt="grafisk_profil_sea_sodertandlakarna" />
+        <GrayDivider />
+        <Img fluid={data.contentfulGrafiskaProfilprogram.imageThree.fluid} alt="grafisk_profil_movement" />
+        <GrayDivider />
+        <Img fluid={data.contentfulGrafiskaProfilprogram.imageFour.fluid} alt="grafisk_profil_stockholms_regionens" />
+        <GrayDivider />
+        <Img fluid={data.contentfulGrafiskaProfilprogram.imageFive.fluid} alt="grafisk_profil_sea_bright" />
+        <GrayDivider />
+        <Img fluid={data.contentfulGrafiskaProfilprogram.imageSix.fluid} alt="grafisk_profil_om_shanti" />
+        <GrayDivider />
+        <Img fluid={data.contentfulGrafiskaProfilprogram.imageSeven.fluid} alt="grafisk_profil_valideringsforum" />
+      </section>
     </Layout>
   )
 

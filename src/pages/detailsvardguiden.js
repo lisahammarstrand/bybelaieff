@@ -1,44 +1,97 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
-import DetailsImageSection from '../components/projectdetailsimage'
-import Image from '../components/image'
 import DetailsDescription from '../components/projectdetailsdescription'
 
+const DescriptionContainer = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #d9d9d9 , white);
+  `
 
 const ProjectDetailsVardguiden = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    contentfulProjectDetailsVardguiden {
+      background
+      titleTop
+      titleColor
+      titleOne
+      subtitleOne
+      descriptionOne {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      creditsOne {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      imageOne {
+        fixed(quality: 100, width: 225) {
+          ...GatsbyContentfulFixed
+        }
+      }
+      titleTwo
+      subtitleTwo
+      descriptionTwo {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      creditsTwo {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      imageTwo {
+        fixed(quality: 100, width: 225) {
+          ...GatsbyContentfulFixed
+        }
+      }
+    }
+  }
+  `
+  )
   return (
 
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background="#7ba07e"
-        title="Vårdguiden 1177" />
+        background={data.contentfulProjectDetailsVardguiden.background}
+        title={data.contentfulProjectDetailsVardguiden.titleTop} />
       <DetailsNavbar
         linkleft="/detailsarkitektur"
         linkright="/detailshallbarvardag"
       />
-      <DetailsImageSection>
-        <Image />
-      </DetailsImageSection>
-      <DetailsDescription
-        color="#7ba07e"
-        title="Vårdguiden 1177"
-        title2="Vårda vårda."
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in."
-        credits="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in."
-      />
-      <DetailsDescription
-        color="#7ba07e"
-        title="Vårdguiden 2 1177"
-        title2="Vårda 2 vårda 2."
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in."
-        credits="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in."
-      />
+      <DescriptionContainer>
+        <DetailsDescription
+          color={data.contentfulProjectDetailsVardguiden.titleColor}
+          title={data.contentfulProjectDetailsVardguiden.titleOne}
+          title2={data.contentfulProjectDetailsVardguiden.subtitleOne}
+          description={data.contentfulProjectDetailsVardguiden.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+          credits={data.contentfulProjectDetailsVardguiden.creditsOne.childMarkdownRemark.rawMarkdownBody}
+        />
+        <Img fixed={data.contentfulProjectDetailsVardguiden.imageOne.fixed} alt="vardguiden_1177" />
+        <DetailsDescription
+          color={data.contentfulProjectDetailsVardguiden.titleColor}
+          title={data.contentfulProjectDetailsVardguiden.titleTwo}
+          title2={data.contentfulProjectDetailsVardguiden.subtitleTwo}
+          description={data.contentfulProjectDetailsVardguiden.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+          credits={data.contentfulProjectDetailsVardguiden.creditsTwo.childMarkdownRemark.rawMarkdownBody}
+        />
+        <Img fixed={data.contentfulProjectDetailsVardguiden.imageTwo.fixed} alt="vardguiden_1177" />
+      </DescriptionContainer>
     </Layout>
   )
 

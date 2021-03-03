@@ -1,36 +1,47 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
-import DetailsImageSection from '../components/projectdetailsimage'
-import Image from '../components/image'
 import DetailsDescription from '../components/projectdetailsdescription'
 
+const GrayDivider = styled.div`
+  width: 90%;
+  margin: 0;
+  border-bottom: 2px solid lightgray;
+  `
 
 const ProjectDetailsArkitektur = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    contentfulArkitektur {
+      background
+      titleTop
+      imageOne {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyContentfulFluid
+        }
+      }
+    }
+  }
+  `)
   return (
 
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background="#c6b364"
-        title="Arkitektur"
-        description="Arkitektur" />
+        background={data.contentfulArkitektur.background}
+        title={data.contentfulArkitektur.titleTop} />
       <DetailsNavbar
         linkleft="/detailskapi"
         linkright="/detailsvardguiden"
       />
-      <DetailsImageSection>
-        <Image />
-      </DetailsImageSection>
-      <DetailsDescription
-        color="#c6b364"
-        title="Arkitektur arkitektur arkitektur"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in." />
-
+      <Img fluid={data.contentfulArkitektur.imageOne.fluid} alt="arkitektur" />
+      <GrayDivider />
     </Layout>
   )
 

@@ -2,19 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-
-
 const DetailsDescriptionContainer = styled.section`
   width: 100%;
   height: auto;
-  padding: 40px;
+  padding: 40px 40px 10px 40px;
   margin: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #000;
-  background-image: linear-gradient(to right, lightgray , white);
+  background-image: linear-gradient(to right, #d9d9d9 , white);
 `
 const DetailsDescriptionCopy = styled.article`
   max-width: 600px;

@@ -1,44 +1,99 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
+import { DetailsDescriptionContainer } from '../components/detailsdescriptioncontainer'
 import DetailsImageSection from '../components/projectdetailsimage'
 import Image from '../components/image'
 import DetailsDescription from '../components/projectdetailsdescription'
 
+const DescriptionContainer = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #d9d9d9 , white);
+  `
 
 const ProjectDetailsSwedbank = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    contentfulProjectDetailsSwedbank {
+      background
+      titleTop
+      titleColor
+      titleOne
+      subtitleOne
+      descriptionOne {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      creditsOne {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      imageOne {
+        fixed(quality: 100, width: 225) {
+          ...GatsbyContentfulFixed
+        }
+      }
+      titleTwo
+      subtitleTwo
+      descriptionTwo {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      creditsTwo {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      imageTwo {
+        fixed(quality: 100, width: 225) {
+          ...GatsbyContentfulFixed
+        }
+      }
+    }
+  }`
+  )
   return (
 
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background="#7ba07e"
-        title="Swedbank" />
+        background={data.contentfulProjectDetailsSwedbank.background}
+        title={data.contentfulProjectDetailsSwedbank.titleTop} />
       <DetailsNavbar
         linkleft="/detailstradgardsmassan"
         linkright="/detailsgs1"
       />
-      <DetailsImageSection>
-        <Image />
-      </DetailsImageSection>
-      <DetailsDescription
-        color="#7ba07e"
-        title="Swedbank"
-        title2="Bank bank."
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in."
-        credits="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in."
-      />
-      <DetailsDescription
-        color="#7ba07e"
-        title="Swedbank 2"
-        title2="Bank 2 bank 2."
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in."
-        credits="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum mi et tristique mattis. Curabitur sagittis imperdiet bibendum. Nulla tincidunt in nisi sit amet faucibus. Vivamus sed sem sapien. Nulla malesuada hendrerit lacus, condimentum rutrum lacus egestas in."
-      />
+      <DescriptionContainer>
+        <DetailsDescription
+          color={data.contentfulProjectDetailsSwedbank.titleColor}
+          title={data.contentfulProjectDetailsSwedbank.titleOne}
+          title2={data.contentfulProjectDetailsSwedbank.subtitleOne}
+          description={data.contentfulProjectDetailsSwedbank.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+          credits={data.contentfulProjectDetailsSwedbank.creditsOne.childMarkdownRemark.rawMarkdownBody}
+        />
+        <Img fixed={data.contentfulProjectDetailsSwedbank.imageOne.fixed} alt="swedbank" />
+        <DetailsDescription
+          color={data.contentfulProjectDetailsSwedbank.titleColor}
+          title={data.contentfulProjectDetailsSwedbank.titleTwo}
+          title2={data.contentfulProjectDetailsSwedbank.subtitleTwo}
+          description={data.contentfulProjectDetailsSwedbank.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+          credits={data.contentfulProjectDetailsSwedbank.creditsTwo.childMarkdownRemark.rawMarkdownBody}
+        />
+        <Img fixed={data.contentfulProjectDetailsSwedbank.imageTwo.fixed} alt="swedbank" />
+      </DescriptionContainer>
     </Layout>
   )
 
