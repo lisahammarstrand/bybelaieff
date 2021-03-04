@@ -71,20 +71,20 @@ const ProjectDetailsGrafiskaProfilprogram = () => {
         linkleft="/"
         linkright="/detailstradgardsmassan"
       />
-      <section>
-        <Img fluid={data.contentfulGrafiskaProfilprogram.imageOne.fluid} alt="grafisk_profil_sea_breeze" />
+      <section className="content-container">
+        <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageOne.fluid} alt="grafisk_profil_sea_breeze" />
         <GrayDivider />
-        <Img fluid={data.contentfulGrafiskaProfilprogram.imageTwo.fluid} alt="grafisk_profil_sea_sodertandlakarna" />
+        <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageTwo.fluid} alt="grafisk_profil_sea_sodertandlakarna" />
         <GrayDivider />
-        <Img fluid={data.contentfulGrafiskaProfilprogram.imageThree.fluid} alt="grafisk_profil_movement" />
+        <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageThree.fluid} alt="grafisk_profil_movement" />
         <GrayDivider />
-        <Img fluid={data.contentfulGrafiskaProfilprogram.imageFour.fluid} alt="grafisk_profil_stockholms_regionens" />
+        <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageFour.fluid} alt="grafisk_profil_stockholms_regionens" />
         <GrayDivider />
-        <Img fluid={data.contentfulGrafiskaProfilprogram.imageFive.fluid} alt="grafisk_profil_sea_bright" />
+        <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageFive.fluid} alt="grafisk_profil_sea_bright" />
         <GrayDivider />
-        <Img fluid={data.contentfulGrafiskaProfilprogram.imageSix.fluid} alt="grafisk_profil_om_shanti" />
+        <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageSix.fluid} alt="grafisk_profil_om_shanti" />
         <GrayDivider />
-        <Img fluid={data.contentfulGrafiskaProfilprogram.imageSeven.fluid} alt="grafisk_profil_valideringsforum" />
+        <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageSeven.fluid} alt="grafisk_profil_valideringsforum" />
       </section>
     </Layout>
   )
