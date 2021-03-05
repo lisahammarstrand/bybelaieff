@@ -51,13 +51,13 @@ const HeroBackground = () => (
         top: `250px`,
 
       }}><h1 style={{
-        borderBottom: `1px solid white`,
         marginBottom: `16px`,
         paddingBottom: `6px`,
+        fontSize: `2.0rem`,
       }}>Exempel på uppdrag</h1>
-        <h2 style={{ fontWeight: `normal`, marginBottom: `12px` }}>Grafisk formgivning</h2>
-        <h2 style={{ fontWeight: `normal`, marginBottom: `12px` }}>Art Direction</h2>
-        <h2 style={{ fontWeight: `normal`, marginBottom: `12px` }}>Arkitektur</h2>
+        <h2 style={{ fontSize: `1.5rem`, fontWeight: `400`, marginBottom: `12px` }}>Grafisk formgivning</h2>
+        <h2 style={{ fontSize: `1.5rem`, fontWeight: `400`, marginBottom: `12px` }}>Art Direction</h2>
+        <h2 style={{ fontSize: `1.5rem`, fontWeight: `400`, marginBottom: `12px` }}>Arkitektur</h2>
         <ScrollDown>
           <ChevronDown>
             <FontAwesomeIcon icon={faChevronDown} />

@@ -12,7 +12,6 @@ const DetailsDescriptionContainer = styled.section`
   justify-content: center;
   align-items: center;
   color: #000;
-  background-image: linear-gradient(to right, #d9d9d9 , white);
 `
 const DetailsDescriptionCopy = styled.article`
   max-width: 600px;

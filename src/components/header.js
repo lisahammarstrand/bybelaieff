@@ -15,17 +15,18 @@ const Header = ({ siteTitle }) => {
       <div className={headerStyles.container}>
         <div className={headerStyles.logoBar}>
           {/*  <img className={headerStyles.logoImg} src={nina_flower_50x50_2} alt="flower_logo" /> */}
-          <h1 style={{ margin: 0, fontSize: `2.0 rem`, fontWeight: `normal` }}>
-            <Link
-              to="/"
-              style={{
-                color: `white`,
-                textDecoration: `none`,
-              }}
-            >
+
+          <Link
+            to="/"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}
+          >
+            <h1 style={{ margin: 0, fontSize: `1.8rem`, fontWeight: `400` }}>
               {siteTitle}
-            </Link>
-          </h1>
+            </h1>
+          </Link>
         </div>
         <nav>
           <div className={headerStyles.hbgIcon} >

@@ -15,7 +15,7 @@ const DescriptionContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right, #d9d9d9 , white);
+  /* background-image: linear-gradient(to right, #d9d9d9 , white); */
   `
 
 const ProjectDetailsTradgardsMassan = () => {

@@ -22,7 +22,7 @@ const ProjectDetailsTopSection = styled.section`
 const DetailsTopSection = ({ background, title }) => {
   return (
     <ProjectDetailsTopSection background={background}>
-      <h1 style={{ fontSize: `2.5rem` }}>{title}</h1>
+      <h1 style={{ fontSize: `2.25rem`, fontWeight: `400` }}>{title}</h1>
     </ProjectDetailsTopSection>
   )
 }
