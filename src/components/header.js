@@ -64,18 +64,19 @@ const Header = ({ siteTitle }) => {
             </HamburgerMenu>)}
           <nav>
             <ul className={headerStyles.navList}>
-              <div className={headerStyles.navItem}
+              <li className={headerStyles.navItem}
                 activeClassName={headerStyles.activeNavItem}
+                style={{ marginBottom: `0` }}
                 onMouseEnter={() => setOpenDropdown(true)}
               /* onMouseLeave={() => setOpenDropdown(false)} */
               >
                 Projekt
-              </div>
+              </li>
               {openDropdown && (
                 <Dropdown ref={node}>
                   <DropdownNavlist>
-                    <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} style={{ lineHeight: `normal` }} to="/detailsgrafiskaprofilprogram">Grafiska profilprogram</Link>
+                    <li style={{ lineHeight: `normal` }}>
+                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsgrafiskaprofilprogram">Grafiska profilprogram</Link>
                     </li>
                     <li>
                       <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailstradgardsmassan">Trädgårdsmässan</Link>
@@ -112,12 +113,13 @@ const Header = ({ siteTitle }) => {
                     </li>
                   </DropdownNavlist>
                 </Dropdown>)}
-              <li>
-                <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/about">Om</Link>
-              </li>
-              <li>
-                <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/contact">Kontakt</Link>
-              </li>
+              <Link to="/about">
+                <li className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} style={{ marginBottom: `0` }}>Om </li>
+              </Link>
+              <Link to="/contact">
+                <li className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} style={{ marginBottom: `0` }}>Kontakt</li>
+              </Link>
+
             </ul>
           </nav >
         </nav>
