@@ -7,7 +7,6 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
-import DetailsDescription from '../components/projectdetailsdescription'
 
 const GrayDivider = styled.div`
   width: 90%;

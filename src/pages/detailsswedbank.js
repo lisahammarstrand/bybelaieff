@@ -7,9 +7,6 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
-import { DetailsDescriptionContainer } from '../components/detailsdescriptioncontainer'
-import DetailsImageSection from '../components/projectdetailsimage'
-import Image from '../components/image'
 import DetailsDescription from '../components/projectdetailsdescription'
 
 const DescriptionContainer = styled.section`
@@ -18,7 +15,6 @@ const DescriptionContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
- /*  background-image: linear-gradient(to right, #d9d9d9 , white); */
   `
 
 const ProjectDetailsSwedbank = () => {

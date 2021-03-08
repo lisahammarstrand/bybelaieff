@@ -46,12 +46,11 @@ header {
 }
 }
 
-
 .nav-item {
   color: white;
   font-size: 0.9rem;
   text-decoration: none;
-  margin-right: 1.3rem;
+  margin-right: 1.6rem;
 }
 
 .nav-item:hover {
