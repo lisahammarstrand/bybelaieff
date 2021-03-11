@@ -5,12 +5,16 @@ import { useState, useRef, useEffect } from 'react'
 import headerStyles from './header.module.css'
 /* import nina_flower_50x50_2 from '../images/nina_flower_50x50_2.png' */
 import Hamburger from 'hamburger-react'
-import { HamburgerMenu, HbgNavList } from './hbgmenu'
+import { HamburgerMenu, HbgNavList, ChevronIcon } from './hbgmenu'
 import { Dropdown, DropdownNavlist } from './dropdown'
+import HbgDropDown from './hbgdropdown'
+import chevron_right_solid from '../images/chevron_right_solid.svg'
+
 
 const Header = ({ siteTitle }) => {
   const [openHamburger, setOpenHamburger] = useState(false)
   const [openDropdown, setOpenDropdown] = useState(false)
+  const [openHbgDropdown, setOpenHbgDropdown] = useState(false)
   const node = useRef(null)
 
   useEffect(() => {
@@ -51,15 +55,26 @@ const Header = ({ siteTitle }) => {
           {openHamburger && (
             <HamburgerMenu>
               <HbgNavList>
-                <li onClick={() => setOpenHamburger(false)}>
-                  <Link className={headerStyles.navItemHbg} to="/">Projekt</Link>
+                <div className={headerStyles.projectButton}>
+                  <li
+                    className={headerStyles.navItemHbg}
+                    onClick={() => setOpenHbgDropdown(!openHbgDropdown)}>
+                    Projekt
                 </li>
-                <li onClick={() => setOpenHamburger(false)}>
-                  <Link className={headerStyles.navItemHbg} to="/about">Om</Link>
-                </li>
-                <li onClick={() => setOpenHamburger(false)}>
-                  <Link className={headerStyles.navItemHbg} to="/contact">Kontakt</Link>
-                </li>
+                  <img className={headerStyles.chevronIcon} src={chevron_right_solid} alt="chevron_icon" />
+                </div>
+                <div style={{ margin: `0` }}>
+                  {openHbgDropdown && (
+                    <HbgDropDown />)}
+                </div>
+                <div style={{ margin: `0` }}>
+                  <li>
+                    <Link className={headerStyles.navItemHbg} to="/about">Om</Link>
+                  </li>
+                  <li>
+                    <Link className={headerStyles.navItemHbg} to="/contact">Kontakt</Link>
+                  </li>
+                </div>
               </HbgNavList>
             </HamburgerMenu>)}
           <nav>
@@ -109,7 +124,7 @@ const Header = ({ siteTitle }) => {
                       <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailssetterwalls">Setterwalls</Link>
                     </li>
                     <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailspraktikertjänst">Praktikertjänst</Link>
+                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailspraktikertjanst">Praktikertjänst</Link>
                     </li>
                   </DropdownNavlist>
                 </Dropdown>)}

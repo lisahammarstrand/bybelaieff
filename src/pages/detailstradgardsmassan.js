@@ -37,8 +37,8 @@ const ProjectDetailsTradgardsMassan = () => {
         }
       }
       imageOne {
-        fixed(quality: 100, width: 756) {
-          ...GatsbyContentfulFixed
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
         }
       }
       titleTwo
@@ -54,8 +54,8 @@ const ProjectDetailsTradgardsMassan = () => {
         }
       }
       imageTwo {
-        fixed(quality: 100, width: 756) {
-          ...GatsbyContentfulFixed
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
         }
       }
     }
@@ -71,22 +71,24 @@ const ProjectDetailsTradgardsMassan = () => {
         linkleft="/detailsgrafiskaprofilprogram"
         linkright="/detailsswedbank" />
       <DescriptionContainer>
-        <DetailsDescription
-          color={data.contentfulProjectDetailsTradgardsmassan.titleColor}
-          title={data.contentfulProjectDetailsTradgardsmassan.titleOne}
-          title2={data.contentfulProjectDetailsTradgardsmassan.subtitleOne}
-          description={data.contentfulProjectDetailsTradgardsmassan.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-          credits={data.contentfulProjectDetailsTradgardsmassan.creditsOne.childMarkdownRemark.rawMarkdownBody}
-        />
-        <Img fixed={data.contentfulProjectDetailsTradgardsmassan.imageOne.fixed} alt="trädgårdsmässan_2014" />
-        <DetailsDescription
-          color={data.contentfulProjectDetailsTradgardsmassan.titleColor}
-          title={data.contentfulProjectDetailsTradgardsmassan.titleTwo}
-          title2={data.contentfulProjectDetailsTradgardsmassan.subtitleTwo}
-          description={data.contentfulProjectDetailsTradgardsmassan.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
-          credits={data.contentfulProjectDetailsTradgardsmassan.creditsTwo.childMarkdownRemark.rawMarkdownBody}
-        />
-        <Img fixed={data.contentfulProjectDetailsTradgardsmassan.imageTwo.fixed} alt="trädgårdsmässan_2015" />
+        <div className="case-container">
+          <DetailsDescription
+            color={data.contentfulProjectDetailsTradgardsmassan.titleColor}
+            title={data.contentfulProjectDetailsTradgardsmassan.titleOne}
+            title2={data.contentfulProjectDetailsTradgardsmassan.subtitleOne}
+            description={data.contentfulProjectDetailsTradgardsmassan.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulProjectDetailsTradgardsmassan.creditsOne.childMarkdownRemark.rawMarkdownBody}
+          />
+          <Img className="case-image" fluid={data.contentfulProjectDetailsTradgardsmassan.imageOne.fluid} alt="trädgårdsmässan_2014" />
+          <DetailsDescription
+            color={data.contentfulProjectDetailsTradgardsmassan.titleColor}
+            title={data.contentfulProjectDetailsTradgardsmassan.titleTwo}
+            title2={data.contentfulProjectDetailsTradgardsmassan.subtitleTwo}
+            description={data.contentfulProjectDetailsTradgardsmassan.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulProjectDetailsTradgardsmassan.creditsTwo.childMarkdownRemark.rawMarkdownBody}
+          />
+          <Img className="case-image" fluid={data.contentfulProjectDetailsTradgardsmassan.imageTwo.fluid} alt="trädgårdsmässan_2015" />
+        </div>
       </DescriptionContainer>
     </Layout>
   )

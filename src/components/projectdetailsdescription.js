@@ -14,7 +14,7 @@ const DetailsDescriptionContainer = styled.section`
   color: #000;
 `
 const DetailsDescriptionCopy = styled.article`
-  max-width: 600px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -7,7 +7,7 @@ export const HamburgerMenu = styled.nav`
   background: #1f363d;
   color: white;
   width: 200px;
-  height: 150px;
+  /* height: auto; */
   padding: 0px;
   text-align: left;
   position: absolute;
@@ -41,3 +41,17 @@ export const HbgNavList = styled.ul`
   flex-direction: column;
   justify-content: space-around;
 `
+export const ChevronIcon = styled.img`
+  margin-left: auto;
+  fill: #ffffff;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.6s ease;
+
+  &:active, &:hover {
+   transform: rotate(90deg);
+  }
+`
+
+
+

@@ -77,3 +77,25 @@ header {
 .active-nav-item-hbg {
   color: #6FD3E9;
 }
+
+.project-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.chevron-icon {
+margin-left: auto;
+margin-bottom: 11px;
+fill: #ffffff;
+width: 16px;
+height: 16px;
+transition: transform 0.6s ease;
+}
+
+.chevron-icon:hover {
+ transform: rotate(90deg);
+}
+
+.chevron-icon:active {
+  transform: rotate(90deg);
+ }

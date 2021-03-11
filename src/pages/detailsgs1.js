@@ -38,8 +38,8 @@ const ProjectDetailsGS1 = () => {
         }
       }
       imageOne {
-        fixed(quality: 100, width: 225) {
-          ...GatsbyContentfulFixed
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
         }
       }
     }
@@ -59,14 +59,16 @@ const ProjectDetailsGS1 = () => {
         linkright="/detailsutbildningsmaterial"
       />
       <DescriptionContainer>
-        <DetailsDescription
-          color={data.contentfulProjectDetailsGs1.titleColor}
-          title={data.contentfulProjectDetailsGs1.titleOne}
-          title2={data.contentfulProjectDetailsGs1.subtitleOne}
-          description={data.contentfulProjectDetailsGs1.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-          credits={data.contentfulProjectDetailsGs1.creditsOne.childMarkdownRemark.rawMarkdownBody}
-        />
-        <Img fixed={data.contentfulProjectDetailsGs1.imageOne.fixed} alt="gs_one" />
+        <div className="case-container">
+          <DetailsDescription
+            color={data.contentfulProjectDetailsGs1.titleColor}
+            title={data.contentfulProjectDetailsGs1.titleOne}
+            title2={data.contentfulProjectDetailsGs1.subtitleOne}
+            description={data.contentfulProjectDetailsGs1.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulProjectDetailsGs1.creditsOne.childMarkdownRemark.rawMarkdownBody}
+          />
+          <Img className="case-image" fluid={data.contentfulProjectDetailsGs1.imageOne.fluid} alt="gs_one" />
+        </div>
       </DescriptionContainer>
 
     </Layout >

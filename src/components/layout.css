@@ -54,6 +54,7 @@ template {
 }
 a {
   background-color: transparent;
+  text-decoration: none;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
@@ -609,12 +610,43 @@ pre tt:after {
   align-items: center;
 }
 
+.education-image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.architecture-image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.case-image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 .content-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.case-container {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
 }
 
   

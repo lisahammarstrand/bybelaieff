@@ -37,8 +37,8 @@ const ProjectDetailsKapi = () => {
         }
       }
       imageOne {
-        fixed(quality: 100, width: 225) {
-          ...GatsbyContentfulFixed
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
         }
       }
     }
@@ -58,13 +58,15 @@ const ProjectDetailsKapi = () => {
         linkright="/detailsarkitektur"
       />
       <DescriptionContainer>
-        <DetailsDescription
-          color={data.contentfulProjectDetailsKapi.titleColor}
-          title={data.contentfulProjectDetailsKapi.titleOne}
-          title2={data.contentfulProjectDetailsKapi.subtitleOne}
-          description={data.contentfulProjectDetailsKapi.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-          credits={data.contentfulProjectDetailsKapi.creditsOne.childMarkdownRemark.rawMarkdownBody} />
-        <Img fixed={data.contentfulProjectDetailsKapi.imageOne.fixed} alt="kapi" />
+        <div className="case-container">
+          <DetailsDescription
+            color={data.contentfulProjectDetailsKapi.titleColor}
+            title={data.contentfulProjectDetailsKapi.titleOne}
+            title2={data.contentfulProjectDetailsKapi.subtitleOne}
+            description={data.contentfulProjectDetailsKapi.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulProjectDetailsKapi.creditsOne.childMarkdownRemark.rawMarkdownBody} />
+          <Img className="case-image" fluid={data.contentfulProjectDetailsKapi.imageOne.fluid} alt="kapi" />
+        </div>
       </DescriptionContainer>
     </Layout>
   )

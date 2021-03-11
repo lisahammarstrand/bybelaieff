@@ -38,8 +38,8 @@ const ProjectDetailsRegionStockholm = () => {
         }
       }
       imageOne {
-        fixed(quality: 100, width: 225) {
-          ...GatsbyContentfulFixed
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
         }
       }
     }
@@ -58,14 +58,16 @@ const ProjectDetailsRegionStockholm = () => {
         linkright="/detailskapi"
       />
       <DescriptionContainer>
-        <DetailsDescription
-          color={data.contentfulProjectDetailsRegionStockholm.titleColor}
-          title={data.contentfulProjectDetailsRegionStockholm.titleOne}
-          title2={data.contentfulProjectDetailsRegionStockholm.subtitleOne}
-          description={data.contentfulProjectDetailsRegionStockholm.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-          credits={data.contentfulProjectDetailsRegionStockholm.creditsOne.childMarkdownRemark.rawMarkdownBody}
-        />
-        <Img fixed={data.contentfulProjectDetailsRegionStockholm.imageOne.fixed} alt="region_stockholm" />
+        <div className="case-container">
+          <DetailsDescription
+            color={data.contentfulProjectDetailsRegionStockholm.titleColor}
+            title={data.contentfulProjectDetailsRegionStockholm.titleOne}
+            title2={data.contentfulProjectDetailsRegionStockholm.subtitleOne}
+            description={data.contentfulProjectDetailsRegionStockholm.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulProjectDetailsRegionStockholm.creditsOne.childMarkdownRemark.rawMarkdownBody}
+          />
+          <Img className="case-image" fluid={data.contentfulProjectDetailsRegionStockholm.imageOne.fluid} alt="region_stockholm" />
+        </div>
       </DescriptionContainer>
     </Layout>
   )

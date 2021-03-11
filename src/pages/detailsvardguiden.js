@@ -37,8 +37,8 @@ const ProjectDetailsVardguiden = () => {
         }
       }
       imageOne {
-        fixed(quality: 100, width: 225) {
-          ...GatsbyContentfulFixed
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
         }
       }
       titleTwo
@@ -54,8 +54,8 @@ const ProjectDetailsVardguiden = () => {
         }
       }
       imageTwo {
-        fixed(quality: 100, width: 225) {
-          ...GatsbyContentfulFixed
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
         }
       }
     }
@@ -74,22 +74,24 @@ const ProjectDetailsVardguiden = () => {
         linkright="/detailshallbarvardag"
       />
       <DescriptionContainer>
-        <DetailsDescription
-          color={data.contentfulProjectDetailsVardguiden.titleColor}
-          title={data.contentfulProjectDetailsVardguiden.titleOne}
-          title2={data.contentfulProjectDetailsVardguiden.subtitleOne}
-          description={data.contentfulProjectDetailsVardguiden.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-          credits={data.contentfulProjectDetailsVardguiden.creditsOne.childMarkdownRemark.rawMarkdownBody}
-        />
-        <Img fixed={data.contentfulProjectDetailsVardguiden.imageOne.fixed} alt="vardguiden_1177" />
-        <DetailsDescription
-          color={data.contentfulProjectDetailsVardguiden.titleColor}
-          title={data.contentfulProjectDetailsVardguiden.titleTwo}
-          title2={data.contentfulProjectDetailsVardguiden.subtitleTwo}
-          description={data.contentfulProjectDetailsVardguiden.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
-          credits={data.contentfulProjectDetailsVardguiden.creditsTwo.childMarkdownRemark.rawMarkdownBody}
-        />
-        <Img fixed={data.contentfulProjectDetailsVardguiden.imageTwo.fixed} alt="vardguiden_1177" />
+        <div className="case-container">
+          <DetailsDescription
+            color={data.contentfulProjectDetailsVardguiden.titleColor}
+            title={data.contentfulProjectDetailsVardguiden.titleOne}
+            title2={data.contentfulProjectDetailsVardguiden.subtitleOne}
+            description={data.contentfulProjectDetailsVardguiden.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulProjectDetailsVardguiden.creditsOne.childMarkdownRemark.rawMarkdownBody}
+          />
+          <Img className="case-image" fluid={data.contentfulProjectDetailsVardguiden.imageOne.fluid} alt="vardguiden_1177" />
+          <DetailsDescription
+            color={data.contentfulProjectDetailsVardguiden.titleColor}
+            title={data.contentfulProjectDetailsVardguiden.titleTwo}
+            title2={data.contentfulProjectDetailsVardguiden.subtitleTwo}
+            description={data.contentfulProjectDetailsVardguiden.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulProjectDetailsVardguiden.creditsTwo.childMarkdownRemark.rawMarkdownBody}
+          />
+          <Img className="case-image" fluid={data.contentfulProjectDetailsVardguiden.imageTwo.fluid} alt="vardguiden_1177" />
+        </div>
       </DescriptionContainer>
     </Layout>
   )

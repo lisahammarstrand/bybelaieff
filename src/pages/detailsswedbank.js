@@ -37,25 +37,8 @@ const ProjectDetailsSwedbank = () => {
         }
       }
       imageOne {
-        fixed(quality: 100, width: 225) {
-          ...GatsbyContentfulFixed
-        }
-      }
-      titleTwo
-      subtitleTwo
-      descriptionTwo {
-        childMarkdownRemark {
-          rawMarkdownBody
-        }
-      }
-      creditsTwo {
-        childMarkdownRemark {
-          rawMarkdownBody
-        }
-      }
-      imageTwo {
-        fixed(quality: 100, width: 225) {
-          ...GatsbyContentfulFixed
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
         }
       }
     }
@@ -73,22 +56,16 @@ const ProjectDetailsSwedbank = () => {
         linkright="/detailsgs1"
       />
       <DescriptionContainer>
-        <DetailsDescription
-          color={data.contentfulProjectDetailsSwedbank.titleColor}
-          title={data.contentfulProjectDetailsSwedbank.titleOne}
-          title2={data.contentfulProjectDetailsSwedbank.subtitleOne}
-          description={data.contentfulProjectDetailsSwedbank.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-          credits={data.contentfulProjectDetailsSwedbank.creditsOne.childMarkdownRemark.rawMarkdownBody}
-        />
-        <Img fixed={data.contentfulProjectDetailsSwedbank.imageOne.fixed} alt="swedbank" />
-        <DetailsDescription
-          color={data.contentfulProjectDetailsSwedbank.titleColor}
-          title={data.contentfulProjectDetailsSwedbank.titleTwo}
-          title2={data.contentfulProjectDetailsSwedbank.subtitleTwo}
-          description={data.contentfulProjectDetailsSwedbank.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
-          credits={data.contentfulProjectDetailsSwedbank.creditsTwo.childMarkdownRemark.rawMarkdownBody}
-        />
-        <Img fixed={data.contentfulProjectDetailsSwedbank.imageTwo.fixed} alt="swedbank" />
+        <div className="case-container">
+          <DetailsDescription
+            color={data.contentfulProjectDetailsSwedbank.titleColor}
+            title={data.contentfulProjectDetailsSwedbank.titleOne}
+            title2={data.contentfulProjectDetailsSwedbank.subtitleOne}
+            description={data.contentfulProjectDetailsSwedbank.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulProjectDetailsSwedbank.creditsOne.childMarkdownRemark.rawMarkdownBody}
+          />
+          <Img className="case-image" fluid={data.contentfulProjectDetailsSwedbank.imageOne.fluid} alt="swedbank" />
+        </div>
       </DescriptionContainer>
     </Layout>
   )

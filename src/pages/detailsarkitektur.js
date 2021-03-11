@@ -9,8 +9,9 @@ import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
 
 const GrayDivider = styled.div`
-  width: 90%;
-  margin: 0;
+  width: 100%;
+  margin-bottom: 24px;
+  margin-top: 24px;
   border-bottom: 2px solid lightgray;
   `
 
@@ -21,6 +22,16 @@ const ProjectDetailsArkitektur = () => {
       background
       titleTop
       imageOne {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      imageTwo {
+        fluid(quality: 100, maxWidth: 1920) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      imageThree {
         fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyContentfulFluid
         }
@@ -39,8 +50,13 @@ const ProjectDetailsArkitektur = () => {
         linkleft="/detailskapi"
         linkright="/detailsvardguiden"
       />
-      <Img fluid={data.contentfulArkitektur.imageOne.fluid} alt="arkitektur" />
-      <GrayDivider />
+      <section className="content-container">
+        <Img className="architecture-image" fluid={data.contentfulArkitektur.imageOne.fluid} alt="arkitektur" />
+        <GrayDivider />
+        <Img className="architecture-image" fluid={data.contentfulArkitektur.imageTwo.fluid} alt="arkitektur" />
+        <GrayDivider />
+        <Img className="architecture-image" fluid={data.contentfulArkitektur.imageThree.fluid} alt="arkitektur" />
+      </section>
     </Layout>
   )
 

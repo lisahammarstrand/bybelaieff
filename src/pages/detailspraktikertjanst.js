@@ -37,8 +37,8 @@ const ProjectDetailsPraktikertjanst = () => {
         }
       }
       imageOne {
-        fixed(quality: 100, width: 225) {
-          ...GatsbyContentfulFixed
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
         }
       }
     }
@@ -56,14 +56,16 @@ const ProjectDetailsPraktikertjanst = () => {
         linkright="/"
       />
       <DescriptionContainer>
-        <DetailsDescription
-          color={data.contentfulProjectDetailsPraktikertjanst.titleColor}
-          title={data.contentfulProjectDetailsPraktikertjanst.titleOne}
-          title2={data.contentfulProjectDetailsPraktikertjanst.subtitleOne}
-          description={data.contentfulProjectDetailsPraktikertjanst.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-          credits={data.contentfulProjectDetailsPraktikertjanst.creditsOne.childMarkdownRemark.rawMarkdownBody}
-        />
-        <Img fixed={data.contentfulProjectDetailsPraktikertjanst.imageOne.fixed} alt="praktikertjänst" />
+        <div className="case-container">
+          <DetailsDescription
+            color={data.contentfulProjectDetailsPraktikertjanst.titleColor}
+            title={data.contentfulProjectDetailsPraktikertjanst.titleOne}
+            title2={data.contentfulProjectDetailsPraktikertjanst.subtitleOne}
+            description={data.contentfulProjectDetailsPraktikertjanst.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulProjectDetailsPraktikertjanst.creditsOne.childMarkdownRemark.rawMarkdownBody}
+          />
+          <Img className="case-image" fluid={data.contentfulProjectDetailsPraktikertjanst.imageOne.fluid} alt="praktikertjänst" />
+        </div>
       </DescriptionContainer>
     </Layout>
   )

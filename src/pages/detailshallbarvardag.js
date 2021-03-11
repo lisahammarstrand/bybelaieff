@@ -37,8 +37,8 @@ const ProjectDetailsHallbarVardag = () => {
         }
       }
       imageOne {
-        fixed(quality: 100, width: 225) {
-          ...GatsbyContentfulFixed
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
         }
       }
     }
@@ -57,14 +57,16 @@ const ProjectDetailsHallbarVardag = () => {
         linkright="/detailssetterwalls"
       />
       <DescriptionContainer>
-        <DetailsDescription
-          color={data.contentfulProjectDetailsHallbarVardag.titleColor}
-          title={data.contentfulProjectDetailsHallbarVardag.titleOne}
-          title2={data.contentfulProjectDetailsHallbarVardag.subtitleOne}
-          description={data.contentfulProjectDetailsHallbarVardag.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-          credits={data.contentfulProjectDetailsHallbarVardag.creditsOne.childMarkdownRemark.rawMarkdownBody}
-        />
-        <Img fixed={data.contentfulProjectDetailsHallbarVardag.imageOne.fixed} alt="hållbar_vardag" />
+        <div className="case-container">
+          <DetailsDescription
+            color={data.contentfulProjectDetailsHallbarVardag.titleColor}
+            title={data.contentfulProjectDetailsHallbarVardag.titleOne}
+            title2={data.contentfulProjectDetailsHallbarVardag.subtitleOne}
+            description={data.contentfulProjectDetailsHallbarVardag.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulProjectDetailsHallbarVardag.creditsOne.childMarkdownRemark.rawMarkdownBody}
+          />
+          <Img className="case-image" fluid={data.contentfulProjectDetailsHallbarVardag.imageOne.fluid} alt="hållbar_vardag" />
+        </div>
       </DescriptionContainer>
     </Layout>
   )
