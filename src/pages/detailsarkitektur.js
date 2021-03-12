@@ -9,7 +9,7 @@ import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
 
 const GrayDivider = styled.div`
-  width: 100%;
+  width: 90%;
   margin-bottom: 24px;
   margin-top: 24px;
   border-bottom: 2px solid lightgray;
