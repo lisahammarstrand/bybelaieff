@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import headerStyles from './header.module.css'
-/* import nina_flower_50x50_2 from '../images/nina_flower_50x50_2.png' */
 import Hamburger from 'hamburger-react'
 import { HamburgerMenu, HbgNavList, ChevronIcon } from './hbgmenu'
 import { Dropdown, DropdownNavlist } from './dropdown'
@@ -35,7 +34,6 @@ const Header = ({ siteTitle }) => {
     <header >
       <div className={headerStyles.container}>
         <div className={headerStyles.logoBar}>
-          {/*  <img className={headerStyles.logoImg} src={nina_flower_50x50_2} alt="flower_logo" /> */}
           <Link
             to="/"
             style={{
@@ -55,18 +53,15 @@ const Header = ({ siteTitle }) => {
           {openHamburger && (
             <HamburgerMenu>
               <HbgNavList>
-                <div className={headerStyles.projectButton}>
-                  <li
-                    className={headerStyles.navItemHbg}
-                    onClick={() => setOpenHbgDropdown(!openHbgDropdown)}>
-                    Projekt
-                </li>
+                <div role="button" className={headerStyles.projectButton}
+                  onClick={() => setOpenHbgDropdown(!openHbgDropdown)}>
+                  <li>Projekt</li>
                   <img className={headerStyles.chevronIcon} src={chevron_right_solid} alt="chevron_icon" />
                 </div>
-                <div style={{ margin: `0` }}>
-                  {openHbgDropdown && (
-                    <HbgDropDown />)}
-                </div>
+
+                {openHbgDropdown && (
+                  <HbgDropDown />)}
+
                 <div style={{ margin: `0` }}>
                   <li>
                     <Link className={headerStyles.navItemHbg} to="/about">Om</Link>

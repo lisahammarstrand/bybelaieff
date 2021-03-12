@@ -7,19 +7,19 @@ export const HamburgerMenu = styled.nav`
   background: #1f363d;
   color: white;
   width: 200px;
-  /* height: auto; */
+/*   height: auto; */
   padding: 0px;
   text-align: left;
   position: absolute;
   top: 100;
   right: 0;
   animation: showMenu 1s forwards;
-  transition: transfrom 0.3s ease-in-out;
-  z-index: 10;
+  transition: transfrom 0.3s ease-out;
+ /*  z-index: 10; */
   
   @keyframes showMenu {
-    0% {height: 0px;}
-    100% {height: 180px;}
+    0% {max-height: 0px;}
+    100% {max-height: 600px;}
   }
   
   &:active {
@@ -31,8 +31,6 @@ export const HamburgerMenu = styled.nav`
   }
 `
 export const HbgNavList = styled.ul`
-  position: absolute;
-  top: 100;
   width: 100%;
   list-style: none;
   margin: 0;

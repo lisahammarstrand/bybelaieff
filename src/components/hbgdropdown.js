@@ -5,8 +5,8 @@ import styled from 'styled-components'
 
 
 const HbgDropdown = styled.div`
-  position: absolute;
-  top: 0px;
+  /* position: absolute;
+  top: 0px; */
   right: 0px;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@ const HbgDropdown = styled.div`
   background: #1f363d;
   color: white;
   width: 200px;
-  height: 520px;
+  /* height: 520px; */
   padding: 0px;
   text-align: left;
   animation: showDropdown 1s forwards;
@@ -22,7 +22,7 @@ const HbgDropdown = styled.div`
 
   @keyframes showDropdown {
     0% {height: 0px;}
-    100% {height: 520px;}
+    100% {height: 450px;}
   }
 
   &:active {
@@ -30,14 +30,14 @@ const HbgDropdown = styled.div`
 }`
 
 const DropdownNavlist = styled.ul`
-  position: absolute;
-  top: 0px;
+ /*  position: absolute;
+  top: 0; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   list-style: none;
   margin: 0;
-  padding: 16px 16px 16px 32px;
+  padding: 0px 0px 0px 8px;
 `
 
 const HbgDropDown = () => {
