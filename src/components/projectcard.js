@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const ProjectCardContainer = styled.div`
@@ -24,6 +23,7 @@ const ProjectCardContainer = styled.div`
     width: 100vw;
   }
 `
+// Working on Project card hover effect, no success
 /* const DescriptionWrapper = styled.div`
   position: absolute;
   top: 0;

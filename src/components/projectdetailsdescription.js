@@ -30,6 +30,7 @@ const DetailsDescriptionCredits = styled.div`
   display: flex;
   font-size: 16px;
 `
+
 const DetailsDescription = ({ color, title, title2, description, credits }) => {
   return (
     <DetailsDescriptionContainer>

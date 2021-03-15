@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
@@ -8,14 +7,8 @@ import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
 import DetailsDescription from '../components/projectdetailsdescription'
+import { DescriptionContainer } from '../components/detailsdescriptioncontainer'
 
-const DescriptionContainer = styled.section`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  `
 
 const ProjectDetailsKapi = () => {
   const data = useStaticQuery(graphql`
