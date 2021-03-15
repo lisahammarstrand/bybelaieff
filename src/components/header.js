@@ -55,7 +55,9 @@ const Header = ({ siteTitle }) => {
               <HbgNavList>
                 <div role="button" className={headerStyles.projectButton}
                   onClick={() => setOpenHbgDropdown(!openHbgDropdown)}>
-                  <li>Projekt</li>
+                  <li className={headerStyles.navItemHbg}
+                    activeClassName={headerStyles.activeNavItem}>
+                    Projekt</li>
                   <img className={headerStyles.chevronIcon} src={chevron_right_solid} alt="chevron_icon" />
                 </div>
 
