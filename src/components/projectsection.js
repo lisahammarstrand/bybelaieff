@@ -5,7 +5,7 @@ import ProjectCard from './projectcard'
 
 
 const ProjectSectionContainer = styled.section`
-  width: 100%;
+  width: 100vw;
   height: 1200px;
   color: white;
   display: flex;
