@@ -115,13 +115,13 @@ const Header = ({ siteTitle }) => {
                       <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsvardguiden">Vårdguiden 1177</Link>
                     </li>
                     <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailshallbarvardag">Hållbar vardag</Link>
+                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailshallbarvardag">Film & rörligt</Link>
                     </li>
                     <li>
                       <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailssetterwalls">Setterwalls</Link>
                     </li>
                     <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailspraktikertjanst">Praktikertjänst</Link>
+                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailspraktikertjanst">Trädgård & keramik</Link>
                     </li>
                   </DropdownNavlist>
                 </Dropdown>)}

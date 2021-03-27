@@ -5,10 +5,11 @@ import styled from 'styled-components'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+
 const AboutContainer = styled.section`
 position: relative;
 width: 100%;
-height: 100vh;
+height: auto;
 display: flex;
 flex-direction: column;
 align-items: center; 
@@ -19,14 +20,12 @@ margin: 0px;
 `
 
 const AboutDescription = styled.article`
-position: absolute;
-top: 50px;
-max-width: 600px;
+max-width: 650px;
 display: flex;
 flex-direction: column;
 justify-content: center;
-align-items: center; 
-text-align: center;
+align-items: flex-start; 
+text-align: left;
 color: white;
 margin: 50px;
 
@@ -55,6 +54,7 @@ const AboutPage = () => {
   return (
     <Layout>
       <SEO title="About" />
+
       <AboutContainer>
         <AboutDescription>
           <h1>{data.contentfulAbout.title}</h1>
@@ -62,6 +62,7 @@ const AboutPage = () => {
           <div dangerouslySetInnerHTML={{ __html: data.contentfulAbout.description.childMarkdownRemark.html, }}></div>
         </AboutDescription>
       </AboutContainer>
+
     </Layout>
   )
 }

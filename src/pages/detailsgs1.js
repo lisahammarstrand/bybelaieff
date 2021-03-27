@@ -25,7 +25,8 @@ const ProjectDetailsGS1 = () => {
           rawMarkdownBody
         }
       }
-      creditsOne {
+      subtitleTwo
+      descriptionTwo {
         childMarkdownRemark {
           rawMarkdownBody
         }
@@ -56,9 +57,10 @@ const ProjectDetailsGS1 = () => {
           <DetailsDescription
             color={data.contentfulProjectDetailsGs1.titleColor}
             title={data.contentfulProjectDetailsGs1.titleOne}
-            title2={data.contentfulProjectDetailsGs1.subtitleOne}
+            subtitle={data.contentfulProjectDetailsGs1.subtitleOne}
             description={data.contentfulProjectDetailsGs1.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-            credits={data.contentfulProjectDetailsGs1.creditsOne.childMarkdownRemark.rawMarkdownBody}
+            subtitle2={data.contentfulProjectDetailsGs1.subtitleTwo}
+            description2={data.contentfulProjectDetailsGs1.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
           />
           <Img className="case-image" fluid={data.contentfulProjectDetailsGs1.imageOne.fluid} alt="gs_one" />
         </div>

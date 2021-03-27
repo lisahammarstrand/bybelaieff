@@ -56,6 +56,7 @@ const ProjectDetailsArkitektur = () => {
         <Img className="architecture-image" fluid={data.contentfulArkitektur.imageTwo.fluid} alt="arkitektur" />
         <GrayDivider />
         <Img className="architecture-image" fluid={data.contentfulArkitektur.imageThree.fluid} alt="arkitektur" />
+        <GrayDivider />
       </section>
     </Layout>
   )

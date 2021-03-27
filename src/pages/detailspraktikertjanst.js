@@ -53,7 +53,7 @@ const ProjectDetailsPraktikertjanst = () => {
           <DetailsDescription
             color={data.contentfulProjectDetailsPraktikertjanst.titleColor}
             title={data.contentfulProjectDetailsPraktikertjanst.titleOne}
-            title2={data.contentfulProjectDetailsPraktikertjanst.subtitleOne}
+            subtitle={data.contentfulProjectDetailsPraktikertjanst.subtitleOne}
             description={data.contentfulProjectDetailsPraktikertjanst.descriptionOne.childMarkdownRemark.rawMarkdownBody}
             credits={data.contentfulProjectDetailsPraktikertjanst.creditsOne.childMarkdownRemark.rawMarkdownBody}
           />

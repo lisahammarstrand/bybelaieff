@@ -24,6 +24,12 @@ const ProjectDetailsKapi = () => {
           rawMarkdownBody
         }
       }
+      subtitleTwo
+      descriptionTwo {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
       creditsOne {
         childMarkdownRemark {
           rawMarkdownBody
@@ -55,8 +61,10 @@ const ProjectDetailsKapi = () => {
           <DetailsDescription
             color={data.contentfulProjectDetailsKapi.titleColor}
             title={data.contentfulProjectDetailsKapi.titleOne}
-            title2={data.contentfulProjectDetailsKapi.subtitleOne}
+            subtitle={data.contentfulProjectDetailsKapi.subtitleOne}
             description={data.contentfulProjectDetailsKapi.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            subtitle2={data.contentfulProjectDetailsKapi.subtitleTwo}
+            description2={data.contentfulProjectDetailsKapi.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
             credits={data.contentfulProjectDetailsKapi.creditsOne.childMarkdownRemark.rawMarkdownBody} />
           <Img className="case-image" fluid={data.contentfulProjectDetailsKapi.imageOne.fluid} alt="kapi" />
         </div>

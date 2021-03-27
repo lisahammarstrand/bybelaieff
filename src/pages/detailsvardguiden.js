@@ -24,29 +24,18 @@ const ProjectDetailsVardguiden = () => {
           rawMarkdownBody
         }
       }
-      creditsOne {
-        childMarkdownRemark {
-          rawMarkdownBody
-        }
-      }
-      imageOne {
-        fluid(quality: 100) {
-          ...GatsbyContentfulFluid
-        }
-      }
-      titleTwo
       subtitleTwo
       descriptionTwo {
         childMarkdownRemark {
           rawMarkdownBody
         }
       }
-      creditsTwo {
+      creditsOne {
         childMarkdownRemark {
           rawMarkdownBody
         }
       }
-      imageTwo {
+      imageOne {
         fluid(quality: 100) {
           ...GatsbyContentfulFluid
         }
@@ -71,19 +60,13 @@ const ProjectDetailsVardguiden = () => {
           <DetailsDescription
             color={data.contentfulProjectDetailsVardguiden.titleColor}
             title={data.contentfulProjectDetailsVardguiden.titleOne}
-            title2={data.contentfulProjectDetailsVardguiden.subtitleOne}
+            subtitle={data.contentfulProjectDetailsVardguiden.subtitleOne}
             description={data.contentfulProjectDetailsVardguiden.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            subtitle2={data.contentfulProjectDetailsVardguiden.subtitleTwo}
+            description2={data.contentfulProjectDetailsVardguiden.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
             credits={data.contentfulProjectDetailsVardguiden.creditsOne.childMarkdownRemark.rawMarkdownBody}
           />
           <Img className="case-image" fluid={data.contentfulProjectDetailsVardguiden.imageOne.fluid} alt="vardguiden_1177" />
-          <DetailsDescription
-            color={data.contentfulProjectDetailsVardguiden.titleColor}
-            title={data.contentfulProjectDetailsVardguiden.titleTwo}
-            title2={data.contentfulProjectDetailsVardguiden.subtitleTwo}
-            description={data.contentfulProjectDetailsVardguiden.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
-            credits={data.contentfulProjectDetailsVardguiden.creditsTwo.childMarkdownRemark.rawMarkdownBody}
-          />
-          <Img className="case-image" fluid={data.contentfulProjectDetailsVardguiden.imageTwo.fluid} alt="vardguiden_1177" />
         </div>
       </DescriptionContainer>
     </Layout>

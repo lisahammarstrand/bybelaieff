@@ -24,6 +24,12 @@ const ProjectDetailsSwedbank = () => {
           rawMarkdownBody
         }
       }
+      subtitleTwo
+      descriptionTwo {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
       creditsOne {
         childMarkdownRemark {
           rawMarkdownBody
@@ -53,8 +59,10 @@ const ProjectDetailsSwedbank = () => {
           <DetailsDescription
             color={data.contentfulProjectDetailsSwedbank.titleColor}
             title={data.contentfulProjectDetailsSwedbank.titleOne}
-            title2={data.contentfulProjectDetailsSwedbank.subtitleOne}
+            subtitle={data.contentfulProjectDetailsSwedbank.subtitleOne}
             description={data.contentfulProjectDetailsSwedbank.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            subtitle2={data.contentfulProjectDetailsSwedbank.subtitleTwo}
+            description2={data.contentfulProjectDetailsSwedbank.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
             credits={data.contentfulProjectDetailsSwedbank.creditsOne.childMarkdownRemark.rawMarkdownBody}
           />
           <Img className="case-image" fluid={data.contentfulProjectDetailsSwedbank.imageOne.fluid} alt="swedbank" />

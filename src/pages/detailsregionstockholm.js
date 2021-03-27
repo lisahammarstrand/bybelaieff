@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
-import DetailsDescription from '../components/projectdetailsdescription'
+import DetailsDescriptionPlus from '../components/projectdetailsdescriptionplus'
 import { DescriptionContainer } from '../components/detailsdescriptioncontainer'
 
 
@@ -25,6 +25,24 @@ const ProjectDetailsRegionStockholm = () => {
         }
       }
       creditsOne {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      subtitleTwo
+      descriptionTwo {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      subtitleThree
+      descriptionThree {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      subtitleFour
+      descriptionFour {
         childMarkdownRemark {
           rawMarkdownBody
         }
@@ -51,11 +69,17 @@ const ProjectDetailsRegionStockholm = () => {
       />
       <DescriptionContainer>
         <div className="case-container">
-          <DetailsDescription
+          <DetailsDescriptionPlus
             color={data.contentfulProjectDetailsRegionStockholm.titleColor}
             title={data.contentfulProjectDetailsRegionStockholm.titleOne}
-            title2={data.contentfulProjectDetailsRegionStockholm.subtitleOne}
+            subtitle={data.contentfulProjectDetailsRegionStockholm.subtitleOne}
             description={data.contentfulProjectDetailsRegionStockholm.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            subtitle2={data.contentfulProjectDetailsRegionStockholm.subtitleTwo}
+            description2={data.contentfulProjectDetailsRegionStockholm.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+            subtitle3={data.contentfulProjectDetailsRegionStockholm.subtitleThree}
+            description3={data.contentfulProjectDetailsRegionStockholm.descriptionThree.childMarkdownRemark.rawMarkdownBody}
+            subtitle4={data.contentfulProjectDetailsRegionStockholm.subtitleFour}
+            description4={data.contentfulProjectDetailsRegionStockholm.descriptionFour.childMarkdownRemark.rawMarkdownBody}
             credits={data.contentfulProjectDetailsRegionStockholm.creditsOne.childMarkdownRemark.rawMarkdownBody}
           />
           <Img className="case-image" fluid={data.contentfulProjectDetailsRegionStockholm.imageOne.fluid} alt="region_stockholm" />

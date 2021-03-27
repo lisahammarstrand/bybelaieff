@@ -24,8 +24,8 @@ const ContactDescription = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
-  text-align: center;
+  align-items: flex-start; 
+  text-align: left;
   color: white;
   margin: 50px;
 
@@ -38,8 +38,8 @@ const ContactDetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
-  text-align: center;
+  align-items: flex-start; 
+  text-align: left;
   margin-top: 32px;
 `
 const ContactDetails = styled.p`
@@ -55,7 +55,6 @@ const ContactPage = () => {
         email
         phone
         linkedin
-        address
       }
     }    
     `
@@ -67,10 +66,9 @@ const ContactPage = () => {
         <ContactDescription>
           <h1>{data.contentfulContact.title}</h1>
           <ContactDetailsContainer>
-            <ContactDetails>Email: {data.contentfulContact.email}</ContactDetails>
-            <ContactDetails>Phone: {data.contentfulContact.phone}</ContactDetails>
-            <ContactDetails>Address: {data.contentfulContact.address}</ContactDetails>
-            <Link to="https://www.linkedin.com/">
+            <ContactDetails>{data.contentfulContact.email}</ContactDetails>
+            <ContactDetails>{data.contentfulContact.phone}</ContactDetails>
+            <Link to="https://www.linkedin.com/in/nina-belaieff-3903471a5/">
               <ContactDetails>{data.contentfulContact.linkedin}</ContactDetails>
             </Link>
           </ContactDetailsContainer>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-// Component used for project details descriptions: Bakgrund and Uppdrag
+// Component used for project details descriptions: Bakgrund, Uppdrag, Lösning, Resultat
 const DetailsDescriptionContainer = styled.section`
   width: 100%;
   height: auto;
@@ -31,7 +31,7 @@ const DetailsDescriptionCredits = styled.div`
   font-size: 16px;
 `
 
-const DetailsDescription = ({ color, title, subtitle, subtitle2, description, description2, credits }) => {
+const DetailsDescriptionPlus = ({ color, title, subtitle, subtitle2, subtitle3, subtitle4, description, description2, description3, description4, credits }) => {
   return (
     <DetailsDescriptionContainer>
       <DetailsDescriptionCopy>
@@ -40,6 +40,8 @@ const DetailsDescription = ({ color, title, subtitle, subtitle2, description, de
         </DetailsDescriptionTitle>
         <p> <span style={{ fontWeight: `bold`, color: color }}>{subtitle}</span> {description}</p>
         <p> <span style={{ fontWeight: `bold`, color: color }}>{subtitle2}</span> {description2}</p>
+        <p> <span style={{ fontWeight: `bold`, color: color }}>{subtitle3}</span> {description3}</p>
+        <p> <span style={{ fontWeight: `bold`, color: color }}>{subtitle4}</span> {description4}</p>
         <DetailsDescriptionCredits>
           <p>{credits}</p>
         </DetailsDescriptionCredits>
@@ -48,4 +50,4 @@ const DetailsDescription = ({ color, title, subtitle, subtitle2, description, de
   )
 }
 
-export default DetailsDescription
+export default DetailsDescriptionPlus

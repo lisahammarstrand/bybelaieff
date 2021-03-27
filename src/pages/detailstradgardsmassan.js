@@ -29,21 +29,15 @@ const ProjectDetailsTradgardsMassan = () => {
           rawMarkdownBody
         }
       }
-      imageOne {
-        fluid(quality: 100) {
-          ...GatsbyContentfulFluid
-        }
-      }
-      titleTwo
       subtitleTwo
       descriptionTwo {
         childMarkdownRemark {
           rawMarkdownBody
         }
       }
-      creditsTwo {
-        childMarkdownRemark {
-          rawMarkdownBody
+      imageOne {
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
         }
       }
       imageTwo {
@@ -68,18 +62,13 @@ const ProjectDetailsTradgardsMassan = () => {
           <DetailsDescription
             color={data.contentfulProjectDetailsTradgardsmassan.titleColor}
             title={data.contentfulProjectDetailsTradgardsmassan.titleOne}
-            title2={data.contentfulProjectDetailsTradgardsmassan.subtitleOne}
+            subtitle={data.contentfulProjectDetailsTradgardsmassan.subtitleOne}
             description={data.contentfulProjectDetailsTradgardsmassan.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            subtitle2={data.contentfulProjectDetailsTradgardsmassan.subtitleTwo}
+            description2={data.contentfulProjectDetailsTradgardsmassan.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
             credits={data.contentfulProjectDetailsTradgardsmassan.creditsOne.childMarkdownRemark.rawMarkdownBody}
           />
           <Img className="case-image" fluid={data.contentfulProjectDetailsTradgardsmassan.imageOne.fluid} alt="trädgårdsmässan_2014" />
-          <DetailsDescription
-            color={data.contentfulProjectDetailsTradgardsmassan.titleColor}
-            title={data.contentfulProjectDetailsTradgardsmassan.titleTwo}
-            title2={data.contentfulProjectDetailsTradgardsmassan.subtitleTwo}
-            description={data.contentfulProjectDetailsTradgardsmassan.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
-            credits={data.contentfulProjectDetailsTradgardsmassan.creditsTwo.childMarkdownRemark.rawMarkdownBody}
-          />
           <Img className="case-image" fluid={data.contentfulProjectDetailsTradgardsmassan.imageTwo.fluid} alt="trädgårdsmässan_2015" />
         </div>
       </DescriptionContainer>
