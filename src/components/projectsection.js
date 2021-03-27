@@ -14,6 +14,9 @@ const ProjectSectionContainer = styled.section`
   a {
     text-decoration: none;
   }
+  @media (max-width: 768px) {
+    height: 3600px;
+  }
 `
 const ProjectSection = () => {
   const data = useStaticQuery(graphql`

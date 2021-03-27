@@ -18,20 +18,22 @@ const ContactContainer = styled.section`
 `
 
 const ContactDescription = styled.article`
-  position: absolute;
-  top: 50px;
-  max-width: 600px;
+  max-width: 650px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; 
   text-align: left;
   color: white;
-  margin: 50px;
+  padding: 50px;
 
   a {
     text-decoration: none;
     color: white;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0px;
   }
 `
 const ContactDetailsContainer = styled.div`

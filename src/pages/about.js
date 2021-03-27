@@ -14,7 +14,6 @@ display: flex;
 flex-direction: column;
 align-items: center; 
 background: #17525F;
-color: #1F363D;
 padding: 40px;
 margin: 0px;
 `
@@ -27,11 +26,15 @@ justify-content: center;
 align-items: flex-start; 
 text-align: left;
 color: white;
-margin: 50px;
+padding: 50px;
 
 a {
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 768px) {
+  padding: 0px; 
 }
 `
 

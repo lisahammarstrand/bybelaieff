@@ -8,7 +8,7 @@ export const Dropdown = styled.div`
   justify-content: center;
   background: #1f363d;
   color: white;
-  width: 200px;
+  width: 180px;
   height: 540px;
   padding: 0px;
   text-align: left;
@@ -18,7 +18,7 @@ export const Dropdown = styled.div`
 
   @keyframes showDropdown {
     0% {height: 0px;}
-    100% {height: 520px;}
+    100% {height: 540px;}
   }
 
   &:active {
