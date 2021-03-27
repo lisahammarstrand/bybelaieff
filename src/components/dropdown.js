@@ -8,7 +8,7 @@ export const Dropdown = styled.div`
   justify-content: center;
   background: #1f363d;
   color: white;
-  width: 180px;
+  width: 200px;
   height: 540px;
   padding: 0px;
   text-align: left;

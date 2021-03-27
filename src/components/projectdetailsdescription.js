@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const DetailsDescriptionContainer = styled.section`
   width: 100%;
   height: auto;
-  padding: 40px 20px 10px 20px;
+  padding: 20px 20px 10px 20px;
   margin: 0px;
   display: flex;
   flex-direction: column;

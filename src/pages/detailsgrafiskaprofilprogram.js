@@ -85,6 +85,7 @@ const ProjectDetailsGrafiskaProfilprogram = () => {
         <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageSix.fluid} alt="grafisk_profil_om_shanti" />
         <GrayDivider />
         <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageSeven.fluid} alt="grafisk_profil_valideringsforum" />
+        <GrayDivider />
       </section>
     </Layout>
   )
