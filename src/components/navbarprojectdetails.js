@@ -18,6 +18,11 @@ const NavContainer = styled.section`
 const NavIcon = styled.h3`
   margin: 0px;
   color: black;
+  transition: ease 0.5s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `
 
 const DetailsNavbar = ({ linkleft, linkright }) => {

@@ -29,7 +29,7 @@ const HbgDropdown = styled.div`
 
 const DropdownNavlist = styled.ul`
   position: absolute;
-  top: 50px
+  top: 0px
   width: 100%;
   display: flex;
   flex-direction: column;

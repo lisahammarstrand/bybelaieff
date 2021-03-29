@@ -1,4 +1,7 @@
+import React from 'react'
+import { Link } from 'gatsby'
 import styled, { keyframes } from 'styled-components'
+import headerStyles from './header.module.css'
 
 export const Dropdown = styled.div`
   position: absolute;
@@ -70,3 +73,49 @@ export const DropdownNavItemLarge = styled.li`
   animation: ${showdropdownitemlarge} 1s forwards;
   transition: transform 0.3s ease-in-out;
 `
+
+const DropdownMenu = () => {
+  return (
+
+    <DropdownNavlist>
+      <DropdownNavItemLarge>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsgrafiskaprofilprogram">Grafiska profilprogram</Link>
+      </DropdownNavItemLarge>
+      <DropdownNavItem>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailstradgardsmassan">Trädgårdsmässan</Link>
+      </DropdownNavItem>
+      <DropdownNavItem>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsswedbank">Swedbank</Link>
+      </DropdownNavItem>
+      <DropdownNavItem>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsgs1">GS1</Link>
+      </DropdownNavItem>
+      <DropdownNavItem>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsutbildningsmaterial">Utbildningsmaterial</Link>
+      </DropdownNavItem>
+      <DropdownNavItem>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsregionstockholm">Region Stockholm</Link>
+      </DropdownNavItem>
+      <DropdownNavItem>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailskapi">KAPI</Link>
+      </DropdownNavItem>
+      <DropdownNavItem>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsarkitektur">Arkitektur</Link>
+      </DropdownNavItem>
+      <DropdownNavItem>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsvardguiden">Vårdguiden 1177</Link>
+      </DropdownNavItem>
+      <DropdownNavItem>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailshallbarvardag">Film & Rörligt</Link>
+      </DropdownNavItem>
+      <DropdownNavItem>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailssetterwalls">Setterwalls</Link>
+      </DropdownNavItem>
+      <DropdownNavItem>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailspraktikertjanst">Trädgård & Keramik</Link>
+      </DropdownNavItem>
+    </DropdownNavlist>
+
+  )
+}
+export default DropdownMenu
