@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from 'react'
 import headerStyles from './header.module.css'
 import Hamburger from 'hamburger-react'
 import { HamburgerMenu, HbgNavList, ChevronIcon } from './hbgmenu'
-import { Dropdown, DropdownNavlist } from './dropdown'
+import { Dropdown, DropdownNavlist, DropdownNavItem, DropdownNavItemLarge } from './dropdown'
 import HbgDropDown from './hbgdropdown'
 import chevron_right_solid from '../images/chevron_right_solid.svg'
 
@@ -53,12 +53,12 @@ const Header = ({ siteTitle }) => {
           {openHamburger && (
             <HamburgerMenu>
               <HbgNavList>
-                <div role="button" className={headerStyles.projectButton}
+                <div role="button" className={headerStyles.projectButtonHbg}
                   onClick={() => setOpenHbgDropdown(!openHbgDropdown)}>
                   <li className={headerStyles.navItemHbg}
                     activeClassName={headerStyles.activeNavItem}>
                     Projekt</li>
-                  <img className={headerStyles.chevronIcon} src={chevron_right_solid} alt="chevron_icon" />
+                  <img className={headerStyles.chevronIconHbg} src={chevron_right_solid} alt="chevron_icon" />
                 </div>
 
                 {openHbgDropdown && (
@@ -76,53 +76,57 @@ const Header = ({ siteTitle }) => {
             </HamburgerMenu>)}
           <nav>
             <ul className={headerStyles.navList}>
-              <li className={headerStyles.navItem}
-                activeClassName={headerStyles.activeNavItem}
-                style={{ marginBottom: `0` }}
+              <div role="button" className={headerStyles.projectButton}
                 onMouseEnter={() => setOpenDropdown(true)}
               /* onMouseLeave={() => setOpenDropdown(false)} */
               >
-                Projekt
+                <li className={headerStyles.navItemProject}
+                  activeClassName={headerStyles.activeNavItem}
+                  style={{ marginBottom: `0` }}
+                >
+                  Projekt
               </li>
+                <img className={headerStyles.chevronIconMain} src={chevron_right_solid} alt="chevron_icon" />
+              </div>
               {openDropdown && (
                 <Dropdown ref={node}>
                   <DropdownNavlist>
-                    <li style={{ lineHeight: `normal` }}>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsgrafiskaprofilprogram">Grafiska profilprogram</Link>
-                    </li>
-                    <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailstradgardsmassan">Trädgårdsmässan</Link>
-                    </li>
-                    <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsswedbank">Swedbank</Link>
-                    </li>
-                    <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsgs1">GS1</Link>
-                    </li>
-                    <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsutbildningsmaterial">Utbildningsmaterial</Link>
-                    </li>
-                    <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsregionstockholm">Region Stockholm</Link>
-                    </li>
-                    <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailskapi">KAPI</Link>
-                    </li>
-                    <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsarkitektur">Arkitektur</Link>
-                    </li>
-                    <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsvardguiden">Vårdguiden 1177</Link>
-                    </li>
-                    <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailshallbarvardag">Film & Rörligt</Link>
-                    </li>
-                    <li>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailssetterwalls">Setterwalls</Link>
-                    </li>
-                    <li style={{ lineHeight: `normal` }}>
-                      <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailspraktikertjanst">Trädgård & Keramik</Link>
-                    </li>
+                    <DropdownNavItemLarge>
+                      <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsgrafiskaprofilprogram">Grafiska profilprogram</Link>
+                    </DropdownNavItemLarge>
+                    <DropdownNavItem>
+                      <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailstradgardsmassan">Trädgårdsmässan</Link>
+                    </DropdownNavItem>
+                    <DropdownNavItem>
+                      <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsswedbank">Swedbank</Link>
+                    </DropdownNavItem>
+                    <DropdownNavItem>
+                      <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsgs1">GS1</Link>
+                    </DropdownNavItem>
+                    <DropdownNavItem>
+                      <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsutbildningsmaterial">Utbildningsmaterial</Link>
+                    </DropdownNavItem>
+                    <DropdownNavItem>
+                      <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsregionstockholm">Region Stockholm</Link>
+                    </DropdownNavItem>
+                    <DropdownNavItem>
+                      <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailskapi">KAPI</Link>
+                    </DropdownNavItem>
+                    <DropdownNavItem>
+                      <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsarkitektur">Arkitektur</Link>
+                    </DropdownNavItem>
+                    <DropdownNavItem>
+                      <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailsvardguiden">Vårdguiden 1177</Link>
+                    </DropdownNavItem>
+                    <DropdownNavItem>
+                      <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailshallbarvardag">Film & Rörligt</Link>
+                    </DropdownNavItem>
+                    <DropdownNavItem>
+                      <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailssetterwalls">Setterwalls</Link>
+                    </DropdownNavItem>
+                    <DropdownNavItem>
+                      <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItem} to="/detailspraktikertjanst">Trädgård & Keramik</Link>
+                    </DropdownNavItem>
                   </DropdownNavlist>
                 </Dropdown>)}
               <Link to="/about">
@@ -131,7 +135,6 @@ const Header = ({ siteTitle }) => {
               <Link to="/contact">
                 <li className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} style={{ marginBottom: `0` }}>Kontakt</li>
               </Link>
-
             </ul>
           </nav >
         </nav>
