@@ -4,7 +4,8 @@ import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import headerStyles from './header.module.css'
 import Hamburger from 'hamburger-react'
-import { HamburgerMenu, HbgNavList, ChevronIcon } from './hbgmenu'
+import { HamburgerMenu, HbgNavList } from './hbgmenu'
+import { MainNavList } from './mainnavlist'
 import { Dropdown } from './dropdown'
 import HbgDropDown from './hbgdropdown'
 import DropdownMenu from './dropdown'
@@ -69,7 +70,7 @@ const Header = ({ siteTitle }) => {
               </HbgNavList>
             </HamburgerMenu>)}
           <nav>
-            <ul className={headerStyles.navList}>
+            <MainNavList>
               <div role="button" className={headerStyles.projectButton}
                 onClick={() => setOpenDropdown(true)}>
                 <li className={headerStyles.navItemProject}
@@ -89,7 +90,7 @@ const Header = ({ siteTitle }) => {
               <Link to="/contact">
                 <li className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} style={{ marginBottom: `0` }}>Kontakt</li>
               </Link>
-            </ul>
+            </MainNavList>
           </nav >
         </nav>
       </div>

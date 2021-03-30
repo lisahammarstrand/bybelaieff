@@ -23,22 +23,7 @@ const ProjectCardContainer = styled.div`
     width: 100vw;
   }
 `
-// Working on Project card hover effect, no success
-/* const DescriptionWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  visibility: hidden;
 
-  ${ProjectCardContainer}:hover & {
-    visibiliy: visible;
-  }
-` */
 const Description = styled.div`
   display: flex;
   flex-direction: column;

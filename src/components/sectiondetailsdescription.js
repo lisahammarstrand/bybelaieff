@@ -21,7 +21,7 @@ const DetailsDescriptionTitle = styled.h3`
 `
 const DetailsDescriptionCredits = styled.div`
   display: flex;
-  font-size: 16px;
+  font-size: 14px;
   text-align: left;
 `
 

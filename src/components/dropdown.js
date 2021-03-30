@@ -3,6 +3,11 @@ import { Link } from 'gatsby'
 import styled, { keyframes } from 'styled-components'
 import headerStyles from './header.module.css'
 
+const showdropdown = keyframes`
+0% {height: 0px;}
+100% {height: 520px;}
+`
+// Exported to Header component to enable useref function (click outside dropdown)
 export const Dropdown = styled.div`
   position: absolute;
   top: 90px;
@@ -15,20 +20,16 @@ export const Dropdown = styled.div`
   height: 520px;
   padding: 0px;
   text-align: left;
-  animation: showDropdown 1s forwards;
+  animation: ${showdropdown} 1s forwards;
   transition: transform 0.3s ease-in-out;
   z-index: 10;
-
-  @keyframes showDropdown {
-    0% {height: 0px;}
-    100% {height: 520px;}
-  }
 
   &:active {
     visibility: visible;
   }
 `
-export const DropdownNavlist = styled.ul`
+
+const DropdownNavlist = styled.ul`
   position: absolute;
   top: 0px;
   width: 100%;
@@ -40,12 +41,13 @@ export const DropdownNavlist = styled.ul`
   margin: 0;
   padding: 16px;
 `
+
 const showdropdownitem = keyframes`
   0% {height: 0px;}
   100% {height: 27px;}
 `
 
-export const DropdownNavItem = styled.li`
+const DropdownNavItem = styled.li`
   color: white;
   font-size: 0.9rem;
   margin-right: 0rem;
@@ -62,7 +64,7 @@ const showdropdownitemlarge = keyframes`
   100% {height: 44px;}
 `
 
-export const DropdownNavItemLarge = styled.li`
+const DropdownNavItemLarge = styled.li`
   color: white;
   font-size: 0.9rem;
   margin-right: 0rem;

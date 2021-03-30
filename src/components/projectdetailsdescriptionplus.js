@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-// Component used for project details descriptions: Bakgrund, Uppdrag, Lösning, Resultat
+// Component used for project details descriptions: Bakgrund, Uppdrag, Lösning, Resultat, Credits
 const DetailsDescriptionContainer = styled.section`
   width: 100%;
   height: auto;
@@ -28,7 +28,7 @@ const DetailsDescriptionTitle = styled.h2`
 `
 const DetailsDescriptionCredits = styled.div`
   display: flex;
-  font-size: 16px;
+  font-size: 14px;
 `
 
 const DetailsDescriptionPlus = ({ color, title, subtitle, subtitle2, subtitle3, subtitle4, description, description2, description3, description4, credits }) => {

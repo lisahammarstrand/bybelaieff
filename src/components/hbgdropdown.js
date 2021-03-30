@@ -3,6 +3,10 @@ import headerStyles from './header.module.css'
 import { Link } from "gatsby"
 import styled, { keyframes } from 'styled-components'
 
+const showhbgdropdown = keyframes`
+  0% {height: 0px;}
+  100% {height: 450px;}
+`
 
 const HbgDropdown = styled.div`
   position: relative;
@@ -15,17 +19,13 @@ const HbgDropdown = styled.div`
   width: 200px;
   padding: 0px;
   text-align: left;
-  animation: showDropdown 1s forwards;
+  animation: ${showhbgdropdown} 1s forwards;
   transition: transform 0.3s ease-in-out;
-
-  @keyframes showDropdown {
-    0% {height: 0px;}
-    100% {height: 450px;}
-  }
 
   &:active {
     visibility: visible;
-}`
+}
+`
 
 const DropdownNavlist = styled.ul`
   position: absolute;
