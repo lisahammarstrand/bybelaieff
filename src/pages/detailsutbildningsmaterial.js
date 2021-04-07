@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
 import SectionDescription from '../components/sectiondetailsdescription'
-
+import ToTopNavbar from '../components/totopnavbar'
 
 const GrayDivider = styled.div`
   width: 90%;
@@ -110,8 +110,8 @@ const ProjectDetailsUtbildningsMaterial = () => {
           credits={data.contentfulUtbildningsmaterial.description4.childMarkdownRemark.rawMarkdownBody}
         />
         <Img className="education-image" fluid={data.contentfulUtbildningsmaterial.imageFour.fluid} alt="utbildningsmaterial" />
-        <GrayDivider />
       </section>
+      <ToTopNavbar />
     </Layout>
   )
 

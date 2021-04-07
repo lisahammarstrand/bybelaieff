@@ -20,7 +20,7 @@ export const Dropdown = styled.div`
   height: 520px;
   padding: 0px;
   text-align: left;
-  animation: ${showdropdown} 1s forwards;
+  animation: ${showdropdown} 0.5s forwards;
   transition: transform 0.3s ease-in-out;
   z-index: 10;
 
@@ -55,7 +55,7 @@ const DropdownNavItem = styled.li`
   height: 27px;
   background: #1f363d;
   cursor: pointer;
-  animation: ${showdropdownitem} 1s forwards;
+  animation: ${showdropdownitem} 0.5s forwards;
   transition: transform 0.3s ease-in-out;
 `
 
@@ -72,7 +72,7 @@ const DropdownNavItemLarge = styled.li`
   line-height: normal;
   background: #1f363d;
   cursor: pointer;
-  animation: ${showdropdownitemlarge} 1s forwards;
+  animation: ${showdropdownitemlarge} 0.5s forwards;
   transition: transform 0.3s ease-in-out;
 `
 

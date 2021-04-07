@@ -7,6 +7,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
+import ToTopNavbar from '../components/totopnavbar'
 
 const GrayDivider = styled.div`
   width: 90%;
@@ -56,8 +57,8 @@ const ProjectDetailsArkitektur = () => {
         <Img className="architecture-image" fluid={data.contentfulArkitektur.imageTwo.fluid} alt="arkitektur" />
         <GrayDivider />
         <Img className="architecture-image" fluid={data.contentfulArkitektur.imageThree.fluid} alt="arkitektur" />
-        <GrayDivider />
       </section>
+      <ToTopNavbar />
     </Layout>
   )
 

@@ -8,7 +8,7 @@ import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
 import DetailsDescription from '../components/projectdetailsdescription'
 import { DescriptionContainer } from '../components/detailsdescriptioncontainer'
-
+import ToTopNavbar from '../components/totopnavbar'
 
 const ProjectDetailsHallbarVardag = () => {
   const data = useStaticQuery(graphql`
@@ -61,6 +61,7 @@ const ProjectDetailsHallbarVardag = () => {
           <Img className="case-image" fluid={data.contentfulProjectDetailsHallbarVardag.imageOne.fluid} alt="hållbar_vardag" />
         </div>
       </DescriptionContainer>
+      <ToTopNavbar />
     </Layout>
   )
 

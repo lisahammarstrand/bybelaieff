@@ -12,9 +12,10 @@ const ProjectCardContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  &:hover {
-    opacity: 0.8;
-  }
+  &:hover > div {
+   /*  opacity: 0.8; */
+    background:rgba(0, 0, 0, 0.1);
+  } 
 
   @media (max-width: 768px) {
     width: 100vw;
@@ -23,6 +24,16 @@ const ProjectCardContainer = styled.div`
     width: 100vw;
   }
 `
+const DescriptionWrapper = styled.div`
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  `
 
 const Description = styled.div`
   display: flex;
@@ -36,16 +47,15 @@ const Description = styled.div`
 }
 `
 
-const ProjectCard = ({ background, title, description }) => {
+const ProjectCard = ({ background, title }) => {
 
   return (
     <ProjectCardContainer background={background}>
-      {/*     <DescriptionWrapper> */}
-      <Description>
-        <h3>{title}</h3>
-        {/* <p>{description}</p> */}
-      </Description>
-      {/* </DescriptionWrapper> */}
+      <DescriptionWrapper>
+        <Description>
+          <h3>{title}</h3>
+        </Description>
+      </DescriptionWrapper>
     </ProjectCardContainer>
   )
 }

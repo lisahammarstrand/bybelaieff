@@ -19,7 +19,7 @@ const HbgDropdown = styled.div`
   width: 200px;
   padding: 0px;
   text-align: left;
-  animation: ${showhbgdropdown} 1s forwards;
+  animation: ${showhbgdropdown} 0.5s forwards;
   transition: transform 0.3s ease-in-out;
 
   &:active {
@@ -52,7 +52,7 @@ export const HbgDropdownNavItem = styled.li`
   height: 24px;
   background: #1f363d;
   cursor: pointer;
-  animation: ${showhbgdropdownitem} 1s forwards;
+  animation: ${showhbgdropdownitem} 0.5s forwards;
   transition: transform 0.3s ease-in-out;
 `
 

@@ -31,8 +31,10 @@ header {
   padding: 0;
 }
 
+@media (min-width: 650px) {
 .hbg-icon {
   display: none;
+}
 }
 
 .nav-item {

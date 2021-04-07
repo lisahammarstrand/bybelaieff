@@ -17,8 +17,8 @@ export const HamburgerMenu = styled.nav`
   position: absolute;
   top: 100;
   right: 0;
-  animation: ${showhbgmenu} 1s forwards;
-  transition: transfrom 0.3s ease-out;
+  animation: ${showhbgmenu} 0.5s forwards;
+  transition: transfrom 0.3s ease-in-out;
   
   &:active {
     visibility: visible;

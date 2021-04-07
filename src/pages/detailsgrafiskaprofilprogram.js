@@ -7,6 +7,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
+import ToTopNavbar from '../components/totopnavbar'
 
 
 const GrayDivider = styled.div`
@@ -86,6 +87,7 @@ const ProjectDetailsGrafiskaProfilprogram = () => {
         <GrayDivider />
         <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageSeven.fluid} alt="grafisk_profil_valideringsforum" />
       </section>
+      <ToTopNavbar />
     </Layout>
   )
 
