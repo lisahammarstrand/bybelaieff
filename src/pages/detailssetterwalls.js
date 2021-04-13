@@ -68,7 +68,7 @@ const ProjectDetailsSetterwalls = () => {
           <Img className="case-image" fluid={data.contentfulProjectDetailsSetterwalls.imageOne.fluid} alt="setterwalls" />
         </div>
       </DescriptionContainer>
-      <ToTopNavbar />
+      <ToTopNavbar linktotop="/detailssetterwalls#top" title="Setterwalls" />
     </Layout>
   )
 

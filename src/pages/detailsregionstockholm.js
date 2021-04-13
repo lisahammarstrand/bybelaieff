@@ -85,7 +85,7 @@ const ProjectDetailsRegionStockholm = () => {
           <Img className="case-image" fluid={data.contentfulProjectDetailsRegionStockholm.imageOne.fluid} alt="region_stockholm" />
         </div>
       </DescriptionContainer>
-      <ToTopNavbar />
+      <ToTopNavbar linktotop="/detailsregionstockholm#top" title="Region Stockholm" />
     </Layout>
   )
 

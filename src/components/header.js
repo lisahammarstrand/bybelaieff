@@ -33,7 +33,7 @@ const Header = ({ siteTitle }) => {
   }, [openDropdown])
 
   return (
-    <header >
+    <header id="top">
       <div className={headerStyles.container}>
         <div className={headerStyles.logoBar}>
           <Link to="/" style={{ color: `white`, textDecoration: `none`, }}>

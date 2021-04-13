@@ -54,6 +54,7 @@ module.exports = {
         icon: `src/images/nina_flower_225x225_2.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-anchor-links`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

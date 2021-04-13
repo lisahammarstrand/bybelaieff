@@ -61,7 +61,7 @@ const ProjectDetailsHallbarVardag = () => {
           <Img className="case-image" fluid={data.contentfulProjectDetailsHallbarVardag.imageOne.fluid} alt="hållbar_vardag" />
         </div>
       </DescriptionContainer>
-      <ToTopNavbar />
+      <ToTopNavbar linktotop="/detailshallbarvardag#top" title="Hållbar vardag" />
     </Layout>
   )
 

@@ -72,7 +72,7 @@ const ProjectDetailsTradgardsMassan = () => {
           <Img className="case-image" fluid={data.contentfulProjectDetailsTradgardsmassan.imageTwo.fluid} alt="trädgårdsmässan_2015" />
         </div>
       </DescriptionContainer>
-      <ToTopNavbar />
+      <ToTopNavbar linktotop="/detailstradgardsmassan#top" title="Trädgårdsmässan" />
     </Layout>
   )
 }

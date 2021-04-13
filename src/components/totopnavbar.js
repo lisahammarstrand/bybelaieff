@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
@@ -24,14 +24,14 @@ const NavIcon = styled.h3`
   }
 `
 
-const ToTopNavbar = ({ linkup }) => {
+const ToTopNavbar = ({ linktotop }) => {
   return (
     <NavContainer>
-      <Link to={linkup}>
+      <AnchorLink to={linktotop}>
         <NavIcon>
           <FontAwesomeIcon icon={faChevronUp} />
         </NavIcon>
-      </Link>
+      </AnchorLink>
     </NavContainer>
   )
 }

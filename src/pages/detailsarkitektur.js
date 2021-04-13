@@ -58,7 +58,7 @@ const ProjectDetailsArkitektur = () => {
         <GrayDivider />
         <Img className="architecture-image" fluid={data.contentfulArkitektur.imageThree.fluid} alt="arkitektur" />
       </section>
-      <ToTopNavbar />
+      <ToTopNavbar linktotop="/detailsarkitektur#top" title="Arkitektur" />/>
     </Layout>
   )
 

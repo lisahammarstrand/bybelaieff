@@ -87,7 +87,7 @@ const ProjectDetailsGrafiskaProfilprogram = () => {
         <GrayDivider />
         <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageSeven.fluid} alt="grafisk_profil_valideringsforum" />
       </section>
-      <ToTopNavbar />
+      <ToTopNavbar linktotop="/detailsgrafiskaprofilprogram#top" title="Grafiska profilprogram" />/>
     </Layout>
   )
 

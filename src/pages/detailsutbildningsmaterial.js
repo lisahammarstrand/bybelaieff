@@ -111,7 +111,7 @@ const ProjectDetailsUtbildningsMaterial = () => {
         />
         <Img className="education-image" fluid={data.contentfulUtbildningsmaterial.imageFour.fluid} alt="utbildningsmaterial" />
       </section>
-      <ToTopNavbar />
+      <ToTopNavbar linktotop="/detailsutbildningsmaterial#top" title="Utbildningsmaterial" />
     </Layout>
   )
 
