@@ -74,7 +74,7 @@ const Header = ({ siteTitle }) => {
               <div role="button" className={headerStyles.projectButton}
                 onClick={() => setOpenDropdown(true)}>
                 <li className={headerStyles.navItemProject}
-                  activeClassName={headerStyles.activeNavItem}
+                  activeClassName={headerStyles.activeNavItemProject}
                   style={{ marginBottom: `0` }}>
                   Projekt
               </li>
@@ -84,12 +84,12 @@ const Header = ({ siteTitle }) => {
                 <Dropdown ref={node}>
                   <DropdownMenu />
                 </Dropdown>)}
-              <Link to="/about">
-                <li className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} style={{ marginBottom: `0` }}>Om </li>
-              </Link>
-              <Link to="/contact">
-                <li className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} style={{ marginBottom: `0` }}>Kontakt</li>
-              </Link>
+              <li style={{ marginBottom: `0` }}>
+                <Link to="/about" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>Om</Link>
+              </li>
+              <li style={{ marginBottom: `0` }}>
+                <Link to="/contact" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>Kontakt</Link>
+              </li>
             </MainNavList>
           </nav >
         </nav>

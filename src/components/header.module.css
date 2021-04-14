@@ -48,6 +48,10 @@ header {
   color: #6FD3E9;
 }
 
+.nav-item:active {
+  color: #6FD3E9;
+}
+
 .active-nav-item {
   color: #6FD3E9;
 }
@@ -109,7 +113,7 @@ header {
   color: #6FD3E9;
   }
   
-.nav-item-dropdown:active {
+.active-nav-item-dropdown {
   color: #6FD3E9;
   }
 

@@ -31,6 +31,11 @@ const ProjectDetailsGS1 = () => {
           rawMarkdownBody
         }
       }
+      creditsOne {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
       imageOne {
         fluid(quality: 100) {
           ...GatsbyContentfulFluid
@@ -61,6 +66,7 @@ const ProjectDetailsGS1 = () => {
             description={data.contentfulProjectDetailsGs1.descriptionOne.childMarkdownRemark.rawMarkdownBody}
             subtitle2={data.contentfulProjectDetailsGs1.subtitleTwo}
             description2={data.contentfulProjectDetailsGs1.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulProjectDetailsGs1.creditsOne.childMarkdownRemark.rawMarkdownBody}
           />
           <Img className="case-image" fluid={data.contentfulProjectDetailsGs1.imageOne.fluid} alt="gs_one" />
         </div>

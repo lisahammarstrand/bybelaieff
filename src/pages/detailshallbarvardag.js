@@ -9,6 +9,7 @@ import DetailsNavbar from '../components/navbarprojectdetails'
 import DetailsDescription from '../components/projectdetailsdescription'
 import { DescriptionContainer } from '../components/detailsdescriptioncontainer'
 import ToTopNavbar from '../components/totopnavbar'
+import Video from '../components/video'
 
 const ProjectDetailsHallbarVardag = () => {
   const data = useStaticQuery(graphql`
@@ -27,11 +28,6 @@ const ProjectDetailsHallbarVardag = () => {
       creditsOne {
         childMarkdownRemark {
           rawMarkdownBody
-        }
-      }
-      imageOne {
-        fluid(quality: 100) {
-          ...GatsbyContentfulFluid
         }
       }
     }
@@ -58,7 +54,12 @@ const ProjectDetailsHallbarVardag = () => {
             description={data.contentfulProjectDetailsHallbarVardag.descriptionOne.childMarkdownRemark.rawMarkdownBody}
             credits={data.contentfulProjectDetailsHallbarVardag.creditsOne.childMarkdownRemark.rawMarkdownBody}
           />
-          <Img className="case-image" fluid={data.contentfulProjectDetailsHallbarVardag.imageOne.fluid} alt="hållbar_vardag" />
+          <Video
+            videoSrcURL="https://www.youtube.com/embed/sSiJ35xjtVg"
+            videoTitle="YouTube video player" />
+          <Video
+            videoSrcURL="https://www.youtube.com/embed/sSiJ35xjtVg"
+            videoTitle="YouTube video player" />
         </div>
       </DescriptionContainer>
       <ToTopNavbar linktotop="/detailshallbarvardag#top" title="Hållbar vardag" />
