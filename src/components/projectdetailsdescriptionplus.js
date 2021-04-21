@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Component used for project details descriptions: Bakgrund, Uppdrag, Lösning, Resultat, Credits
+// Region Stockholm
 const DetailsDescriptionContainer = styled.section`
   width: 100%;
   height: auto;
@@ -12,6 +13,10 @@ const DetailsDescriptionContainer = styled.section`
   justify-content: center;
   align-items: center;
   color: #000;
+
+  @media screen and (max-width: 768px) {
+    padding: 20px 30px 10px 30px;
+  }
 `
 const DetailsDescriptionCopy = styled.article`
   width: 100%;

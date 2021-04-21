@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-// Component used in sections with only Title and Credits, f ex Utbildningsmaterial
+// Component used in sections with only Title and Credits
+// Utbildningsmaterial
 const DetailsDescriptionCopy = styled.article`
   width: 100%;
   height: auto;

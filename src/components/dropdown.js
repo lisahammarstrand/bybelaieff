@@ -81,40 +81,40 @@ const DropdownMenu = () => {
 
     <DropdownNavlist>
       <DropdownNavItemLarge>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/detailsgrafiskaprofilprogram">Grafiska profilprogram</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/grafiskaprofilprogram">Grafiska profilprogram</Link>
       </DropdownNavItemLarge>
       <DropdownNavItem>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/detailstradgardsmassan">Trädgårdsmässan</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/tradgardsmassan">Trädgårdsmässan</Link>
       </DropdownNavItem>
       <DropdownNavItem>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/detailsswedbank">Swedbank</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/swedbank">Swedbank</Link>
       </DropdownNavItem>
       <DropdownNavItem>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/detailsgs1">GS1</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/gs1">GS1</Link>
       </DropdownNavItem>
       <DropdownNavItem>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/detailsutbildningsmaterial">Utbildningsmaterial</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/utbildningsmaterial">Utbildningsmaterial</Link>
       </DropdownNavItem>
       <DropdownNavItem>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/detailsregionstockholm">Region Stockholm</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/regionstockholm">Region Stockholm</Link>
       </DropdownNavItem>
       <DropdownNavItem>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/detailskapi">KAPI</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/kapi">KAPI</Link>
       </DropdownNavItem>
       <DropdownNavItem>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/detailsarkitektur">Arkitektur</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/arkitektur">Arkitektur</Link>
       </DropdownNavItem>
       <DropdownNavItem>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/detailsvardguiden">Vårdguiden 1177</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/vardguiden1177">Vårdguiden 1177</Link>
       </DropdownNavItem>
       <DropdownNavItem>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/detailshallbarvardag">Film & Rörligt</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/rorligt">Rörligt</Link>
       </DropdownNavItem>
       <DropdownNavItem>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/detailssetterwalls">Setterwalls</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/setterwalls">Setterwalls</Link>
       </DropdownNavItem>
       <DropdownNavItem>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/detailspraktikertjanst">Trädgård & Keramik</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/ovrigt">Övrigt</Link>
       </DropdownNavItem>
     </DropdownNavlist>
 

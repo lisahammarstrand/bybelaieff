@@ -10,10 +10,11 @@ import DetailsDescription from '../components/projectdetailsdescription'
 import { DescriptionContainer } from '../components/detailsdescriptioncontainer'
 import ToTopNavbar from '../components/totopnavbar'
 
-const ProjectDetailsKapi = () => {
-  const data = useStaticQuery(graphql`
-  query {
-    contentfulProjectDetailsKapi {
+const ProjectGS1 = () => {
+  const data = useStaticQuery(
+    graphql`
+   {
+    contentfulGs1 {
       background
       titleTop
       titleColor
@@ -41,37 +42,38 @@ const ProjectDetailsKapi = () => {
         }
       }
     }
-  } 
-  `
+  }
+    `
   )
-  return (
 
-    <Layout>
+  return (
+    < Layout >
       <SEO title="Project Details" />
       <DetailsTopSection
-        background={data.contentfulProjectDetailsKapi.background}
-        title={data.contentfulProjectDetailsKapi.titleTop}
+        background={data.contentfulGs1.background}
+        title={data.contentfulGs1.titleTop}
       />
       <DetailsNavbar
-        linkleft="/detailsregionstockholm"
-        linkright="/detailsarkitektur"
+        linkleft="/swedbank"
+        linkright="/utbildningsmaterial"
       />
       <DescriptionContainer>
         <div className="case-container">
           <DetailsDescription
-            color={data.contentfulProjectDetailsKapi.titleColor}
-            title={data.contentfulProjectDetailsKapi.titleOne}
-            subtitle={data.contentfulProjectDetailsKapi.subtitleOne}
-            description={data.contentfulProjectDetailsKapi.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-            subtitle2={data.contentfulProjectDetailsKapi.subtitleTwo}
-            description2={data.contentfulProjectDetailsKapi.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
-            credits={data.contentfulProjectDetailsKapi.creditsOne.childMarkdownRemark.rawMarkdownBody} />
-          <Img className="case-image" fluid={data.contentfulProjectDetailsKapi.imageOne.fluid} alt="kapi" />
+            color={data.contentfulGs1.titleColor}
+            title={data.contentfulGs1.titleOne}
+            subtitle={data.contentfulGs1.subtitleOne}
+            description={data.contentfulGs1.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            subtitle2={data.contentfulGs1.subtitleTwo}
+            description2={data.contentfulGs1.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulGs1.creditsOne.childMarkdownRemark.rawMarkdownBody}
+          />
+          <Img className="case-image" fluid={data.contentfulGs1.imageOne.fluid} alt="gs_one" />
         </div>
       </DescriptionContainer>
-      <ToTopNavbar linktotop="/detailskapi#top" title="Kapi" />
-    </Layout>
-  )
+      <ToTopNavbar linktotop="/gs1#top" title="GS1" />
 
+    </Layout >
+  )
 }
-export default ProjectDetailsKapi
+export default ProjectGS1

@@ -61,40 +61,40 @@ const HbgDropDown = () => {
     <HbgDropdown>
       <DropdownNavlist>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsgrafiskaprofilprogram">Grafiska profilprogram</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/grafiskaprofilprogram">Grafiska profilprogram</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailstradgardsmassan">Trädgårdsmässan</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/tradgardsmassan">Trädgårdsmässan</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsswedbank">Swedbank</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/swedbank">Swedbank</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsgs1">GS1</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/gs1">GS1</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsutbildningsmaterial">Utbildningsmaterial</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/utbildningsmaterial">Utbildningsmaterial</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsregionstockholm">Region Stockholm</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/regionstockholm">Region Stockholm</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailskapi">KAPI</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/kapi">KAPI</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsarkitektur">Arkitektur</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/arkitektur">Arkitektur</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailsvardguiden">Vårdguiden 1177</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/vardguiden1177">Vårdguiden 1177</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailshallbarvardag">Film & Rörligt</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/rorligt">Rörligt</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailssetterwalls">Setterwalls</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/setterwalls">Setterwalls</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/detailspraktikertjanst">Trädgård & Keramik</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/ovrigt">Övrigt</Link>
         </HbgDropdownNavItem>
       </DropdownNavlist>
     </HbgDropdown>

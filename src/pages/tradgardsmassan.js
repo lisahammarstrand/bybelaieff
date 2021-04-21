@@ -10,10 +10,10 @@ import DetailsDescription from '../components/projectdetailsdescription'
 import { DescriptionContainer } from '../components/detailsdescriptioncontainer'
 import ToTopNavbar from '../components/totopnavbar'
 
-const ProjectDetailsTradgardsMassan = () => {
+const ProjectTradgardsMassan = () => {
   const data = useStaticQuery(graphql`
   query {
-    contentfulProjectDetailsTradgardsmassan {
+    contentfulTradgardsmassan {
       background
       titleTop
       titleColor
@@ -52,28 +52,28 @@ const ProjectDetailsTradgardsMassan = () => {
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background={data.contentfulProjectDetailsTradgardsmassan.background}
-        title={data.contentfulProjectDetailsTradgardsmassan.titleTop} />
+        background={data.contentfulTradgardsmassan.background}
+        title={data.contentfulTradgardsmassan.titleTop} />
       <DetailsNavbar
-        linkleft="/detailsgrafiskaprofilprogram"
-        linkright="/detailsswedbank" />
+        linkleft="/grafiskaprofilprogram"
+        linkright="/swedbank" />
       <DescriptionContainer>
         <div className="case-container">
           <DetailsDescription
-            color={data.contentfulProjectDetailsTradgardsmassan.titleColor}
-            title={data.contentfulProjectDetailsTradgardsmassan.titleOne}
-            subtitle={data.contentfulProjectDetailsTradgardsmassan.subtitleOne}
-            description={data.contentfulProjectDetailsTradgardsmassan.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-            subtitle2={data.contentfulProjectDetailsTradgardsmassan.subtitleTwo}
-            description2={data.contentfulProjectDetailsTradgardsmassan.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
-            credits={data.contentfulProjectDetailsTradgardsmassan.creditsOne.childMarkdownRemark.rawMarkdownBody}
+            color={data.contentfulTradgardsmassan.titleColor}
+            title={data.contentfulTradgardsmassan.titleOne}
+            subtitle={data.contentfulTradgardsmassan.subtitleOne}
+            description={data.contentfulTradgardsmassan.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            subtitle2={data.contentfulTradgardsmassan.subtitleTwo}
+            description2={data.contentfulTradgardsmassan.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulTradgardsmassan.creditsOne.childMarkdownRemark.rawMarkdownBody}
           />
-          <Img className="case-image" fluid={data.contentfulProjectDetailsTradgardsmassan.imageOne.fluid} alt="trädgårdsmässan_2014" />
-          <Img className="case-image" fluid={data.contentfulProjectDetailsTradgardsmassan.imageTwo.fluid} alt="trädgårdsmässan_2015" />
+          <Img className="case-image" fluid={data.contentfulTradgardsmassan.imageOne.fluid} alt="trädgårdsmässan_2014" />
+          <Img className="case-image" fluid={data.contentfulTradgardsmassan.imageTwo.fluid} alt="trädgårdsmässan_2015" />
         </div>
       </DescriptionContainer>
-      <ToTopNavbar linktotop="/detailstradgardsmassan#top" title="Trädgårdsmässan" />
+      <ToTopNavbar linktotop="/tradgardsmassan#top" title="Trädgårdsmässan" />
     </Layout>
   )
 }
-export default ProjectDetailsTradgardsMassan
+export default ProjectTradgardsMassan

@@ -17,7 +17,7 @@ const GrayDivider = styled.div`
   border-bottom: 2px solid lightgray;
   `
 
-const ProjectDetailsUtbildningsMaterial = () => {
+const ProjectsUtbildningsMaterial = () => {
   const data = useStaticQuery(graphql`
   query {
     contentfulUtbildningsmaterial {
@@ -79,8 +79,8 @@ const ProjectDetailsUtbildningsMaterial = () => {
         title={data.contentfulUtbildningsmaterial.titleTop}
       />
       <DetailsNavbar
-        linkleft="/detailsgs1"
-        linkright="/detailsregionstockholm"
+        linkleft="/gs1"
+        linkright="/regionstockholm"
       />
       <section className="content-container">
         <SectionDescription
@@ -111,9 +111,9 @@ const ProjectDetailsUtbildningsMaterial = () => {
         />
         <Img className="education-image" fluid={data.contentfulUtbildningsmaterial.imageFour.fluid} alt="utbildningsmaterial" />
       </section>
-      <ToTopNavbar linktotop="/detailsutbildningsmaterial#top" title="Utbildningsmaterial" />
+      <ToTopNavbar linktotop="/utbildningsmaterial#top" title="Utbildningsmaterial" />
     </Layout>
   )
 
 }
-export default ProjectDetailsUtbildningsMaterial
+export default ProjectsUtbildningsMaterial

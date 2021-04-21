@@ -1,6 +1,5 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -11,10 +10,10 @@ import { DescriptionContainer } from '../components/detailsdescriptioncontainer'
 import ToTopNavbar from '../components/totopnavbar'
 import Video from '../components/video'
 
-const ProjectDetailsHallbarVardag = () => {
+const ProjectsMotion = () => {
   const data = useStaticQuery(graphql`
   query {
-    contentfulProjectDetailsHallbarVardag {
+    contentfulRorligt {
       background
       titleTop
       titleColor
@@ -30,6 +29,10 @@ const ProjectDetailsHallbarVardag = () => {
           rawMarkdownBody
         }
       }
+      videoSourceOne
+      videoTitleOne
+      videoSourceTwo
+      videoTitleTwo
     }
   }
   `)
@@ -38,33 +41,33 @@ const ProjectDetailsHallbarVardag = () => {
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background={data.contentfulProjectDetailsHallbarVardag.background}
-        title={data.contentfulProjectDetailsHallbarVardag.titleTop}
+        background={data.contentfulRorligt.background}
+        title={data.contentfulRorligt.titleTop}
       />
       <DetailsNavbar
-        linkleft="/detailsvardguiden"
-        linkright="/detailssetterwalls"
+        linkleft="/vardguiden1177"
+        linkright="/setterwalls"
       />
       <DescriptionContainer>
         <div className="case-container">
           <DetailsDescription
-            color={data.contentfulProjectDetailsHallbarVardag.titleColor}
-            title={data.contentfulProjectDetailsHallbarVardag.titleOne}
-            subtitle={data.contentfulProjectDetailsHallbarVardag.subtitleOne}
-            description={data.contentfulProjectDetailsHallbarVardag.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-            credits={data.contentfulProjectDetailsHallbarVardag.creditsOne.childMarkdownRemark.rawMarkdownBody}
+            color={data.contentfulRorligt.titleColor}
+            title={data.contentfulRorligt.titleOne}
+            subtitle={data.contentfulRorligt.subtitleOne}
+            description={data.contentfulRorligt.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulRorligt.creditsOne.childMarkdownRemark.rawMarkdownBody}
           />
           <Video
-            videoSrcURL="https://www.youtube.com/embed/sSiJ35xjtVg"
-            videoTitle="YouTube video player" />
+            videoSrcURL={data.contentfulRorligt.videoSourceOne}
+            videoTitle={data.contentfulRorligt.videoTitleOne} />
           <Video
-            videoSrcURL="https://www.youtube.com/embed/sSiJ35xjtVg"
-            videoTitle="YouTube video player" />
+            videoSrcURL={data.contentfulRorligt.videoSourceTwo}
+            videoTitle={data.contentfulRorligt.videoTitleTwo} />
         </div>
       </DescriptionContainer>
-      <ToTopNavbar linktotop="/detailshallbarvardag#top" title="Hållbar vardag" />
+      <ToTopNavbar linktotop="/rorligt#top" title="Rörligt" />
     </Layout>
   )
 
 }
-export default ProjectDetailsHallbarVardag
+export default ProjectsMotion

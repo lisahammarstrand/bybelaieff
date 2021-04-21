@@ -57,15 +57,12 @@ const AboutPage = () => {
   return (
     <Layout>
       <SEO title="About" />
-
       <AboutContainer>
         <AboutDescription>
           <h1>{data.contentfulAbout.title}</h1>
-          {/* <div>{data.contentfulAbout.description.childMarkdownRemark.rawMarkdownBody}</div> */}
           <div dangerouslySetInnerHTML={{ __html: data.contentfulAbout.description.childMarkdownRemark.html, }}></div>
         </AboutDescription>
       </AboutContainer>
-
     </Layout>
   )
 }

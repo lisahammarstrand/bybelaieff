@@ -31,7 +31,7 @@ header {
   padding: 0;
 }
 
-@media (min-width: 650px) {
+@media screen and (min-width: 769px) {
 .hbg-icon {
   display: none;
 }

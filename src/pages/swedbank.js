@@ -10,10 +10,10 @@ import DetailsDescription from '../components/projectdetailsdescription'
 import { DescriptionContainer } from '../components/detailsdescriptioncontainer'
 import ToTopNavbar from '../components/totopnavbar'
 
-const ProjectDetailsVardguiden = () => {
+const ProjectSwedbank = () => {
   const data = useStaticQuery(graphql`
   query {
-    contentfulProjectDetailsVardguiden {
+    contentfulSwedbank {
       background
       titleTop
       titleColor
@@ -41,37 +41,36 @@ const ProjectDetailsVardguiden = () => {
         }
       }
     }
-  }
-  `
+  }`
   )
   return (
 
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background={data.contentfulProjectDetailsVardguiden.background}
-        title={data.contentfulProjectDetailsVardguiden.titleTop} />
+        background={data.contentfulSwedbank.background}
+        title={data.contentfulSwedbank.titleTop} />
       <DetailsNavbar
-        linkleft="/detailsarkitektur"
-        linkright="/detailshallbarvardag"
+        linkleft="/tradgardsmassan"
+        linkright="/gs1"
       />
       <DescriptionContainer>
         <div className="case-container">
           <DetailsDescription
-            color={data.contentfulProjectDetailsVardguiden.titleColor}
-            title={data.contentfulProjectDetailsVardguiden.titleOne}
-            subtitle={data.contentfulProjectDetailsVardguiden.subtitleOne}
-            description={data.contentfulProjectDetailsVardguiden.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-            subtitle2={data.contentfulProjectDetailsVardguiden.subtitleTwo}
-            description2={data.contentfulProjectDetailsVardguiden.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
-            credits={data.contentfulProjectDetailsVardguiden.creditsOne.childMarkdownRemark.rawMarkdownBody}
+            color={data.contentfulSwedbank.titleColor}
+            title={data.contentfulSwedbank.titleOne}
+            subtitle={data.contentfulSwedbank.subtitleOne}
+            description={data.contentfulSwedbank.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            subtitle2={data.contentfulSwedbank.subtitleTwo}
+            description2={data.contentfulSwedbank.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulSwedbank.creditsOne.childMarkdownRemark.rawMarkdownBody}
           />
-          <Img className="case-image" fluid={data.contentfulProjectDetailsVardguiden.imageOne.fluid} alt="vardguiden_1177" />
+          <Img className="case-image" fluid={data.contentfulSwedbank.imageOne.fluid} alt="swedbank" />
         </div>
       </DescriptionContainer>
-      <ToTopNavbar linktotop="/detailsvardguiden#top" title="Vårdguiden" />
+      <ToTopNavbar linktotop="/swedbank#top" title="Swedbank" />
     </Layout>
   )
 
 }
-export default ProjectDetailsVardguiden
+export default ProjectSwedbank

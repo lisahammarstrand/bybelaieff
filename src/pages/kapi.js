@@ -10,16 +10,22 @@ import DetailsDescription from '../components/projectdetailsdescription'
 import { DescriptionContainer } from '../components/detailsdescriptioncontainer'
 import ToTopNavbar from '../components/totopnavbar'
 
-const ProjectDetailsPraktikertjanst = () => {
+const ProjectKapi = () => {
   const data = useStaticQuery(graphql`
   query {
-    contentfulProjectDetailsPraktikertjanst {
+    contentfulKapi {
       background
       titleTop
       titleColor
       titleOne
       subtitleOne
       descriptionOne {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      subtitleTwo
+      descriptionTwo {
         childMarkdownRemark {
           rawMarkdownBody
         }
@@ -35,34 +41,37 @@ const ProjectDetailsPraktikertjanst = () => {
         }
       }
     }
-  }
-  `)
+  } 
+  `
+  )
   return (
 
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background={data.contentfulProjectDetailsPraktikertjanst.background}
-        title={data.contentfulProjectDetailsPraktikertjanst.titleTop} />
+        background={data.contentfulKapi.background}
+        title={data.contentfulKapi.titleTop}
+      />
       <DetailsNavbar
-        linkleft="/detailssetterwalls"
-        linkright="/"
+        linkleft="/regionstockholm"
+        linkright="/arkitektur"
       />
       <DescriptionContainer>
         <div className="case-container">
           <DetailsDescription
-            color={data.contentfulProjectDetailsPraktikertjanst.titleColor}
-            title={data.contentfulProjectDetailsPraktikertjanst.titleOne}
-            subtitle={data.contentfulProjectDetailsPraktikertjanst.subtitleOne}
-            description={data.contentfulProjectDetailsPraktikertjanst.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-            credits={data.contentfulProjectDetailsPraktikertjanst.creditsOne.childMarkdownRemark.rawMarkdownBody}
-          />
-          <Img className="case-image" fluid={data.contentfulProjectDetailsPraktikertjanst.imageOne.fluid} alt="praktikertjänst" />
+            color={data.contentfulKapi.titleColor}
+            title={data.contentfulKapi.titleOne}
+            subtitle={data.contentfulKapi.subtitleOne}
+            description={data.contentfulKapi.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            subtitle2={data.contentfulKapi.subtitleTwo}
+            description2={data.contentfulKapi.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulKapi.creditsOne.childMarkdownRemark.rawMarkdownBody} />
+          <Img className="case-image" fluid={data.contentfulKapi.imageOne.fluid} alt="kapi" />
         </div>
       </DescriptionContainer>
-      <ToTopNavbar linktotop="/detailspraktikertjanst#top" title="Praktikertjänst" />
+      <ToTopNavbar linktotop="/kapi#top" title="Kapi" />
     </Layout>
   )
 
 }
-export default ProjectDetailsPraktikertjanst
+export default ProjectKapi

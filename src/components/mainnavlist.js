@@ -5,7 +5,7 @@ import styled from 'styled-components'
 export const MainNavList = styled.ul`
 display: none;
 
-@media (min-width: 650px) {
+@media screen and (min-width: 769px) {
   display: flex;
   align-items: center;
   list-style-type: none;

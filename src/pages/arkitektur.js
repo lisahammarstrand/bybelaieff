@@ -16,7 +16,7 @@ const GrayDivider = styled.div`
   border-bottom: 2px solid lightgray;
   `
 
-const ProjectDetailsArkitektur = () => {
+const ProjectsArkitektur = () => {
   const data = useStaticQuery(graphql`
   query {
     contentfulArkitektur {
@@ -48,8 +48,8 @@ const ProjectDetailsArkitektur = () => {
         background={data.contentfulArkitektur.background}
         title={data.contentfulArkitektur.titleTop} />
       <DetailsNavbar
-        linkleft="/detailskapi"
-        linkright="/detailsvardguiden"
+        linkleft="/kapi"
+        linkright="/vardguiden1177"
       />
       <section className="content-container">
         <Img className="architecture-image" fluid={data.contentfulArkitektur.imageOne.fluid} alt="arkitektur" />
@@ -58,9 +58,9 @@ const ProjectDetailsArkitektur = () => {
         <GrayDivider />
         <Img className="architecture-image" fluid={data.contentfulArkitektur.imageThree.fluid} alt="arkitektur" />
       </section>
-      <ToTopNavbar linktotop="/detailsarkitektur#top" title="Arkitektur" />/>
+      <ToTopNavbar linktotop="/arkitektur#top" title="Arkitektur" />
     </Layout>
   )
 
 }
-export default ProjectDetailsArkitektur
+export default ProjectsArkitektur

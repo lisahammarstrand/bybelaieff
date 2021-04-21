@@ -10,10 +10,10 @@ import DetailsDescription from '../components/projectdetailsdescription'
 import { DescriptionContainer } from '../components/detailsdescriptioncontainer'
 import ToTopNavbar from '../components/totopnavbar'
 
-const ProjectDetailsSetterwalls = () => {
+const ProjectSetterwalls = () => {
   const data = useStaticQuery(graphql`
   query {
-    contentfulProjectDetailsSetterwalls {
+    contentfulSetterwalls {
       background
       titleTop
       titleColor
@@ -48,29 +48,29 @@ const ProjectDetailsSetterwalls = () => {
     <Layout>
       <SEO title="Project Details" />
       <DetailsTopSection
-        background={data.contentfulProjectDetailsSetterwalls.background}
-        title={data.contentfulProjectDetailsSetterwalls.titleTop} />
+        background={data.contentfulSetterwalls.background}
+        title={data.contentfulSetterwalls.titleTop} />
       <DetailsNavbar
-        linkleft="/detailshallbarvardag"
-        linkright="/detailspraktikertjanst"
+        linkleft="/rorligt"
+        linkright="/ovrigt"
       />
       <DescriptionContainer>
         <div className="case-container">
           <DetailsDescription
-            color={data.contentfulProjectDetailsSetterwalls.titleColor}
-            title={data.contentfulProjectDetailsSetterwalls.titleOne}
-            subtitle={data.contentfulProjectDetailsSetterwalls.subtitleOne}
-            description={data.contentfulProjectDetailsSetterwalls.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-            subtitle2={data.contentfulProjectDetailsSetterwalls.subtitleTwo}
-            description2={data.contentfulProjectDetailsSetterwalls.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
-            credits={data.contentfulProjectDetailsSetterwalls.creditsOne.childMarkdownRemark.rawMarkdownBody}
+            color={data.contentfulSetterwalls.titleColor}
+            title={data.contentfulSetterwalls.titleOne}
+            subtitle={data.contentfulSetterwalls.subtitleOne}
+            description={data.contentfulSetterwalls.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            subtitle2={data.contentfulSetterwalls.subtitleTwo}
+            description2={data.contentfulSetterwalls.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulSetterwalls.creditsOne.childMarkdownRemark.rawMarkdownBody}
           />
-          <Img className="case-image" fluid={data.contentfulProjectDetailsSetterwalls.imageOne.fluid} alt="setterwalls" />
+          <Img className="case-image" fluid={data.contentfulSetterwalls.imageOne.fluid} alt="setterwalls" />
         </div>
       </DescriptionContainer>
-      <ToTopNavbar linktotop="/detailssetterwalls#top" title="Setterwalls" />
+      <ToTopNavbar linktotop="/setterwalls#top" title="Setterwalls" />
     </Layout>
   )
 
 }
-export default ProjectDetailsSetterwalls
+export default ProjectSetterwalls

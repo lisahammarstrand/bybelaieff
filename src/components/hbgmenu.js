@@ -24,7 +24,7 @@ export const HamburgerMenu = styled.nav`
     visibility: visible;
   }
 
-  @media (min-width: 650px) {
+  @media screen and (min-width: 769px) {
     display: none;
   }
 `

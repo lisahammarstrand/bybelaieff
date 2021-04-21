@@ -16,7 +16,7 @@ const GrayDivider = styled.div`
   border-bottom: 2px solid lightgray;
   `
 
-const ProjectDetailsGrafiskaProfilprogram = () => {
+const ProjectsGrafiskaProfilprogram = () => {
   const data = useStaticQuery(graphql`
   query {
     contentfulGrafiskaProfilprogram {
@@ -70,7 +70,7 @@ const ProjectDetailsGrafiskaProfilprogram = () => {
       />
       <DetailsNavbar
         linkleft="/"
-        linkright="/detailstradgardsmassan"
+        linkright="/tradgardsmassan"
       />
       <section className="content-container">
         <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageOne.fluid} alt="grafisk_profil_sea_breeze" />
@@ -87,9 +87,9 @@ const ProjectDetailsGrafiskaProfilprogram = () => {
         <GrayDivider />
         <Img className="visualid-image" fluid={data.contentfulGrafiskaProfilprogram.imageSeven.fluid} alt="grafisk_profil_valideringsforum" />
       </section>
-      <ToTopNavbar linktotop="/detailsgrafiskaprofilprogram#top" title="Grafiska profilprogram" />/>
+      <ToTopNavbar linktotop="/grafiskaprofilprogram#top" title="Grafiska profilprogram" />/>
     </Layout>
   )
 
 }
-export default ProjectDetailsGrafiskaProfilprogram
+export default ProjectsGrafiskaProfilprogram
