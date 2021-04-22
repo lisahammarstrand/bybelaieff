@@ -61,10 +61,10 @@ const Header = ({ siteTitle }) => {
                   <HbgDropDown />)}
                 <div style={{ margin: `0` }}>
                   <li>
-                    <Link className={headerStyles.navItemHbg} to="/about">Om</Link>
+                    <Link className={headerStyles.navItemHbg} to="/om">Om</Link>
                   </li>
                   <li>
-                    <Link className={headerStyles.navItemHbg} to="/contact">Kontakt</Link>
+                    <Link className={headerStyles.navItemHbg} to="/kontakt">Kontakt</Link>
                   </li>
                 </div>
               </HbgNavList>
@@ -85,10 +85,10 @@ const Header = ({ siteTitle }) => {
                   <DropdownMenu />
                 </Dropdown>)}
               <li style={{ marginBottom: `0` }}>
-                <Link to="/about" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>Om</Link>
+                <Link to="/om" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>Om</Link>
               </li>
               <li style={{ marginBottom: `0` }}>
-                <Link to="/contact" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>Kontakt</Link>
+                <Link to="/kontakt" className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem}>Kontakt</Link>
               </li>
             </MainNavList>
           </nav >

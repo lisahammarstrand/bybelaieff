@@ -42,7 +42,7 @@ const AboutPage = () => {
   const data = useStaticQuery(
     graphql`
     {
-      contentfulAbout {
+      contentfulOm {
         title
         description {
           childMarkdownRemark {
@@ -56,11 +56,11 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="Om" />
       <AboutContainer>
         <AboutDescription>
-          <h1>{data.contentfulAbout.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: data.contentfulAbout.description.childMarkdownRemark.html, }}></div>
+          <h1 style={{ fontSize: `2.25rem`, fontWeight: `400` }}>{data.contentfulOm.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: data.contentfulOm.description.childMarkdownRemark.html, }}></div>
         </AboutDescription>
       </AboutContainer>
     </Layout>

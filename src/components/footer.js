@@ -63,10 +63,10 @@ const Footer = () => {
       <NavContainer>
         <Navigation>
           <NavItem>
-            <Link to="/about">Om</Link>
+            <Link to="/om">Om</Link>
           </NavItem>
           <NavItem>
-            <Link to="/contact">Kontakt</Link>
+            <Link to="/kontakt">Kontakt</Link>
           </NavItem>
           <NavItem>
             <Link to="https://www.linkedin.com/in/nina-belaieff-3903471a5/">Linkedin</Link>

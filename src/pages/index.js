@@ -8,7 +8,7 @@ import ProjectSection from '../components/projectsection'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Start" />
     <HeroSection />
     <ProjectSection />
   </Layout>

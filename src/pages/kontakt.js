@@ -52,7 +52,7 @@ const ContactPage = () => {
   const data = useStaticQuery(
     graphql`
     query MyQuery {
-      contentfulContact {
+      contentfulKontakt {
         title
         email
         phone
@@ -63,15 +63,15 @@ const ContactPage = () => {
   )
   return (
     <Layout>
-      <SEO title="Contact" />
+      <SEO title="Kontakt" />
       <ContactContainer>
         <ContactDescription>
-          <h1>{data.contentfulContact.title}</h1>
+          <h1 style={{ fontSize: `2.25rem`, fontWeight: `400` }}>{data.contentfulKontakt.title}</h1>
           <ContactDetailsContainer>
-            <ContactDetails>{data.contentfulContact.email}</ContactDetails>
-            <ContactDetails>{data.contentfulContact.phone}</ContactDetails>
+            <ContactDetails>{data.contentfulKontakt.email}</ContactDetails>
+            <ContactDetails>{data.contentfulKontakt.phone}</ContactDetails>
             <Link to="https://www.linkedin.com/in/nina-belaieff-3903471a5/">
-              <ContactDetails>{data.contentfulContact.linkedin}</ContactDetails>
+              <ContactDetails>{data.contentfulKontakt.linkedin}</ContactDetails>
             </Link>
           </ContactDetailsContainer>
         </ContactDescription>
