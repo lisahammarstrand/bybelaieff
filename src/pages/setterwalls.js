@@ -46,7 +46,7 @@ const ProjectSetterwalls = () => {
   return (
 
     <Layout>
-      <SEO title="Project Details" />
+      <SEO title="Setterwalls" />
       <DetailsTopSection
         background={data.contentfulSetterwalls.background}
         title={data.contentfulSetterwalls.titleTop} />

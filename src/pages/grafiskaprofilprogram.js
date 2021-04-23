@@ -63,7 +63,7 @@ const ProjectsGrafiskaProfilprogram = () => {
   return (
 
     <Layout>
-      <SEO title="Project Details" />
+      <SEO title="Grafiska profilprogram" />
       <DetailsTopSection
         background={data.contentfulGrafiskaProfilprogram.background}
         title={data.contentfulGrafiskaProfilprogram.titleTop}

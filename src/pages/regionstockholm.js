@@ -58,7 +58,7 @@ const ProjectsRegionStockholm = () => {
   return (
 
     <Layout>
-      <SEO title="Project Details" />
+      <SEO title="Region Stockholm" />
       <DetailsTopSection
         background={data.contentfulRegionStockholm.background}
         title={data.contentfulRegionStockholm.titleTop}

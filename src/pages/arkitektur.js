@@ -43,7 +43,7 @@ const ProjectsArkitektur = () => {
   return (
 
     <Layout>
-      <SEO title="Project Details" />
+      <SEO title="Arkitektur" />
       <DetailsTopSection
         background={data.contentfulArkitektur.background}
         title={data.contentfulArkitektur.titleTop} />

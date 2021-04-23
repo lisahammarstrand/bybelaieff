@@ -48,7 +48,7 @@ const ProjectGS1 = () => {
 
   return (
     < Layout >
-      <SEO title="Project Details" />
+      <SEO title="GS1" />
       <DetailsTopSection
         background={data.contentfulGs1.background}
         title={data.contentfulGs1.titleTop}

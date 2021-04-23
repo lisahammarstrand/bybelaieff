@@ -39,7 +39,7 @@ const ProjectsMotion = () => {
   return (
 
     <Layout>
-      <SEO title="Project Details" />
+      <SEO title="Rörligt" />
       <DetailsTopSection
         background={data.contentfulRorligt.background}
         title={data.contentfulRorligt.titleTop}

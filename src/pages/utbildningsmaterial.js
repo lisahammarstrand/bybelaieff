@@ -73,7 +73,7 @@ const ProjectsUtbildningsMaterial = () => {
   return (
 
     <Layout>
-      <SEO title="Project Details" />
+      <SEO title="Utbildningsmaterial" />
       <DetailsTopSection
         background={data.contentfulUtbildningsmaterial.background}
         title={data.contentfulUtbildningsmaterial.titleTop}

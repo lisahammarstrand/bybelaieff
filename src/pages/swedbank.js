@@ -46,7 +46,7 @@ const ProjectSwedbank = () => {
   return (
 
     <Layout>
-      <SEO title="Project Details" />
+      <SEO title="Swedbank" />
       <DetailsTopSection
         background={data.contentfulSwedbank.background}
         title={data.contentfulSwedbank.titleTop} />

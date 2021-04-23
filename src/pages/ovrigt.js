@@ -40,7 +40,7 @@ const ProjectsMiscellaneous = () => {
   return (
 
     <Layout>
-      <SEO title="Project Details" />
+      <SEO title="Övrigt" />
       <DetailsTopSection
         background={data.contentfulOvrigt.background}
         title={data.contentfulOvrigt.titleTop} />

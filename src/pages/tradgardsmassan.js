@@ -50,7 +50,7 @@ const ProjectTradgardsMassan = () => {
 `)
   return (
     <Layout>
-      <SEO title="Project Details" />
+      <SEO title="Trädgårdsmässan" />
       <DetailsTopSection
         background={data.contentfulTradgardsmassan.background}
         title={data.contentfulTradgardsmassan.titleTop} />

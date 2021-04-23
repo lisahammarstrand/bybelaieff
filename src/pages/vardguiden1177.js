@@ -47,7 +47,7 @@ const ProjectVardguiden = () => {
   return (
 
     <Layout>
-      <SEO title="Project Details" />
+      <SEO title="Vårdguiden 1177" />
       <DetailsTopSection
         background={data.contentfulVardguiden1177.background}
         title={data.contentfulVardguiden1177.titleTop} />

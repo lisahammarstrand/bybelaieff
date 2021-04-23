@@ -47,7 +47,7 @@ const ProjectKapi = () => {
   return (
 
     <Layout>
-      <SEO title="Project Details" />
+      <SEO title="KAPI" />
       <DetailsTopSection
         background={data.contentfulKapi.background}
         title={data.contentfulKapi.titleTop}
