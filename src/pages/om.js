@@ -19,7 +19,7 @@ margin: 0px;
 `
 
 const AboutDescription = styled.article`
-max-width: 650px;
+max-width: 750px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -49,6 +49,36 @@ const AboutPage = () => {
             html
           }
         }
+        title2
+        description2 {
+          childMarkdownRemark {
+            html
+          }
+        }
+        subtitle2
+        subdescription2 {
+          childMarkdownRemark {
+            html
+          }
+        }
+        subtitle22
+        subdescription22 {
+          childMarkdownRemark {
+            html
+          }
+        }
+        title3
+        description3 {
+          childMarkdownRemark {
+            html
+          }
+        }
+        title4
+        description4 {
+          childMarkdownRemark {
+            html
+          }
+        }
       }
     }
     `
@@ -59,8 +89,18 @@ const AboutPage = () => {
       <SEO title="Om" />
       <AboutContainer>
         <AboutDescription>
-          <h1 style={{ fontSize: `2.25rem`, fontWeight: `400` }}>{data.contentfulOm.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: data.contentfulOm.description.childMarkdownRemark.html, }}></div>
+          <h1 style={{ marginBottom: `0.4rem`, fontSize: `2.25rem`, fontWeight: `400` }}>{data.contentfulOm.title}</h1>
+          <div style={{ marginBottom: `1.0rem` }} dangerouslySetInnerHTML={{ __html: data.contentfulOm.description.childMarkdownRemark.html, }}></div>
+          <h2 style={{ marginBottom: `0.4rem` }}>{data.contentfulOm.title2}</h2>
+          <div dangerouslySetInnerHTML={{ __html: data.contentfulOm.description2.childMarkdownRemark.html, }}></div>
+          <h3 style={{ marginBottom: `0.4rem`, fontSize: `1.2rem`, fontWeight: `400` }}>{data.contentfulOm.subtitle2}</h3>
+          <div dangerouslySetInnerHTML={{ __html: data.contentfulOm.subdescription2.childMarkdownRemark.html, }}></div>
+          <h3 style={{ marginBottom: `0.4rem`, fontSize: `1.2rem`, fontWeight: `400` }}>{data.contentfulOm.subtitle22}</h3>
+          <div style={{ marginBottom: `1.0rem` }} dangerouslySetInnerHTML={{ __html: data.contentfulOm.subdescription22.childMarkdownRemark.html, }}></div>
+          <h2 style={{ marginBottom: `0.4rem`, fontSize: `1.5rem`, fontWeight: `600` }}>{data.contentfulOm.title3}</h2>
+          <div style={{ marginBottom: `1.0rem` }} dangerouslySetInnerHTML={{ __html: data.contentfulOm.description3.childMarkdownRemark.html, }}></div>
+          <h2 style={{ marginBottom: `0.4rem`, fontSize: `1.5rem`, fontWeight: `600` }}>{data.contentfulOm.title4}</h2>
+          <div dangerouslySetInnerHTML={{ __html: data.contentfulOm.description4.childMarkdownRemark.html, }}></div>
         </AboutDescription>
       </AboutContainer>
     </Layout>
