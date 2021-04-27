@@ -98,9 +98,10 @@ header {
   color: #6FD3E9;
 }
   
-.chevron-icon-main:active {
+/* .chevron-icon-main:active {
   color: #6FD3E9;
-  }
+  transform: rotate(270deg);
+} */
 
 .nav-item-dropdown {
   color: white;
@@ -161,4 +162,5 @@ header {
 
 .chevron-icon-hbg:active {
   color: #6FD3E9;
+  /* transform: rotate(270deg); */
  }

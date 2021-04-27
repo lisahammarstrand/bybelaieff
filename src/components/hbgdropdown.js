@@ -26,6 +26,10 @@ const HbgDropdown = styled.div`
     visibility: visible;
 }
 `
+const showhbgdropdownnavlist = keyframes`
+  0% {height: 0px;}
+  100% {height: 450px;}
+`
 
 const DropdownNavlist = styled.ul`
   position: absolute;
@@ -37,6 +41,8 @@ const DropdownNavlist = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0px 0px 0px 8px;
+  animation: ${showhbgdropdownnavlist} 0.5s forwards;
+  transition: transform 0.3s ease-in-out;
 `
 
 const showhbgdropdownitem = keyframes`
