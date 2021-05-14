@@ -42,7 +42,7 @@ const ContactDetailsContainer = styled.div`
   justify-content: center;
   align-items: flex-start; 
   text-align: left;
-  margin-top: 32px;
+  margin-top: 0px;
 `
 const ContactDetails = styled.p`
   margin: 8px;
@@ -62,7 +62,7 @@ const ContactPage = () => {
         phone
         linkedin
       }
-    }    
+    }   
     `
   )
   return (
@@ -70,7 +70,7 @@ const ContactPage = () => {
       <SEO title="Kontakt" />
       <ContactContainer>
         <ContactDescription>
-          <h1 dangerouslySetInnerHTML={{ __html: data.contentfulOm.title.childMarkdownRemark.html, }}></h1>
+          <h1 dangerouslySetInnerHTML={{ __html: data.contentfulKontakt.title.childMarkdownRemark.html, }}></h1>
           <ContactDetailsContainer>
             <ContactDetails>{data.contentfulKontakt.email}</ContactDetails>
             <ContactDetails>{data.contentfulKontakt.phone}</ContactDetails>
