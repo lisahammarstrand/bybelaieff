@@ -73,12 +73,6 @@ const AboutPage = () => {
             html
           }
         }
-        title4
-        description4 {
-          childMarkdownRemark {
-            html
-          }
-        }
       }
     }
     `
@@ -99,8 +93,6 @@ const AboutPage = () => {
           <div style={{ marginBottom: `1.0rem` }} dangerouslySetInnerHTML={{ __html: data.contentfulOm.subdescription22.childMarkdownRemark.html, }}></div>
           <h2 style={{ marginBottom: `0.4rem`, fontSize: `1.5rem`, fontWeight: `600` }}>{data.contentfulOm.title3}</h2>
           <div style={{ marginBottom: `1.0rem` }} dangerouslySetInnerHTML={{ __html: data.contentfulOm.description3.childMarkdownRemark.html, }}></div>
-          <h2 style={{ marginBottom: `0.4rem`, fontSize: `1.5rem`, fontWeight: `600` }}>{data.contentfulOm.title4}</h2>
-          <div dangerouslySetInnerHTML={{ __html: data.contentfulOm.description4.childMarkdownRemark.html, }}></div>
         </AboutDescription>
       </AboutContainer>
     </Layout>

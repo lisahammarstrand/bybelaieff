@@ -53,7 +53,11 @@ const ContactPage = () => {
     graphql`
     query MyQuery {
       contentfulKontakt {
-        title
+        title {
+          childMarkdownRemark {
+            html
+          }
+        }
         email
         phone
         linkedin
@@ -66,7 +70,7 @@ const ContactPage = () => {
       <SEO title="Kontakt" />
       <ContactContainer>
         <ContactDescription>
-          <h1 style={{ fontSize: `2.25rem`, fontWeight: `400` }}>{data.contentfulKontakt.title}</h1>
+          <h1 dangerouslySetInnerHTML={{ __html: data.contentfulOm.title.childMarkdownRemark.html, }}></h1>
           <ContactDetailsContainer>
             <ContactDetails>{data.contentfulKontakt.email}</ContactDetails>
             <ContactDetails>{data.contentfulKontakt.phone}</ContactDetails>
