@@ -1,14 +1,21 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import DetailsTopSection from '../components/projectdetailstop'
 import DetailsNavbar from '../components/navbarprojectdetails'
-import DetailsDescription from '../components/projectdetailsdescription'
-import { DescriptionContainer } from '../components/detailsdescriptioncontainer'
+import SectionDescription from '../components/sectiondetailsdescription'
 import ToTopNavbar from '../components/totopnavbar'
+
+const GrayDivider = styled.div`
+  width: 90%;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  border-bottom: 2px solid lightgray;
+  `
 
 const ProjectsMiscellaneous = () => {
   const data = useStaticQuery(graphql`
@@ -18,18 +25,23 @@ const ProjectsMiscellaneous = () => {
       titleTop
       titleColor
       titleOne
-      subtitleOne
       descriptionOne {
         childMarkdownRemark {
           rawMarkdownBody
         }
       }
-      creditsOne {
+      imageOne {
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      titleTwo
+      descriptionTwo {
         childMarkdownRemark {
           rawMarkdownBody
         }
       }
-      imageOne {
+      imageTwo {
         fluid(quality: 100) {
           ...GatsbyContentfulFluid
         }
@@ -48,18 +60,21 @@ const ProjectsMiscellaneous = () => {
         linkleft="/setterwalls"
         linkright="/"
       />
-      <DescriptionContainer>
-        <div className="case-container">
-          <DetailsDescription
-            color={data.contentfulOvrigt.titleColor}
-            title={data.contentfulOvrigt.titleOne}
-            subtitle={data.contentfulOvrigt.subtitleOne}
-            description={data.contentfulOvrigt.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-            credits={data.contentfulOvrigt.creditsOne.childMarkdownRemark.rawMarkdownBody}
-          />
-          <Img className="case-image" fluid={data.contentfulOvrigt.imageOne.fluid} alt="praktikertjänst" />
-        </div>
-      </DescriptionContainer>
+      <section className="content-container">
+        <SectionDescription
+          color={data.contentfulOvrigt.background}
+          title={data.contentfulOvrigt.titleOne}
+          credits={data.contentfulOvrigt.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+        />
+        <Img className="fullwidth-image" fluid={data.contentfulOvrigt.imageOne.fluid} alt="blommor i krukor" />
+        <GrayDivider />
+        <SectionDescription
+          color={data.contentfulOvrigt.background}
+          title={data.contentfulOvrigt.titleTwo}
+          credits={data.contentfulOvrigt.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+        />
+        <Img className="fullwidth-image" fluid={data.contentfulOvrigt.imageTwo.fluid} alt="blommor i krukor" />
+      </section>
       <ToTopNavbar linktotop="/ovrigt#top" title="Övrigt" />
     </Layout>
   )

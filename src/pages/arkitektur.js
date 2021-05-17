@@ -52,11 +52,11 @@ const ProjectsArkitektur = () => {
         linkright="/vardguiden1177"
       />
       <section className="content-container">
-        <Img className="architecture-image" fluid={data.contentfulArkitektur.imageOne.fluid} alt="arkitektur" />
+        <Img className="fullwidth-image" fluid={data.contentfulArkitektur.imageOne.fluid} alt="arkitektur" />
         <GrayDivider />
-        <Img className="architecture-image" fluid={data.contentfulArkitektur.imageTwo.fluid} alt="arkitektur" />
+        <Img className="fullwidth-image" fluid={data.contentfulArkitektur.imageTwo.fluid} alt="arkitektur" />
         <GrayDivider />
-        <Img className="architecture-image" fluid={data.contentfulArkitektur.imageThree.fluid} alt="arkitektur" />
+        <Img className="fullwidth-image" fluid={data.contentfulArkitektur.imageThree.fluid} alt="arkitektur" />
       </section>
       <ToTopNavbar linktotop="/arkitektur#top" title="Arkitektur" />
     </Layout>

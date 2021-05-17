@@ -34,6 +34,7 @@ const DetailsDescriptionTitle = styled.h2`
 const DetailsDescriptionCredits = styled.div`
   display: flex;
   font-size: 14px;
+  line-height: 1.4;
 `
 
 const DetailsDescriptionPlus = ({ color, title, subtitle, subtitle2, subtitle3, subtitle4, description, description2, description3, description4, credits }) => {

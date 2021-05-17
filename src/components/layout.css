@@ -602,23 +602,8 @@ pre tt:after {
   align-items: center;
   background: lightgray;
 }
-.visualid-image {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.education-image {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.architecture-image {
+.fullwidth-image {
   width: 100%;
   display: flex;
   flex-direction: column;

@@ -88,28 +88,28 @@ const ProjectsUtbildningsMaterial = () => {
           title={data.contentfulUtbildningsmaterial.title1}
           credits={data.contentfulUtbildningsmaterial.descriptionOne.childMarkdownRemark.rawMarkdownBody}
         />
-        <Img className="education-image" fluid={data.contentfulUtbildningsmaterial.imageOne.fluid} alt="utbildningsmaterial" />
+        <Img className="fullwidth-image" fluid={data.contentfulUtbildningsmaterial.imageOne.fluid} alt="utbildningsmaterial" />
         <GrayDivider />
         <SectionDescription
           color={data.contentfulUtbildningsmaterial.background}
           title={data.contentfulUtbildningsmaterial.title2}
           credits={data.contentfulUtbildningsmaterial.description2.childMarkdownRemark.rawMarkdownBody}
         />
-        <Img className="education-image" fluid={data.contentfulUtbildningsmaterial.imageTwo.fluid} alt="utbildningsmaterial" />
+        <Img className="fullwidth-image" fluid={data.contentfulUtbildningsmaterial.imageTwo.fluid} alt="utbildningsmaterial" />
         <GrayDivider />
         <SectionDescription
           color={data.contentfulUtbildningsmaterial.background}
           title={data.contentfulUtbildningsmaterial.title3}
           credits={data.contentfulUtbildningsmaterial.description3.childMarkdownRemark.rawMarkdownBody}
         />
-        <Img className="education-image" fluid={data.contentfulUtbildningsmaterial.imageThree.fluid} alt="utbildningsmaterial" />
+        <Img className="fullwidth-image" fluid={data.contentfulUtbildningsmaterial.imageThree.fluid} alt="utbildningsmaterial" />
         <GrayDivider />
         <SectionDescription
           color={data.contentfulUtbildningsmaterial.background}
           title={data.contentfulUtbildningsmaterial.title4}
           credits={data.contentfulUtbildningsmaterial.description4.childMarkdownRemark.rawMarkdownBody}
         />
-        <Img className="education-image" fluid={data.contentfulUtbildningsmaterial.imageFour.fluid} alt="utbildningsmaterial" />
+        <Img className="fullwidth-image" fluid={data.contentfulUtbildningsmaterial.imageFour.fluid} alt="utbildningsmaterial" />
       </section>
       <ToTopNavbar linktotop="/utbildningsmaterial#top" title="Utbildningsmaterial" />
     </Layout>
