@@ -40,6 +40,11 @@ const ProjectVardguiden = () => {
           ...GatsbyContentfulFluid
         }
       }
+      imageTwo {
+        fluid(quality: 100) {
+          ...GatsbyContentfulFluid
+        }
+      }
     }
   }
   `
@@ -67,6 +72,7 @@ const ProjectVardguiden = () => {
             credits={data.contentfulVardguiden1177.creditsOne.childMarkdownRemark.rawMarkdownBody}
           />
           <Img className="case-image" fluid={data.contentfulVardguiden1177.imageOne.fluid} alt="vardguiden_1177" />
+          <Img className="case-image" fluid={data.contentfulVardguiden1177.imageTwo.fluid} alt="vardguiden_1177" />
         </div>
       </DescriptionContainer>
       <ToTopNavbar linktotop="/vardguiden1177#top" title="Vårdguiden" />

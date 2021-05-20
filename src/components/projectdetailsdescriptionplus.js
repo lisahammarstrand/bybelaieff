@@ -23,7 +23,7 @@ const DetailsDescriptionCopy = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: left;
 `
 const DetailsDescriptionTitle = styled.h2`

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Component used for project details descriptions: Bakgrund, Uppdrag, Credits
-// Trädgårdsmässan, Swedbank, GS1, KAPI, Vårdguiden 1177, Swtterwalls
+// Trädgårdsmässan, Swedbank, GS1, KAPI, Vårdguiden 1177, Setterwalls
 const DetailsDescriptionContainer = styled.section`
   width: 100%;
   height: auto;
@@ -23,7 +23,7 @@ const DetailsDescriptionCopy = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: left;
 `
 const DetailsDescriptionTitle = styled.h2`
@@ -44,8 +44,8 @@ const DetailsDescription = ({ color, title, subtitle, subtitle2, description, de
         <DetailsDescriptionTitle color={color}>
           {title}
         </DetailsDescriptionTitle>
-        <p> <span style={{ fontWeight: `bold`, color: color }}>{subtitle}</span> {description}</p>
-        <p> <span style={{ fontWeight: `bold`, color: color }}>{subtitle2}</span> {description2}</p>
+        <p style={{ textAlign: `left` }}> <span style={{ fontWeight: `bold`, color: color }}>{subtitle}</span> {description}</p>
+        <p style={{ textAlign: `left` }}> <span style={{ fontWeight: `bold`, color: color }}>{subtitle2}</span> {description2}</p>
         <DetailsDescriptionCredits>
           <p>{credits}</p>
         </DetailsDescriptionCredits>
