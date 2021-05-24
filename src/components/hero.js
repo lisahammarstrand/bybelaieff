@@ -83,7 +83,7 @@ const HeroBackground = () => (
         transition={4} // transition duration between images
         duration={8} // how long an image is shown
         // specify images to include (and their order) according to `relativePath`
-        images={["hero_top_blue_2.jpg", "hero_top_green.jpg", "hero_top_yellow.jpg"]}
+        images={["hero_top_blue2.jpg", "hero_top_green2.jpg", "hero_top_yellow2.jpg"]}
 
         // pass down standard element props
         style={{
