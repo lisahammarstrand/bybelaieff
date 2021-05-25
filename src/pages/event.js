@@ -13,7 +13,7 @@ import ToTopNavbar from '../components/totopnavbar'
 const ProjectKapi = () => {
   const data = useStaticQuery(graphql`
   query {
-    contentfulKapi {
+    contentfulEvent {
       background
       titleTop
       titleColor
@@ -47,10 +47,10 @@ const ProjectKapi = () => {
   return (
 
     <Layout>
-      <SEO title="KAPI" />
+      <SEO title="Event" />
       <DetailsTopSection
-        background={data.contentfulKapi.background}
-        title={data.contentfulKapi.titleTop}
+        background={data.contentfulEvent.background}
+        title={data.contentfulEvent.titleTop}
       />
       <DetailsNavbar
         linkleft="/regionstockholm"
@@ -59,17 +59,17 @@ const ProjectKapi = () => {
       <DescriptionContainer>
         <div className="case-container">
           <DetailsDescription
-            color={data.contentfulKapi.titleColor}
-            title={data.contentfulKapi.titleOne}
-            subtitle={data.contentfulKapi.subtitleOne}
-            description={data.contentfulKapi.descriptionOne.childMarkdownRemark.rawMarkdownBody}
-            subtitle2={data.contentfulKapi.subtitleTwo}
-            description2={data.contentfulKapi.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
-            credits={data.contentfulKapi.creditsOne.childMarkdownRemark.rawMarkdownBody} />
-          <Img className="case-image" fluid={data.contentfulKapi.imageOne.fluid} alt="kapi" />
+            color={data.contentfulEvent.titleColor}
+            title={data.contentfulEvent.titleOne}
+            subtitle={data.contentfulEvent.subtitleOne}
+            description={data.contentfulEvent.descriptionOne.childMarkdownRemark.rawMarkdownBody}
+            subtitle2={data.contentfulEvent.subtitleTwo}
+            description2={data.contentfulEvent.descriptionTwo.childMarkdownRemark.rawMarkdownBody}
+            credits={data.contentfulEvent.creditsOne.childMarkdownRemark.rawMarkdownBody} />
+          <Img className="case-image" fluid={data.contentfulEvent.imageOne.fluid} alt="kapi" />
         </div>
       </DescriptionContainer>
-      <ToTopNavbar linktotop="/kapi#top" title="Kapi" />
+      <ToTopNavbar linktotop="/event#top" title="Event" />
     </Layout>
   )
 

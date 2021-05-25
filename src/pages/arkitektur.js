@@ -48,7 +48,7 @@ const ProjectsArkitektur = () => {
         background={data.contentfulArkitektur.background}
         title={data.contentfulArkitektur.titleTop} />
       <DetailsNavbar
-        linkleft="/kapi"
+        linkleft="/event"
         linkright="/vardguiden1177"
       />
       <section className="content-container">

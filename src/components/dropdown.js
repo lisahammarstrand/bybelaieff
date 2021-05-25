@@ -99,7 +99,7 @@ const DropdownMenu = () => {
         <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/regionstockholm">Region Stockholm</Link>
       </DropdownNavItem>
       <DropdownNavItem>
-        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/kapi">KAPI</Link>
+        <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/event">Event</Link>
       </DropdownNavItem>
       <DropdownNavItem>
         <Link className={headerStyles.navItemDropdown} activeClassName={headerStyles.activeNavItemDropdown} to="/arkitektur">Arkitektur</Link>

@@ -85,7 +85,7 @@ const HbgDropDown = () => {
           <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/regionstockholm">Region Stockholm</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
-          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/kapi">KAPI</Link>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/event">Event</Link>
         </HbgDropdownNavItem>
         <HbgDropdownNavItem>
           <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/arkitektur">Arkitektur</Link>

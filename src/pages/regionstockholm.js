@@ -65,7 +65,7 @@ const ProjectsRegionStockholm = () => {
       />
       <DetailsNavbar
         linkleft="/utbildningsmaterial"
-        linkright="/kapi"
+        linkright="/event"
       />
       <DescriptionContainer>
         <div className="case-container">
