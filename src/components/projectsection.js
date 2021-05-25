@@ -26,7 +26,6 @@ const ProjectSection = () => {
         node {
           background
           title
-          subtitle
           slug
           order
         }
@@ -45,7 +44,6 @@ const ProjectSection = () => {
               <ProjectCard
                 background={edge.node.background}
                 title={edge.node.title}
-                description={edge.node.subtitle}
               />
             </Link>
           </>
